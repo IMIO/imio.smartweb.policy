@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="imio.smartweb.policy">
+
+  <browser:page
+    name="faceted_subtyper"
+    for="imio.smartweb.core.contents.IFolder"
+    class="imio.smartweb.policy.browser.faceted.subtyper.FolderFacetedPublicSubtyper"
+    permission="zope.Public"
+    allowed_interface="eea.facetednavigation.subtypes.interfaces.IFacetedSubtyper"
+    layer="imio.smartweb.policy.interfaces.IImioSmartwebPolicyLayer"
+    />
+
+  <browser:page
+    name="faceted_search_subtyper"
+    for="imio.smartweb.core.contents.IFolder"
+    class="imio.smartweb.policy.browser.faceted.subtyper.FolderFacetedPublicSubtyper"
+    permission="zope.Public"
+    allowed_interface="eea.facetednavigation.subtypes.interfaces.IFacetedSubtyper"
+    layer="imio.smartweb.policy.interfaces.IImioSmartwebPolicyLayer"
+  />
+
+</configure>
