@@ -11,7 +11,8 @@
     Better import explicit packages or configurations ;)
   -->
   <!--<includeDependencies package="." />-->
-
+  <include package="imio.smartweb.locales" />
+  <include package="imio.smartweb.core" />
   <include package=".browser" />
 
   <include file="permissions.zcml" />
