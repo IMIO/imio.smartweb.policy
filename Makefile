@@ -1,4 +1,5 @@
 #!/usr/bin/make
+all: buildout
 
 bin/buildout: bin/pip buildout.cfg
 	bin/pip install -I -r requirements.txt
