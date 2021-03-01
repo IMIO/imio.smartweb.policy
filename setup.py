@@ -69,7 +69,5 @@ setup(
     entry_points="""
     [z3c.autoinclude.plugin]
     target = plone
-    [console_scripts]
-    update_locale = imio.smartweb.policy.locales.update:update_locale
     """,
 )

@@ -2,7 +2,7 @@
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     name="Image"
     meta_type="Dexterity FTI"
-    i18n:domain="imio.smartweb.policy">
+    i18n:domain="imio.smartweb">
 
   <property name="global_allow">False</property>
 
