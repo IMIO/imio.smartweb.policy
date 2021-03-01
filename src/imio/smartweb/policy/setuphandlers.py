@@ -1,21 +1,30 @@
 # -*- coding: utf-8 -*-
 from Products.CMFPlone.interfaces import INonInstallable
+from Products.CMFQuickInstallerTool import interfaces as quiskinstallinterfaces
 from zope.interface import implementer
 
 
 @implementer(INonInstallable)
 class HiddenProfiles(object):
-
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller."""
         return [
-            'imio.smartweb.policy:uninstall',
+            "imio.smartweb.core:default",
+            "imio.smartweb.policy:uninstall",
+        ]
+
+
+@implementer(quiskinstallinterfaces.INonInstallable)
+class HiddenProducts(object):
+    def getNonInstallableProducts(self):
+        """Hides profiles from QuickInstaller"""
+        return [
+            u"imio.smartweb.core",
         ]
 
 
 def post_install(context):
     """Post install script"""
-    # Do something at the end of the installation of this package.
 
 
 def uninstall(context):
