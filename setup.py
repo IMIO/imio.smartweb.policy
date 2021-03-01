@@ -50,10 +50,13 @@ setup(
         'setuptools',
         # -*- Extra requirements: -*-
         'z3c.jbot',
-        'eea.facetednavigation',
         'plone.api>=1.8.4',
         'plone.restapi',
         'plone.app.dexterity',
+        'eea.facetednavigation',
+        'collective.pivot',
+        'imio.portletpage',
+        'imio.smartweb.core',
         'imio.smartweb.locales',
     ],
     extras_require={
