@@ -21,11 +21,12 @@ class ImioSmartwebPolicyLayer(PloneSandboxLayer):
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
         import plone.restapi
+
         self.loadZCML(package=plone.restapi)
         self.loadZCML(package=imio.smartweb.policy)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'imio.smartweb.policy:default')
+        applyProfile(portal, "imio.smartweb.policy:default")
 
 
 IMIO_SMARTWEB_POLICY_FIXTURE = ImioSmartwebPolicyLayer()
@@ -33,13 +34,13 @@ IMIO_SMARTWEB_POLICY_FIXTURE = ImioSmartwebPolicyLayer()
 
 IMIO_SMARTWEB_POLICY_INTEGRATION_TESTING = IntegrationTesting(
     bases=(IMIO_SMARTWEB_POLICY_FIXTURE,),
-    name='ImioSmartwebPolicyLayer:IntegrationTesting',
+    name="ImioSmartwebPolicyLayer:IntegrationTesting",
 )
 
 
 IMIO_SMARTWEB_POLICY_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(IMIO_SMARTWEB_POLICY_FIXTURE,),
-    name='ImioSmartwebPolicyLayer:FunctionalTesting',
+    name="ImioSmartwebPolicyLayer:FunctionalTesting",
 )
 
 
@@ -49,5 +50,5 @@ IMIO_SMARTWEB_POLICY_ACCEPTANCE_TESTING = FunctionalTesting(
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='ImioSmartwebPolicyLayer:AcceptanceTesting',
+    name="ImioSmartwebPolicyLayer:AcceptanceTesting",
 )

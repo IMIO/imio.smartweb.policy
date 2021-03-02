@@ -9,22 +9,18 @@ class FolderFacetedPublicSubtyper(FacetedPublicSubtyper):
 
     @property
     def can_enable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         return False
 
     @property
     def can_disable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         return False
 
     def enable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         return False
 
     def disable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         return False
