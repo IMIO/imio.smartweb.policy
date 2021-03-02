@@ -2,8 +2,13 @@
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     name="File"
     meta_type="Dexterity FTI"
-    i18n:domain="imio.smartweb">
+    i18n:domain="plone">
 
   <property name="global_allow">False</property>
+
+  <property name="behaviors" purge="false">
+    <element value="plone.basic"/>
+    <element value="plone.leadimage"/>
+  </property>
 
 </object>
