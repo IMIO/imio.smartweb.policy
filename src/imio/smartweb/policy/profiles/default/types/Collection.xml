@@ -7,7 +7,6 @@
   <property name="global_allow">False</property>
 
   <property name="behaviors" purge="false">
-    <element value="plone.basic"/>
     <element value="plone.leadimage"/>
     <element value="eea.faceted.navigable"/>
   </property>
