@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+from imio.smartweb.policy.utils import clear_manager_portlets
+from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
 from Products.CMFQuickInstallerTool import interfaces as quiskinstallinterfaces
 from zope.interface import implementer
@@ -25,6 +28,10 @@ class HiddenProducts(object):
 
 def post_install(context):
     """Post install script"""
+    portal = api.portal.get()
+    clear_manager_portlets(portal, "plone.leftcolumn")
+    clear_manager_portlets(portal, "plone.rightcolumn")
+    clear_manager_portlets(portal, "plone.footerportlets")
 
 
 def uninstall(context):
