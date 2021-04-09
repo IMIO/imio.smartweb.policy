@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rolemap>
   <permissions>
-  <!-- -*- extra stuff goes here -*- -->
-
+    <permission name="Portlets: Manage portlets" acquire="False">
+    </permission>
   </permissions>
 </rolemap>
