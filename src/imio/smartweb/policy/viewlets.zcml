@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+  <configure package="plone.app.layout.viewlets">
+    <browser:viewlet
+        name="plone.global_sections"
+        manager=".interfaces.IPortalHeader"
+        class=".common.GlobalSectionsViewlet"
+        permission="zope2.View"
+        />
+    <browser:viewlet
+        name="plone.path_bar"
+        manager=".interfaces.IPortalHeader"
+        class=".common.PathBarViewlet"
+        permission="zope2.View"
+        />
+  </configure>
+
+</configure>
