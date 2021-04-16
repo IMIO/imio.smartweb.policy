@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from imio.smartweb.policy.utils import add_navigation_links
 from imio.smartweb.policy.utils import clear_manager_portlets
 from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
@@ -32,6 +33,7 @@ def post_install(context):
     clear_manager_portlets(portal, "plone.leftcolumn")
     clear_manager_portlets(portal, "plone.rightcolumn")
     clear_manager_portlets(portal, "plone.footerportlets")
+    add_navigation_links(portal)
 
 
 def uninstall(context):
