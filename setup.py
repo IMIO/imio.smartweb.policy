@@ -57,7 +57,6 @@ setup(
         "plone.app.dexterity",
         "eea.facetednavigation",
         "collective.pivot",
-        "imio.portletpage",
         "imio.smartweb.core",
         "imio.smartweb.locales",
     ],

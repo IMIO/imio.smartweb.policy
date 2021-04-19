@@ -7,7 +7,6 @@
     i18n_domain="imio.smartweb">
 
   <include package="collective.pivot" />
-  <include package="imio.portletpage" />
   <include package="imio.smartweb.locales" />
   <include package="imio.smartweb.core" />
   <include package=".browser" />
