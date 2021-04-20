@@ -7,6 +7,7 @@
     i18n_domain="imio.smartweb">
 
   <include package="collective.pivot" />
+  <include package="eea.facetednavigation" />
   <include package="imio.smartweb.locales" />
   <include package="imio.smartweb.core" />
   <include package=".browser" />
