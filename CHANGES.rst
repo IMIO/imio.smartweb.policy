@@ -5,7 +5,14 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Migrate & improve buildout for Plone 6
+  [boulch]
+
+- Add uninstall profile
+  [boulch]
+
+- Fix tests for Plone 6
+  [boulch]
 
 
 1.0a1 (2021-04-19)
