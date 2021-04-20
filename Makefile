@@ -1,4 +1,5 @@
 #!/usr/bin/make
+.PHONY: buildout run cleanall test test-coverage
 all: buildout
 
 bin/buildout: bin/pip buildout.cfg
@@ -14,6 +15,12 @@ bin/pip:
 
 run: bin/instance
 	bin/instance fg
+
+test: bin/instance
+	bin/test
+
+test-coverage: bin/instance
+	bin/test-coverage
 
 cleanall:
 	rm -fr develop-eggs downloads eggs parts .installed.cfg lib lib64 include bin .mr.developer.cfg local/
