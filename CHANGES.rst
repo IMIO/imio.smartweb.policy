@@ -5,6 +5,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
+- Change header viewlets default order
+  [laulaz]
+
 - Migrate & improve buildout for Plone 6
   [boulch]
 
