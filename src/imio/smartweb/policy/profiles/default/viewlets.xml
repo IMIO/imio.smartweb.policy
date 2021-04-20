@@ -1,26 +1,26 @@
 <?xml version="1.0"?>
 <object>
   <hidden manager="plone.mainnavigation" skinname="Plone Default">
-      <viewlet name="plone.global_sections" />
+    <viewlet name="plone.global_sections" />
   </hidden>
   <hidden manager="plone.abovecontent" skinname="Plone Default">
-      <viewlet name="plone.path_bar" />
+    <viewlet name="plone.path_bar" />
   </hidden>
   <hidden manager="plone.portalheader" skinname="Plone Default">
     <viewlet name="plone.anontools" />
     <viewlet name="plone.membertools" />
   </hidden>
   <order manager="plone.portalheader" skinname="Plone Default">
-      <viewlet name="imio.smartweb.subsite_banner" />
-      <viewlet name="plone.logo" />
-      <viewlet name="plone.global_sections" />
-      <viewlet name="plone.searchbox" />
-      <viewlet name="plone.anontools" />
-      <viewlet name="plone.membertools" />
-      <viewlet name="imio.smartweb.header_actions" />
-      <viewlet name="plone.app.i18n.locales.languageselector" />
-      <viewlet name="imio.smartweb.subsite_logo" />
-      <viewlet name="imio.smartweb.subsite_navigation" />
-      <viewlet name="plone.path_bar" />
+    <viewlet name="imio.smartweb.subsite_banner" />
+    <viewlet name="plone.logo" />
+    <viewlet name="plone.global_sections" />
+    <viewlet name="plone.searchbox" />
+    <viewlet name="plone.anontools" />
+    <viewlet name="plone.membertools" />
+    <viewlet name="imio.smartweb.header_actions" />
+    <viewlet name="plone.app.i18n.locales.languageselector" />
+    <viewlet name="imio.smartweb.subsite_logo" />
+    <viewlet name="imio.smartweb.subsite_navigation" />
+    <viewlet name="plone.path_bar" />
   </order>
 </object>
