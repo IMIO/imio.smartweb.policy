@@ -5,7 +5,7 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
-- Add basic demo profile with content creation
+- Add basic demo profile with content creation & improve install profile
   [laulaz]
 
 - Fix navigation links translations

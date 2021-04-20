@@ -9,6 +9,12 @@ from zope.component import getUtility
 from zope.i18n import translate
 
 
+def remove_unused_contents(portal):
+    api.content.delete(portal.news)
+    api.content.delete(portal.events)
+    api.content.delete(portal.Members)
+
+
 def clear_manager_portlets(folder, manager_name):
     manager = getUtility(IPortletManager, name=manager_name, context=folder)
     assignments = getMultiAdapter((folder, manager), IPortletAssignmentMapping)
