@@ -6,6 +6,7 @@ from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.portlets.interfaces import IPortletManager
 from zope.component import getMultiAdapter
 from zope.component import getUtility
+from zope.i18n import translate
 
 
 def clear_manager_portlets(folder, manager_name):
@@ -16,13 +17,14 @@ def clear_manager_portlets(folder, manager_name):
 
 
 def add_navigation_links(context):
+    current_lang = api.portal.get_current_language()[:2]
     api.content.create(
         container=context,
         type="Link",
-        title=_(u"I am"),
+        title=translate(_(u"I am"), target_language=current_lang)
     )
     api.content.create(
         container=context,
         type="Link",
-        title=_(u"One click finding"),
+        title=translate(_(u"One click finding"), target_language=current_lang)
     )

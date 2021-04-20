@@ -5,6 +5,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
+- Fix navigation links translations
+  [laulaz]
+
 - Change header viewlets default order
   [laulaz]
 
