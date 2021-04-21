@@ -27,10 +27,10 @@ def add_navigation_links(context):
     api.content.create(
         container=context,
         type="Link",
-        title=translate(_(u"I am"), target_language=current_lang)
+        title=translate(_(u"I am"), target_language=current_lang),
     )
     api.content.create(
         container=context,
         type="Link",
-        title=translate(_(u"One click finding"), target_language=current_lang)
+        title=translate(_(u"One click finding"), target_language=current_lang),
     )
