@@ -3,11 +3,11 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="imio.smartweb">
 
-    <record name="plone.default_page_types">
-      <value purge="true">
-        <element>Collection</element>
-        <element>imio.smartweb.Page</element>
-      </value>
-    </record>
+  <record name="plone.default_page_types">
+    <value purge="true">
+      <element>Collection</element>
+      <element>imio.smartweb.Page</element>
+    </value>
+  </record>
 
 </registry>
