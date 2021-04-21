@@ -6,7 +6,10 @@
 
   <property name="global_allow">False</property>
 
-  <property name="behaviors" purge="false">
+  <property name="behaviors" purge="true">
+    <element value="plone.categorization"/>
+    <element value="plone.namefromfilename"/>
+    <element value="plone.shortname"/>
     <element value="plone.leadimage"/>
   </property>
 
