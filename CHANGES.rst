@@ -5,6 +5,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
+- Add configuration for TinyMCE toolbars / menus
+  [laulaz]
+
 - Add basic demo profile with content creation & improve install profile
   [laulaz]
 
