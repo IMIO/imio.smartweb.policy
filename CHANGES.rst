@@ -5,7 +5,8 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add collective.bigbang.
+  [bsuttor]
 
 
 1.0a2 (2021-04-22)

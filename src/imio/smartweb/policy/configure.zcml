@@ -6,6 +6,7 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="imio.smartweb">
 
+  <include package="collective.bigbang" />
   <include package="collective.pivot" />
   <include package="eea.facetednavigation" />
   <include package="imio.smartweb.locales" />

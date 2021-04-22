@@ -59,6 +59,7 @@ setup(
         "collective.pivot",
         "imio.smartweb.core",
         "imio.smartweb.locales",
+        "collective.bigbang",
     ],
     extras_require={
         "test": [
