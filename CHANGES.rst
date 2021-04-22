@@ -5,6 +5,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
+- WEBMIGP5-12: Override TinyMCE Formats inline items
+  [laulaz]
+
 - WEBMIGP5-14: Change images behaviors
   [laulaz]
 

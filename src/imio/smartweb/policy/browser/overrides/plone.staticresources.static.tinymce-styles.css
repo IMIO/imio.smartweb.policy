@@ -1,0 +1,6 @@
+p.callout {
+  background: #eee;
+  padding: 1em;
+  border-left: 1em solid #ccc;
+  clear: both;
+}
