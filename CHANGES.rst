@@ -5,6 +5,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
+- WEBMIGP5-14: Change images behaviors
+  [laulaz]
+
 - WEBMIGP5-13: Change files behaviors
   [laulaz]
 

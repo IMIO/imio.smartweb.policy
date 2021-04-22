@@ -6,4 +6,9 @@
 
   <property name="global_allow">False</property>
 
+  <property name="behaviors" purge="true">
+    <element value="plone.namefromfilename"/>
+    <element value="plone.shortname"/>
+  </property>
+
 </object>
