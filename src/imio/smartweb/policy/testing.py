@@ -8,6 +8,7 @@ from plone.app.testing import (
     PloneSandboxLayer,
 )
 from plone.testing import z2
+from zope.globalrequest import setRequest
 
 import imio.smartweb.policy
 
@@ -26,6 +27,10 @@ class ImioSmartwebPolicyLayer(PloneSandboxLayer):
         self.loadZCML(package=imio.smartweb.policy)
 
     def setUpPloneSite(self, portal):
+        request = portal.REQUEST
+        # set basic request to be able to get current language from it during
+        # policy setuphandlers
+        setRequest(request)
         applyProfile(portal, "imio.smartweb.policy:default")
 
 
