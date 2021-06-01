@@ -60,6 +60,7 @@ setup(
         "imio.smartweb.core",
         "imio.smartweb.locales",
         "collective.bigbang",
+        "pas.plugins.imio",
     ],
     extras_require={
         "test": [

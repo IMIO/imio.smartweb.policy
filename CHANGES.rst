@@ -5,6 +5,9 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
+- Add pas.plugins.imio.
+  [bsuttor]
+
 - Add collective.bigbang.
   [bsuttor]
 
