@@ -5,7 +5,7 @@ from zope.interface import implementer
 
 @implementer(IFacetedSubtyper)
 class FolderFacetedPublicSubtyper(FacetedPublicSubtyper):
-    """ Deactivate faceted navigation on imio.smartweb.Folder content type. """
+    """Deactivate faceted navigation on imio.smartweb.Folder content type."""
 
     @property
     def can_enable(self):
