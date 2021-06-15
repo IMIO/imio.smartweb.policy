@@ -5,6 +5,9 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
+- Add collective.messagesviewlet
+  [boulch]
+
 - Add pas.plugins.imio.
   [bsuttor]
 
