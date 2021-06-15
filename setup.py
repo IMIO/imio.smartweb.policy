@@ -56,6 +56,7 @@ setup(
         "plone.restapi",
         "plone.app.dexterity",
         "eea.facetednavigation",
+        "collective.messagesviewlet",
         "collective.pivot",
         "imio.smartweb.core",
         "imio.smartweb.locales",
