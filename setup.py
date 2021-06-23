@@ -58,6 +58,7 @@ setup(
         "eea.facetednavigation",
         "collective.messagesviewlet",
         "collective.pivot",
+        "imio.gdpr",
         "imio.smartweb.core",
         "imio.smartweb.locales",
         "collective.bigbang",

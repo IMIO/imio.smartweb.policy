@@ -5,6 +5,9 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
+- Add imio.gdpr
+  [boulch]
+
 - Add collective.messagesviewlet
   [boulch]
 

@@ -6,6 +6,7 @@
     <dependency>profile-plone.app.contenttypes:plone-content</dependency>
     <dependency>profile-collective.pivot:default</dependency>
     <dependency>profile-eea.facetednavigation:default</dependency>
+     <dependency>profile-imio.gdpr:default</dependency>
     <dependency>profile-imio.smartweb.core:default</dependency>
   </dependencies>
 </metadata>
