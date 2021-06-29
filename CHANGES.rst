@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a3 (unreleased)
+1.0a3 (2021-06-29)
 ------------------
 
 - Add imio.gdpr
