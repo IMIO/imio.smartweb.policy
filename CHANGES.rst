@@ -5,7 +5,8 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove collective.pivot out of metadata (undo auto-install)
+  [boulch]
 
 
 1.0a3 (2021-06-29)
