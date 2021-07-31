@@ -29,7 +29,7 @@
 
   <genericsetup:registerProfile
       name="demo"
-      title="imio.smartweb.policy"
+      title="imio.smartweb.policy (demo)"
       directory="profiles/demo"
       description="Installs the imio.smartweb.policy demo contents and configuration"
       provides="Products.GenericSetup.interfaces.EXTENSION"
