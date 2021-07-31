@@ -5,6 +5,9 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
+- Change default image scales
+  [laulaz]
+
 - Remove collective.pivot out of metadata (undo auto-install)
   [boulch]
 
