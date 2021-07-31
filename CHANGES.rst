@@ -5,6 +5,9 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
+- Allow only useful image scales in TinyMCE text fields
+  [laulaz]
+
 - Change default image scales
   [laulaz]
 

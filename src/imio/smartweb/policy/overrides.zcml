@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope">
+
+  <!-- Adapters for patterns settings -->
+  <adapter
+      factory=".pattern_settings.SmartwebPatternSettingsAdapter"
+      for="* * *"
+      name="pattern_settings"
+      provides="Products.CMFPlone.interfaces.IPatternsSettings"
+  />
+  <adapter
+      factory=".pattern_settings.SmartwebPatternSettingsAdapter"
+      for="* * *"
+      name="plone_settings"
+      provides="Products.CMFPlone.interfaces.IPatternsSettings"
+  />
+
+</configure>
