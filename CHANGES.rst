@@ -5,6 +5,9 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
+- Manager order / visibility of subsite header viewlets
+  [laulaz]
+
 - Allow only useful image scales in TinyMCE text fields
   [laulaz]
 

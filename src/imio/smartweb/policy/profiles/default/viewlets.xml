@@ -9,7 +9,13 @@
   <hidden manager="plone.portalheader" skinname="Plone Default">
     <viewlet name="plone.anontools" />
     <viewlet name="plone.membertools" />
+    <viewlet name="imio.smartweb.subsite_logo" />
+    <viewlet name="imio.smartweb.subsite_navigation" />
   </hidden>
+  <order manager="imio.smartweb.subsite_header_viewletmanager" skinname="Plone Default">
+    <viewlet name="imio.smartweb.subsite_logo" />
+    <viewlet name="imio.smartweb.subsite_navigation" />
+  </order>
   <order manager="plone.portalheader" skinname="Plone Default">
     <viewlet name="imio.smartweb.subsite_banner" />
     <viewlet name="plone.logo" />
@@ -19,6 +25,7 @@
     <viewlet name="plone.membertools" />
     <viewlet name="imio.smartweb.header_actions" />
     <viewlet name="plone.app.i18n.locales.languageselector" />
+    <viewlet name="imio.smartweb.subsite_header_viewlet" />
     <viewlet name="imio.smartweb.subsite_logo" />
     <viewlet name="imio.smartweb.subsite_navigation" />
     <viewlet name="plone.path_bar" />
