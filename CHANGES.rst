@@ -5,6 +5,9 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
+- Rename dependency : collective.bigbang to collective.bigbang
+  [boulch]
+
 - Manager order / visibility of subsite header viewlets
   [laulaz]
 
