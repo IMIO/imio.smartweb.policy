@@ -61,7 +61,7 @@ setup(
         "imio.gdpr",
         "imio.smartweb.core",
         "imio.smartweb.locales",
-        "collective.bigbang",
+        "collective.big.bang",
         "pas.plugins.imio",
     ],
     extras_require={
