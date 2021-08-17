@@ -2,9 +2,10 @@
 <metadata>
   <version>1000</version>
   <dependencies>
-    <dependency>profile-collective.messagesviewlet:default</dependency>
     <dependency>profile-plone.app.contenttypes:plone-content</dependency>
     <dependency>profile-collective.anysurfer:default</dependency>
+    <dependency>profile-collective.autopublishing:default</dependency>
+    <dependency>profile-collective.messagesviewlet:default</dependency>
     <dependency>profile-eea.facetednavigation:default</dependency>
     <dependency>profile-imio.gdpr:default</dependency>
     <dependency>profile-imio.smartweb.core:default</dependency>

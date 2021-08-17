@@ -6,17 +6,20 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="imio.smartweb">
 
-  <include package="collective.bigbang" />
+  <include package="collective.autopublishing" />
+  <include package="collective.big.bang" />
   <include package="collective.messagesviewlet" />
   <include package="collective.pivot" />
   <include package="eea.facetednavigation" />
+  <include package="pas.plugins.imio" />
   <include package="imio.gdpr" />
+
   <include package="imio.smartweb.locales" />
   <include package="imio.smartweb.core" />
-  <include package=".browser" />
 
   <include file="permissions.zcml" />
   <include file="viewlets.zcml" />
+  <include package=".browser" />
 
   <genericsetup:registerProfile
       name="default"

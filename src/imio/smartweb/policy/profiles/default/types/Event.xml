@@ -6,8 +6,4 @@
 
   <property name="global_allow">False</property>
 
-  <property name="behaviors" purge="false">
-    <element value="plone.leadimage"/>
-  </property>
-
 </object>

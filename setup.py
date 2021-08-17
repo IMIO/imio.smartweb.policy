@@ -53,16 +53,16 @@ setup(
         # -*- Extra requirements: -*-
         "z3c.jbot",
         "plone.api>=1.8.4",
-        "plone.restapi",
         "plone.app.dexterity",
-        "eea.facetednavigation",
+        "collective.autopublishing",
+        "collective.big.bang",
         "collective.messagesviewlet",
         "collective.pivot",
+        "eea.facetednavigation",
+        "pas.plugins.imio",
         "imio.gdpr",
         "imio.smartweb.core",
         "imio.smartweb.locales",
-        "collective.big.bang",
-        "pas.plugins.imio",
     ],
     extras_require={
         "test": [
