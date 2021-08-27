@@ -25,8 +25,7 @@ class ImioSmartwebPolicyLayer(PloneSandboxLayer):
 
     def setUpPloneSite(self, portal):
         request = portal.REQUEST
-        # set basic request to be able to get current language from it during
-        # policy setuphandlers
+        # set basic request to be able to handle redirect in subscribers
         setRequest(request)
         applyProfile(portal, "imio.smartweb.policy:default")
 
