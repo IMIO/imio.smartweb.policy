@@ -3,6 +3,14 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="imio.smartweb">
 
+  <record name="plone.displayed_types"
+          interface="Products.CMFPlone.interfaces.controlpanel.INavigationSchema"
+          field="displayed_types">
+    <value purge="false">
+      <element>Collection</element>
+    </value>
+  </record>
+
   <record name="plone.default_page_types">
     <value purge="true">
       <element>Collection</element>
