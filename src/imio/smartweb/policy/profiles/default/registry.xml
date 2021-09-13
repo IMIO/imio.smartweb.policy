@@ -22,6 +22,7 @@
           interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema"
           field="allowed_sizes">
     <value purge="true">
+      <element>banner 1920:600</element>
       <element>large 1200:1200</element>
       <element>preview 600:600</element>
       <element>mini 450:450</element>
