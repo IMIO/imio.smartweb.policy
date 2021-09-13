@@ -5,6 +5,7 @@
   </hidden>
   <hidden manager="plone.abovecontent" skinname="Plone Default">
     <viewlet name="plone.path_bar" />
+    <viewlet name="local-message-viewlet" />
   </hidden>
   <hidden manager="plone.portalheader" skinname="Plone Default">
     <viewlet name="plone.anontools" />
@@ -25,9 +26,12 @@
     <viewlet name="plone.membertools" />
     <viewlet name="imio.smartweb.header_actions" />
     <viewlet name="plone.app.i18n.locales.languageselector" />
+    <viewlet name="message-viewlet" />
     <viewlet name="imio.smartweb.subsite_header_viewlet" />
     <viewlet name="imio.smartweb.subsite_logo" />
     <viewlet name="imio.smartweb.subsite_navigation" />
+    <viewlet name="local-message-viewlet" />
     <viewlet name="plone.path_bar" />
+    <viewlet name="imio.smartweb.banner" />
   </order>
 </object>

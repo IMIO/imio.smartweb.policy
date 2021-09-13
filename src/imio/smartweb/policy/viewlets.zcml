@@ -12,4 +12,16 @@
         />
   </configure>
 
+  <configure package="collective.messagesviewlet.browser">
+    <browser:viewlet
+        for="*"
+        layer="collective.messagesviewlet.interfaces.ICollectiveMessagesviewletLayer"
+        name="local-message-viewlet"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".messagesviewlet.LocalMessagesViewlet"
+        template="messagesviewlet.pt"
+        permission="zope2.View"
+        />
+  </configure>
+
 </configure>
