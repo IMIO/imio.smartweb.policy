@@ -110,10 +110,6 @@
                   {
                       "format": "h4",
                       "title": "Header 4"
-                  },
-                  {
-                      "format": "h5",
-                      "title": "Header 5"
                   }
               ],
               "title": "Headers"
@@ -129,35 +125,6 @@
                   }
               ],
               "title": "Bloc"
-          },
-          {
-              "items": [{
-                      "format": "bold",
-                      "icon": "bold",
-                      "title": "Bold"
-                  },
-                  {
-                      "format": "italic",
-                      "icon": "italic",
-                      "title": "Italic"
-                  },
-                  {
-                      "format": "underline",
-                      "icon": "underline",
-                      "title": "Underline"
-                  },
-                  {
-                      "format": "strikethrough",
-                      "icon": "strikethrough",
-                      "title": "Strikethrough"
-                  },
-                  {
-                      "format": "superscript",
-                      "icon": "superscript",
-                      "title": "Superscript"
-                  }
-              ],
-              "title": "Inline"
           },
           {
               "items": [{
@@ -183,11 +150,9 @@
       <element>advlist</element>
       <element>autosave</element>
       <element>code</element>
-      <element>contextmenu</element>
       <element>fullscreen</element>
       <element>insertdatetime</element>
       <element>lists</element>
-      <element>media</element>
       <element>nonbreaking</element>
       <element>noneditable</element>
       <element>pagebreak</element>
@@ -204,7 +169,7 @@
   </record>
 
   <record name="plone.toolbar" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="toolbar">
-    <value>ltr rtl | undo redo | styleselect | bold italic | alignleft aligncenter alignright | removeformat | bullist numlist | plonelink unlink ploneimage | code | fullscreen</value>
+    <value>ltr rtl | undo redo | styleselect | bold italic superscript | alignleft aligncenter alignright | removeformat | bullist numlist | plonelink unlink | code | fullscreen</value>
   </record>
 
 
