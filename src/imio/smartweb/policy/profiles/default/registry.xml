@@ -15,6 +15,7 @@
     <value purge="true">
       <element>Collection</element>
       <element>imio.smartweb.Page</element>
+      <element>imio.smartweb.PortalPage</element>
     </value>
   </record>
 
