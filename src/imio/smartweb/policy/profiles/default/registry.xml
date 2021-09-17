@@ -37,140 +37,89 @@
 
   <!-- TinyMCE custom configuration -->
 
-  <record name="plone.alignment_styles" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="alignment_styles">
-    <value purge="true">
-      <element>Left|alignleft|alignleft</element>
-      <element>Center|aligncenter|aligncenter</element>
-      <element>Right|alignright|alignright</element>
+  <record name="plone.allowed_types"
+          interface="Products.CMFPlone.interfaces.controlpanel.IMarkupSchema">
+    <value>
+      <element>text/html</element>
     </value>
   </record>
 
-  <record name="plone.block_styles" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="block_styles">
-    <value purge="true">
-      <element>Paragraph|p</element>
-    </value>
-  </record>
-
-  <record name="plone.header_styles" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="header_styles">
-    <value purge="true">
-      <element>Header 2|h2</element>
-      <element>Header 3|h3</element>
-      <element>Header 4|h4</element>
-    </value>
-  </record>
-
-  <record name="plone.inline_styles" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="inline_styles">
-    <value purge="true">
-      <element>Bold|bold|bold</element>
-      <element>Italic|italic|italic</element>
-      <element>Strikethrough|strikethrough|strikethrough</element>
-      <element>Superscript|superscript|superscript</element>
-      <element>Subscript|subscript|subscript</element>
-    </value>
-  </record>
-
-  <record name="plone.menu" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="menu">
-    <value>{
+  <record name="plone.menu"
+          interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+    <value>
+    {
       "edit": {
           "title": "Edit",
-          "items": "undo redo | cut copy paste pastetext | searchreplace textpattern selectall | textcolor"
+          "items": "undo redo | cut copy paste | searchreplace selectall"
       },
       "view": {
           "title": "View",
-          "items": "visualaid visualchars visualblocks preview fullpage fullscreen"
+          "items": "preview fullscreen"
       },
       "table": {
           "title": "Table",
-          "items": "inserttable tableprops deletetable | cell row column"
+          "items": "inserttable deletetable | cell row column"
       }
     }
     </value>
   </record>
 
-  <record name="plone.menubar" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="menubar">
+  <record name="plone.menubar"
+          interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
     <value purge="true">
-      <element>edit</element>
-      <element>table</element>
       <element>format</element>
     </value>
   </record>
 
-  <record name="plone.other_settings" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="other_settings">
+  <record name="plone.other_settings"
+          interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
     <value>
     {
-      "style_formats": [{
-              "items": [
-                  {
-                      "format": "h2",
-                      "title": "Header 2"
-                  },
-                  {
-                      "format": "h3",
-                      "title": "Header 3"
-                  },
-                  {
-                      "format": "h4",
-                      "title": "Header 4"
-                  }
-              ],
-              "title": "Headers"
-          },
-          {
-              "items": [{
-                      "format": "p",
-                      "title": "Paragraph"
-                  },
-                  {
-                      "format": "blockquote",
-                      "title": "Blockquote"
-                  }
-              ],
-              "title": "Bloc"
-          },
-          {
-              "items": [{
-                      "classes": "listing",
-                      "selector": "table",
-                      "title": "Listing"
-                  },
-                  {
-                      "classes": "invisible-grid",
-                      "selector": "table",
-                      "title": "Invisible Grid"
-                  }
-              ],
-              "title": "Tables"
-          }
+      "paste_as_text": true,
+      "style_formats": [
+         {
+            "block": "h2",
+            "title": "Titre 2"
+         },
+         {
+            "block": "h3",
+            "title": "Titre 3"
+         },
+         {
+            "block": "h4",
+            "title": "Titre 4"
+         },
+         {
+            "block": "mark",
+            "title": "Mise en évidence"
+         },
+         {
+            "block": "blockquote",
+            "title": "Citation"
+         }
       ]
     }
     </value>
   </record>
 
-  <record name="plone.plugins" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="plugins">
+  <record name="plone.plugins"
+          interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
     <value purge="true">
-      <element>advlist</element>
       <element>autosave</element>
-      <element>code</element>
       <element>fullscreen</element>
-      <element>insertdatetime</element>
       <element>lists</element>
-      <element>nonbreaking</element>
-      <element>noneditable</element>
-      <element>pagebreak</element>
       <element>paste</element>
       <element>preview</element>
-      <element>print</element>
       <element>searchreplace</element>
       <element>tabfocus</element>
       <element>table</element>
-      <element>visualblocks</element>
-      <element>visualchars</element>
       <element>wordcount</element>
     </value>
   </record>
 
-  <record name="plone.toolbar" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="toolbar">
-    <value>ltr rtl | undo redo | styleselect | bold italic superscript | alignleft aligncenter alignright | removeformat | bullist numlist | plonelink unlink | code | fullscreen</value>
+  <record name="plone.toolbar"
+          interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+    <value>undo redo | styleselect | bold italic superscript | bullist numlist | plonelink unlink | fullscreen</value>
   </record>
 
 
