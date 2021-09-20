@@ -54,7 +54,7 @@
       },
       "view": {
           "title": "View",
-          "items": "preview fullscreen"
+          "items": "visualblocks preview fullscreen"
       },
       "table": {
           "title": "Table",
@@ -77,6 +77,10 @@
     {
       "paste_as_text": true,
       "style_formats": [
+         {
+            "block": "p",
+            "title": "Paragraphe"
+         },
          {
             "block": "h2",
             "title": "Titre 2"
@@ -113,6 +117,7 @@
       <element>searchreplace</element>
       <element>tabfocus</element>
       <element>table</element>
+      <element>visualblocks</element>
       <element>wordcount</element>
     </value>
   </record>
