@@ -24,10 +24,12 @@
           field="allowed_sizes">
     <value purge="true">
       <element>banner 1920:600</element>
-      <element>large 1200:1200</element>
-      <element>preview 600:600</element>
-      <element>mini 450:450</element>
-      <element>thumb 300:300</element>
+      <element>extralarge 1320:1320</element>
+      <element>large 768:768</element>
+      <element>medium 600:600</element>
+      <element>preview 400:400</element>
+      <element>mini 200:200</element>
+      <element>thumb 128:128</element>
       <element>tile 64:64</element>
       <element>icon 32:32</element>
       <element>listing 16:16</element>
