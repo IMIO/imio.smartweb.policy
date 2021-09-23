@@ -58,6 +58,7 @@ setup(
         "collective.big.bang",
         "collective.messagesviewlet",
         "collective.pivot",
+        "collective.solr",
         "eea.facetednavigation",
         "pas.plugins.imio",
         "imio.gdpr",

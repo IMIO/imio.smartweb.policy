@@ -5,6 +5,9 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
+- Add `collective.solr` dependency
+  [mpeeters]
+
 - Rename dependency : collective.bigbang to collective.bigbang
   [boulch]
 
