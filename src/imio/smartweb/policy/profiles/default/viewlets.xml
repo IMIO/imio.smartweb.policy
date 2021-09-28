@@ -18,6 +18,11 @@
     <viewlet name="plone.colophon" />
     <viewlet name="plone.site_actions" />
   </hidden>
+
+  <order manager="plone.portaltop" skinname="Plone Default">
+    <viewlet name="imio.smartweb.minisite_portal_link" />
+    <viewlet name="plone.header" />
+  </order>
   <order manager="imio.smartweb.subsite_header_viewletmanager" skinname="Plone Default">
     <viewlet name="imio.smartweb.subsite_logo" />
     <viewlet name="imio.smartweb.subsite_navigation" />
