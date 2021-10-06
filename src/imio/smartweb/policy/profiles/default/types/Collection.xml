@@ -11,4 +11,8 @@
     <element value="eea.faceted.navigable"/>
   </property>
 
+  <property name="view_methods" purge="true">
+    <element value="listing_view"/>
+  </property>
+
 </object>
