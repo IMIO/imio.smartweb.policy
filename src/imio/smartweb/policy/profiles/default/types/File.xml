@@ -7,10 +7,12 @@
   <property name="global_allow">False</property>
 
   <property name="behaviors" purge="true">
-    <element value="plone.categorization"/>
     <element value="plone.namefromfilename"/>
-    <element value="plone.shortname"/>
     <element value="plone.leadimage"/>
+    <element value="collective.taxonomy.generated.page_category"/>
+    <element value="imio.smartweb.topics"/>
+    <element value="plone.categorization"/>
+    <element value="plone.shortname"/>
   </property>
 
 </object>
