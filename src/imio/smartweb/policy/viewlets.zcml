@@ -10,6 +10,14 @@
         permission="zope2.View"
         layer="imio.smartweb.policy.interfaces.IImioSmartwebPolicyLayer"
         />
+    <browser:viewlet
+        name="plone.keywords"
+        manager=".interfaces.IBelowContentBody"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        template="keywords.pt"
+        permission="cmf.ModifyPortalContent"
+        layer="imio.smartweb.policy.interfaces.IImioSmartwebPolicyLayer"
+        />
   </configure>
 
   <configure package="collective.messagesviewlet.browser">
