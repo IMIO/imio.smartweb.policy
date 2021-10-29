@@ -52,6 +52,7 @@
   </order>
   <order manager="plone.portalfooter" skinname="Plone Default">
     <viewlet name="imio.smartweb.subsite_footer" />
+    <viewlet name="imio.smartweb.minisite_footer" />
     <viewlet name="imio.smartweb.footer" />
     <viewlet name="plone.analytics" />
   </order>
