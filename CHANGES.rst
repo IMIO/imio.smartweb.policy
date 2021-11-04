@@ -5,19 +5,49 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
-- Add `collective.solr` dependency
+- Add `collective.solr` dependency & Activate SolR search by default
   [mpeeters]
+
+- Add pas.plugins.imio profile dependency
+  [laulaz]
+
+- Hide plone.keywords for non editors
+  [laulaz]
+
+- Add topics & page category on File content type
+  [laulaz]
+
+- Allow only listing_view on collections
+  [laulaz]
+
+- Make Collections globally addable
+  [laulaz]
+
+- TinyMCE config is now made in imio.smartweb.common
+  [laulaz]
+
+- Simplify TinyMCE config & force paste as text
+  [laulaz]
+
+- Allow PortalPage content as default view
+  [laulaz]
+
+- Display Collection in navigation by default
+  [laulaz]
+
+- Move localmessages viewlet from default abovecontent to portalheader viewlet manager
+  [boulch]
 
 - Rename dependency : collective.bigbang to collective.bigbang
   [boulch]
 
-- Manager order / visibility of subsite header viewlets
+- Manage grouping/order/visibility of subsite/minisite header/footer viewlets
   [laulaz]
 
 - Allow only useful image scales in TinyMCE text fields
   [laulaz]
 
-- Change default image scales
+- Move code to imio.smartweb.common
   [laulaz]
 
 - Remove collective.pivot out of metadata (undo auto-install)
