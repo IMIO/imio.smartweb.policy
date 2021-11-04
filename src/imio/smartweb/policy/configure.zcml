@@ -19,6 +19,7 @@
   <include package="imio.smartweb.core" />
 
   <include file="permissions.zcml" />
+  <include file="upgrades.zcml" />
   <include file="viewlets.zcml" />
   <include package=".browser" />
 
