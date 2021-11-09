@@ -12,3 +12,8 @@ def configure_first_official_release(context):
     portal_setup.runAllImportStepsFromProfile("profile-pas.plugins.imio:default")
     portal_setup.runImportStepFromProfile(PROFILEID, "typeinfo")
     portal_setup.runImportStepFromProfile(PROFILEID, "viewlets")
+
+
+def reload_types(context):
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.runImportStepFromProfile(PROFILEID, "typeinfo")

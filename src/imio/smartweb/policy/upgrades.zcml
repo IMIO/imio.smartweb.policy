@@ -12,4 +12,13 @@
       profile="imio.smartweb.policy:default"
       />
 
+  <genericsetup:upgradeStep
+      title="Reload portal_types"
+      description="Reload portal types to add cropping behavior on File"
+      source="1001"
+      destination="1002"
+      handler=".upgrades.reload_types"
+      profile="imio.smartweb.policy:default"
+      />
+
 </configure>

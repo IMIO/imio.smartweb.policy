@@ -5,7 +5,8 @@ Changelog
 1.0a5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add cropping support on File content type
+  [laulaz]
 
 
 1.0a4 (2021-11-05)
