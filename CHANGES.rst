@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a5 (unreleased)
+1.0a5 (2021-11-16)
 ------------------
 
 - Add cropping support on File content type
