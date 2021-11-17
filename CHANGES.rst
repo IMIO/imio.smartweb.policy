@@ -5,7 +5,8 @@ Changelog
 1.0a6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add upgrade to restrict collections views (will always be faceted layouts)
+  [laulaz]
 
 
 1.0a5 (2021-11-16)

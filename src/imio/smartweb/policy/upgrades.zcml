@@ -21,4 +21,13 @@
       profile="imio.smartweb.policy:default"
       />
 
+  <genericsetup:upgradeStep
+      title="Reload portal_types"
+      description="Reload portal types to restrict available views on collections"
+      source="1002"
+      destination="1003"
+      handler=".upgrades.reload_types"
+      profile="imio.smartweb.policy:default"
+      />
+
 </configure>
