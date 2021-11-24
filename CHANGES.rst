@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a6 (unreleased)
+1.0a6 (2021-11-24)
 ------------------
 
 - Add upgrade to restrict collections views (will always be faceted layouts)
