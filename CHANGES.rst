@@ -5,6 +5,9 @@ Changelog
 1.0a7 (unreleased)
 ------------------
 
+- Restore Default workflow on Link type
+  [laulaz]
+
 - Change 'en-un-click' to ifind folder and add iam folder with some links + upgrade steps.
   [boulch]
 

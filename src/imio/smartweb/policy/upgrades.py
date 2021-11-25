@@ -2,6 +2,7 @@
 
 from imio.smartweb.policy.utils import add_iam_folder
 from plone import api
+from plone.app.workflow.remap import remap_workflow
 import logging
 
 logger = logging.getLogger("imio.smartweb.policy")
@@ -30,3 +31,8 @@ def transform_old_iam_link_to_iam_folder(context):
             api.content.delete(obj=obj)
     current_lang = api.portal.get_current_language()[:2]
     add_iam_folder(portal, current_lang)
+
+
+def restore_links_workflow(context):
+    portal = api.portal.get()
+    remap_workflow(portal, type_ids=("Link",), chain="(Default)")
