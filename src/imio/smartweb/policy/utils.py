@@ -7,6 +7,7 @@ from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.portlets.interfaces import IPortletManager
 from zope.component import getMultiAdapter
 from zope.component import getUtility
+from zope.globalrequest import getRequest
 from zope.i18n import translate
 
 
@@ -41,6 +42,7 @@ def add_iam_folder(context, current_lang):
         link.remoteUrl = "{0}/@@search?iam={1}".format("${portal_url}", term.token)
         api.content.transition(link, "publish")
 
+
 def add_ifind_folder(context, current_lang):
     i_find_folder = api.content.create(
         container=context,
@@ -63,6 +65,14 @@ def add_ifind_folder(context, current_lang):
         }
     ]
     api.content.transition(collection, "publish")
+    request = getRequest()
+    request.form = {
+        "cid": "page-category",
+        "faceted.page-category.index": "taxonomy_procedure_category",
+        "faceted.page-category.vocabulary": "collective.taxonomy.procedure_category",
+    }
+    handler = getMultiAdapter((collection, request), name=u"faceted_update_criterion")
+    handler.edit(**request.form)
 
 
 def add_navigation_links(context):
