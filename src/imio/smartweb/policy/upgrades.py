@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from imio.smartweb.policy.utils import add_iam_folder
 from plone import api
 import logging
 
@@ -17,3 +18,15 @@ def configure_first_official_release(context):
 def reload_types(context):
     portal_setup = api.portal.get_tool("portal_setup")
     portal_setup.runImportStepFromProfile(PROFILEID, "typeinfo")
+
+
+def transform_old_iam_link_to_iam_folder(context):
+    portal = api.portal.get()
+    obj = portal.get("i-am") or portal.get("je-suis")
+    if obj is not None:
+        if obj.portal_type != "Link":
+            return
+        else:
+            api.content.delete(obj=obj)
+    current_lang = api.portal.get_current_language()[:2]
+    add_iam_folder(portal, current_lang)

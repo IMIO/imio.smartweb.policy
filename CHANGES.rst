@@ -5,7 +5,8 @@ Changelog
 1.0a7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Change 'en-un-click' to ifind folder and add iam folder with some links + upgrade steps.
+  [boulch]
 
 
 1.0a6 (2021-11-24)
