@@ -39,7 +39,7 @@ def add_iam_folder(context, current_lang):
             title=translate(_(term.title), target_language=current_lang),
         )
         link.remoteUrl = "{0}/@@search?iam={1}".format("${portal_url}", term.token)
-
+        api.content.transition(link, "publish")
 
 def add_ifind_folder(context, current_lang):
     i_find_folder = api.content.create(

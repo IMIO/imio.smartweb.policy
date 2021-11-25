@@ -31,20 +31,20 @@
       />
 
   <genericsetup:upgradeStep
-      title="Transform iam link to folder"
-      description="Transform old iam link types to new iam link folder and contents"
+      title="Restore default workflow on Link type"
+      description=""
       source="1003"
       destination="1004"
-      handler=".upgrades.transform_old_iam_link_to_iam_folder"
+      handler=".upgrades.restore_links_workflow"
       profile="imio.smartweb.policy:default"
       />
 
   <genericsetup:upgradeStep
-      title="Restore default workflow on Link type"
-      description=""
+      title="Transform iam link to folder"
+      description="Transform old iam link types to new iam link folder and contents"
       source="1004"
       destination="1005"
-      handler=".upgrades.restore_links_workflow"
+      handler=".upgrades.transform_old_iam_link_to_iam_folder"
       profile="imio.smartweb.policy:default"
       />
 
