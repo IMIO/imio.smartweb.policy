@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a7 (unreleased)
+1.0a7 (2021-11-26)
 ------------------
 
 - Restore Default workflow on Link type
