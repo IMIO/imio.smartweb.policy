@@ -5,7 +5,8 @@ Changelog
 1.0a8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add caching configuration
+  [sverbois]
 
 
 1.0a7 (2021-11-26)
