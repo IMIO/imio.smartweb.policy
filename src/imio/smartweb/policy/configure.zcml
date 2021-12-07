@@ -13,6 +13,7 @@
   <include package="collective.solr" />
   <include package="eea.facetednavigation" />
   <include package="pas.plugins.imio" />
+  <include package="plone.app.caching" />
   <include package="plone.app.imagecropping" />
   <include package="imio.gdpr" />
 
