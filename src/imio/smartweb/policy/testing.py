@@ -8,7 +8,9 @@ from plone.app.testing import (
     PloneSandboxLayer,
 )
 from plone.testing import z2
+from z3c.form.interfaces import IFormLayer
 from zope.globalrequest import setRequest
+from zope.interface import alsoProvides
 
 import imio.smartweb.policy
 
@@ -27,6 +29,7 @@ class ImioSmartwebPolicyLayer(PloneSandboxLayer):
         request = portal.REQUEST
         # set basic request to be able to handle redirect in subscribers
         setRequest(request)
+        alsoProvides(request, IFormLayer)
         applyProfile(portal, "imio.smartweb.policy:default")
 
 
