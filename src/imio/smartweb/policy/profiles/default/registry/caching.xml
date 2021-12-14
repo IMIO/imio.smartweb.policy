@@ -11,12 +11,12 @@
 
   <record name="plone.caching.interfaces.ICacheSettings.operationMapping">
     <value>
-      <element key="plone.content.dynamic">plone.app.caching.weakCaching</element>
-      <element key="plone.content.feed">plone.app.caching.weakCaching</element>
-      <element key="plone.content.file">plone.app.caching.moderateCaching</element>
-      <element key="plone.content.folderView">plone.app.caching.moderateCaching</element>
-      <element key="plone.content.itemView">plone.app.caching.moderateCaching</element>
-      <element key="plone.resource">plone.app.caching.moderateCaching</element>
+      <element key="plone.content.dynamic">plone.app.caching.moderateCaching</element>
+      <element key="plone.content.feed">plone.app.caching.moderateCaching</element>
+      <element key="plone.content.file">plone.app.caching.terseCaching</element>
+      <element key="plone.content.folderView">plone.app.caching.terseCaching</element>
+      <element key="plone.content.itemView">plone.app.caching.terseCaching</element>
+      <element key="plone.resource">plone.app.caching.terseCaching</element>
       <element key="plone.stableResource">plone.app.caching.strongCaching</element>
     </value>
   </record>
@@ -38,15 +38,37 @@
     <value/>
   </record>
   <record name="plone.app.caching.moderateCaching.lastModified">
-    <value>True</value>
+    <value>False</value>
   </record>
   <record name="plone.app.caching.moderateCaching.ramCache">
     <value>False</value>
   </record>
   <record name="plone.app.caching.moderateCaching.smaxage">
-    <value>60</value>
+    <value>120</value>
   </record>
   <record name="plone.app.caching.moderateCaching.vary">
+    <value/>
+  </record>
+  
+  <record name="plone.app.caching.terseCaching.anonOnly">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.terseCaching.etags">
+    <value/>
+  </record>
+  <record name="plone.app.caching.terseCaching.lastModified">
+    <value>True</value>
+  </record>
+  <record name="plone.app.caching.terseCaching.maxage">
+    <value>120</value>
+  </record>
+  <record name="plone.app.caching.terseCaching.ramCache">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.terseCaching.smaxage">
+    <value>120</value>
+  </record>
+  <record name="plone.app.caching.terseCaching.vary">
     <value/>
   </record>
 
