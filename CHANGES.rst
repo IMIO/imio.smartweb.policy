@@ -5,7 +5,8 @@ Changelog
 1.0a9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Restore Plone colophon viewlet in footer
+  [laulaz]
 
 
 1.0a8 (2021-12-16)

@@ -48,4 +48,13 @@
       profile="imio.smartweb.policy:default"
       />
 
+  <genericsetup:upgradeStep
+      title="Reload viewlets step"
+      description="Reload viewlets to display plone.colophon"
+      source="1005"
+      destination="1006"
+      handler=".upgrades.reload_viewlets"
+      profile="imio.smartweb.policy:default"
+      />
+
 </configure>

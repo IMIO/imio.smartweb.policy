@@ -18,7 +18,7 @@
   </hidden>
   <hidden manager="plone.portalfooter" skinname="Plone Default">
     <viewlet name="plone.footer" />
-    <viewlet name="plone.colophon" />
+    <viewlet name="plone.colophon" remove="True"/>
     <viewlet name="plone.site_actions" />
   </hidden>
 
@@ -54,6 +54,7 @@
     <viewlet name="imio.smartweb.subsite_footer" />
     <viewlet name="imio.smartweb.minisite_footer" />
     <viewlet name="imio.smartweb.footer" />
+    <viewlet name="plone.colophon" />
     <viewlet name="plone.analytics" />
   </order>
 

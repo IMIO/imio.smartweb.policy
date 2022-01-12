@@ -36,3 +36,8 @@ def transform_old_iam_link_to_iam_folder(context):
 def restore_links_workflow(context):
     portal = api.portal.get()
     remap_workflow(portal, type_ids=("Link",), chain="(Default)")
+
+
+def reload_viewlets(context):
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.runImportStepFromProfile(PROFILEID, "viewlets")
