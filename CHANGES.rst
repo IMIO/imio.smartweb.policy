@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a9 (unreleased)
+1.0a9 (2022-01-13)
 ------------------
 
 - Restore Plone colophon viewlet in footer
