@@ -5,7 +5,8 @@ Changelog
 1.0a10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Remove client caching in terseCaching
+  [sverbois]
 
 
 1.0a9 (2022-01-13)
