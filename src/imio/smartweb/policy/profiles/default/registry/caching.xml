@@ -60,7 +60,7 @@
     <value>True</value>
   </record>
   <record name="plone.app.caching.terseCaching.maxage">
-    <value>120</value>
+    <value>0</value>
   </record>
   <record name="plone.app.caching.terseCaching.ramCache">
     <value>False</value>
