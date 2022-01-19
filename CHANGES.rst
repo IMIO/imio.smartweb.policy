@@ -5,6 +5,9 @@ Changelog
 1.0a10 (unreleased)
 -------------------
 
+- Update buildout to use Plone 6.0.0a2 released version
+  [laulaz]
+
 - Get some missing upgrades steps from plone6 dev to plone6 released
   [boulch]
 
