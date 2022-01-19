@@ -3,6 +3,14 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="imio.smartweb">
 
+  <genericsetup:registerProfile
+      name="upgrade_1006_to_1007"
+      title="Upgrade policy 1006 to 1007"
+      directory="profiles/1006_to_1007"
+      description="Add caching configuration to registry"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -56,5 +64,15 @@
       handler=".upgrades.reload_viewlets"
       profile="imio.smartweb.policy:default"
       />
+
+  <genericsetup:upgradeSteps
+      source="1006"
+      destination="1007"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Add caching configuration to registry"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1006_to_1007"
+        />
+  </genericsetup:upgradeSteps>
 
 </configure>

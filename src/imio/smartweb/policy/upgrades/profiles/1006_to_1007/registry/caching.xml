@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<registry>
+
+  <record name="plone.caching.interfaces.ICacheSettings.enabled">
+    <value>True</value>
+  </record>
+
+  <record name="plone.cachepurging.interfaces.ICachePurgingSettings.enabled">
+    <value>False</value>
+  </record>
+
+  <record name="plone.caching.interfaces.ICacheSettings.operationMapping">
+    <value>
+      <element key="plone.content.dynamic">plone.app.caching.moderateCaching</element>
+      <element key="plone.content.feed">plone.app.caching.moderateCaching</element>
+      <element key="plone.content.file">plone.app.caching.terseCaching</element>
+      <element key="plone.content.folderView">plone.app.caching.terseCaching</element>
+      <element key="plone.content.itemView">plone.app.caching.terseCaching</element>
+      <element key="plone.resource">plone.app.caching.terseCaching</element>
+      <element key="plone.stableResource">plone.app.caching.strongCaching</element>
+    </value>
+  </record>
+
+  <record name="plone.app.caching.interfaces.IPloneCacheSettings.contentTypeRulesetMapping">
+    <value>
+      <element key="Collection">plone.content.dynamic</element>
+      <element key="imio.smartweb.DirectoryView">plone.content.dynamic</element>
+      <element key="imio.smartweb.EventsView">plone.content.dynamic</element>
+      <element key="imio.smartweb.NewsView">plone.content.dynamic</element>
+      <element key="imio.smartweb.PortalPage">plone.content.dynamic</element>
+    </value>
+  </record>
+
+  <record name="plone.app.caching.moderateCaching.anonOnly">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.moderateCaching.etags">
+    <value/>
+  </record>
+  <record name="plone.app.caching.moderateCaching.lastModified">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.moderateCaching.ramCache">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.moderateCaching.smaxage">
+    <value>120</value>
+  </record>
+  <record name="plone.app.caching.moderateCaching.vary">
+    <value/>
+  </record>
+  
+  <record name="plone.app.caching.terseCaching.anonOnly">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.terseCaching.etags">
+    <value/>
+  </record>
+  <record name="plone.app.caching.terseCaching.lastModified">
+    <value>True</value>
+  </record>
+  <record name="plone.app.caching.terseCaching.maxage">
+    <value>120</value>
+  </record>
+  <record name="plone.app.caching.terseCaching.ramCache">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.terseCaching.smaxage">
+    <value>120</value>
+  </record>
+  <record name="plone.app.caching.terseCaching.vary">
+    <value/>
+  </record>
+
+  <record name="plone.app.caching.strongCaching.anonOnly">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.strongCaching.etags">
+    <value/>
+  </record>
+  <record name="plone.app.caching.strongCaching.lastModified">
+    <value>True</value>
+  </record>
+  <record name="plone.app.caching.strongCaching.maxage">
+    <value>86400</value>
+  </record>
+  <record name="plone.app.caching.strongCaching.ramCache">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.strongCaching.smaxage">
+    <value>86400</value>
+  </record>
+  <record name="plone.app.caching.strongCaching.vary">
+    <value/>
+  </record>
+
+  <record name="plone.app.caching.weakCaching.anonOnly">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.weakCaching.etags">
+    <value/>
+  </record>
+  <record name="plone.app.caching.weakCaching.lastModified">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.weakCaching.ramCache">
+    <value>False</value>
+  </record>
+  <record name="plone.app.caching.weakCaching.vary">
+    <value/>
+  </record>
+
+</registry>

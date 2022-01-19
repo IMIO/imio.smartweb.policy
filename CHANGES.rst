@@ -5,6 +5,9 @@ Changelog
 1.0a10 (unreleased)
 -------------------
 
+- Load/register caching configuration + move upgrades steps in an upgrades folder.
+  [boulch]
+
 - Remove client caching in terseCaching
   [sverbois]
 
