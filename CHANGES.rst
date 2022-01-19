@@ -5,6 +5,9 @@ Changelog
 1.0a10 (unreleased)
 -------------------
 
+- Get some missing upgrades steps from plone6 dev to plone6 released
+  [boulch]
+
 - Load/register caching configuration + move upgrades steps in an upgrades folder.
   [boulch]
 
