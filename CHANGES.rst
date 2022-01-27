@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a11 (unreleased)
+1.0a11 (2022-01-27)
 -------------------
 
 - Fix Plone translations override
