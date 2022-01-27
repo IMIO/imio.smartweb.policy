@@ -6,6 +6,9 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="imio.smartweb">
 
+  <!-- We must include locales first to override some Plone translations -->
+  <include package="imio.smartweb.locales" />
+
   <include package="collective.autopublishing" />
   <include package="collective.big.bang" />
   <include package="collective.messagesviewlet" />
@@ -17,7 +20,6 @@
   <include package="plone.app.imagecropping" />
   <include package="imio.gdpr" />
 
-  <include package="imio.smartweb.locales" />
   <include package="imio.smartweb.core" />
 
   <include file="permissions.zcml" />

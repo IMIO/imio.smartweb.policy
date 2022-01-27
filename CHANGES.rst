@@ -5,7 +5,8 @@ Changelog
 1.0a11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix Plone translations override
+  [laulaz]
 
 
 1.0a10 (2022-01-19)
