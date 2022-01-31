@@ -5,6 +5,10 @@ Changelog
 1.0a12 (unreleased)
 -------------------
 
+- Patch terse caching operation to add Cache-Control header even when
+  intercepting a 304 NOT MODIFIED
+  [laulaz]
+
 - Fix client caching value in terseCaching (was different in upgrade step)
   [laulaz]
 

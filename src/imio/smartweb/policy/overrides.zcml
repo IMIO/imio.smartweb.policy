@@ -15,4 +15,10 @@
       provides="Products.CMFPlone.interfaces.IPatternsSettings"
   />
 
+  <!-- Adapter for terse caching operation -->
+  <adapter
+      factory=".caching.PatchedTerseCaching"
+      name="plone.app.caching.terseCaching"
+  />
+
 </configure>
