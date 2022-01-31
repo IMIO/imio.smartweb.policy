@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a12 (unreleased)
+1.0a12 (2022-01-31)
 -------------------
 
 - Patch terse caching operation to add Cache-Control header even when
