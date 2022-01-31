@@ -28,7 +28,7 @@ def add_iam_folder(context, current_lang):
     i_am_folder = api.content.create(
         container=context,
         type="imio.smartweb.Folder",
-        title=translate(_(u"I am"), target_language=current_lang),
+        title=translate(_("I am"), target_language=current_lang),
     )
     api.content.transition(i_am_folder, "publish")
 
@@ -47,14 +47,14 @@ def add_ifind_folder(context, current_lang):
     i_find_folder = api.content.create(
         container=context,
         type="imio.smartweb.Folder",
-        title=translate(_(u"I find"), target_language=current_lang),
+        title=translate(_("I find"), target_language=current_lang),
     )
     api.content.transition(i_find_folder, "publish")
     collection = api.content.create(
         container=i_find_folder,
         type="Collection",
         title=translate(
-            _(u"Procedures and practical informations"), target_language=current_lang
+            _("Procedures and practical informations"), target_language=current_lang
         ),
     )
     collection.query = [
@@ -71,7 +71,7 @@ def add_ifind_folder(context, current_lang):
         "faceted.page-category.index": "taxonomy_procedure_category",
         "faceted.page-category.vocabulary": "collective.taxonomy.procedure_category",
     }
-    handler = getMultiAdapter((collection, request), name=u"faceted_update_criterion")
+    handler = getMultiAdapter((collection, request), name="faceted_update_criterion")
     handler.edit(**request.form)
 
 

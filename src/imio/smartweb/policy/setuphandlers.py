@@ -24,7 +24,7 @@ class HiddenProducts(object):
     def getNonInstallableProducts(self):
         """Hides profiles from QuickInstaller"""
         return [
-            u"imio.smartweb.core",
+            "imio.smartweb.core",
         ]
 
 
