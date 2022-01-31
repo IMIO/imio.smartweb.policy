@@ -11,6 +11,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1008_to_1009"
+      title="Upgrade policy 1008 to 1009"
+      directory="profiles/1008_to_1009"
+      description="Fix caching configuration"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -79,39 +87,42 @@
       source="1007"
       destination="1008"
       profile="imio.smartweb.policy:default">
-
     <genericsetup:upgradeStep
         title="Be sure that the Plone Site FTI is a dexterity one"
         handler="plone.app.upgrade.v60.alphas.change_plone_site_fti"
         />
-
     <genericsetup:upgradeStep
         title="Make the Plone Site a dexterity container"
         handler="plone.app.upgrade.v60.alphas.make_site_dx"
         />
-
     <genericsetup:upgradeDepends
         title="Run to6000 upgrade profile."
         import_profile="plone.app.upgrade.v60:to6000"
         />
-
     <genericsetup:upgradeStep
         title="Remove broken temp_folder / tempstorage / Products.TemporaryStorage"
         handler="plone.app.upgrade.v60.alphas.remove_temp_folder"
         />
-
     <genericsetup:upgradeStep
         title="Fix UUID for DX Site Root"
         description=""
         handler="plone.app.upgrade.v60.alphas.add_uuid_to_dxsiteroot"
         />
-
     <genericsetup:upgradeStep
         title="Index the Site Root"
         description=""
         handler="plone.app.upgrade.v60.alphas.index_siteroot"
         />
+  </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      source="1008"
+      destination="1009"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Fix caching configuration"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1008_to_1009"
+        />
   </genericsetup:upgradeSteps>
 
 </configure>

@@ -5,7 +5,8 @@ Changelog
 1.0a12 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix client caching value in terseCaching (was different in upgrade step)
+  [laulaz]
 
 
 1.0a11 (2022-01-27)
