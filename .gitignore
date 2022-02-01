@@ -29,6 +29,7 @@ pip-selfcheck.json
 report.html
 .vscode/
 .tox/
+.idea/
 share/
 reports/
 # excludes
