@@ -38,7 +38,7 @@
     <value/>
   </record>
   <record name="plone.app.caching.moderateCaching.lastModified">
-    <value>False</value>
+    <value>True</value>
   </record>
   <record name="plone.app.caching.moderateCaching.ramCache">
     <value>False</value>
