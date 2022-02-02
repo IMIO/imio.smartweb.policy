@@ -15,10 +15,22 @@
       provides="Products.CMFPlone.interfaces.IPatternsSettings"
   />
 
-  <!-- Adapter for terse caching operation -->
+  <!-- Adapters for caching operations -->
+  <adapter
+      factory=".caching.PatchedModerateCaching"
+      name="plone.app.caching.moderateCaching"
+  />
+  <adapter
+      factory=".caching.PatchedStrongCaching"
+      name="plone.app.caching.strongCaching"
+  />
   <adapter
       factory=".caching.PatchedTerseCaching"
       name="plone.app.caching.terseCaching"
+  />
+  <adapter
+      factory=".caching.PatchedWeakCaching"
+      name="plone.app.caching.weakCaching"
   />
 
 </configure>

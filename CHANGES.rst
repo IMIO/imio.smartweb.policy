@@ -5,6 +5,10 @@ Changelog
 1.0a13 (unreleased)
 -------------------
 
+- Patch ALL caching operations to add Cache-Control header even when
+  intercepting a 304 NOT MODIFIED
+  [laulaz]
+
 - Update buildout to use Plone 6.0.0a3 packages versions
   [boulch]
 
