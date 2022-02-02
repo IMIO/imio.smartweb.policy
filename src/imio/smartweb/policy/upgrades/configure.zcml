@@ -125,4 +125,13 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeStep
+    title="Reload portal_types"
+    description="Reload portal types to add imio.smartweb.listing behavior on links"
+    source="1009"
+    destination="1010"
+    handler=".upgrades.reload_types"
+    profile="imio.smartweb.policy:default"
+    />
+
 </configure>

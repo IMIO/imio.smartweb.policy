@@ -8,6 +8,7 @@
 
   <property name="behaviors" purge="false">
     <element value="plone.leadimage"/>
+    <element value="imio.smartweb.listing"/>"
   </property>
 
 </object>
