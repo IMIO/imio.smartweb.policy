@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a13 (unreleased)
+1.0a13 (2022-02-03)
 -------------------
 
 - Upgrade step : Reload portal types to add imio.smartweb.listing behavior on links
