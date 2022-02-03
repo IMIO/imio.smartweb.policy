@@ -5,7 +5,8 @@ Changelog
 1.0a15 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Use auto-checkout for collective.z3cform.select2 (Plone 6)
+  [laulaz]
 
 
 1.0a14 (2022-02-03)
