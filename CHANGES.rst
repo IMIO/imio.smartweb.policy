@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a14 (unreleased)
+1.0a14 (2022-02-03)
 -------------------
 
 - Add collective.z3cform.select2 as a dependency
