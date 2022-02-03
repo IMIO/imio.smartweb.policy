@@ -5,7 +5,8 @@ Changelog
 1.0a14 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add collective.z3cform.select2 as a dependency
+  [boulch]
 
 
 1.0a13 (2022-02-03)
