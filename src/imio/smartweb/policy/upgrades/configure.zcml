@@ -19,6 +19,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1010_to_1011"
+      title="Upgrade policy 1010 to 1011"
+      directory="profiles/1010_to_1011"
+      description="Activate plone.app.caching.moderateCaching.lastModified"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -133,5 +141,15 @@
     handler=".upgrades.reload_types"
     profile="imio.smartweb.policy:default"
     />
+
+  <genericsetup:upgradeSteps
+      source="1010"
+      destination="1011"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Activate plone.app.caching.moderateCaching.lastModified"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1010_to_1011"
+        />
+  </genericsetup:upgradeSteps>
 
 </configure>

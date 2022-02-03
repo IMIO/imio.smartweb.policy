@@ -5,6 +5,9 @@ Changelog
 1.0a15 (unreleased)
 -------------------
 
+- Activate plone.app.caching.moderateCaching.lastModified
+  [sverbois, laulaz]
+
 - Use auto-checkout for collective.z3cform.select2 (Plone 6)
   [laulaz]
 
