@@ -5,11 +5,12 @@ Changelog
 1.0a13 (unreleased)
 -------------------
 
+- Upgrade step : Reload portal types to add imio.smartweb.listing behavior on links
+  [boulch]
+
 - Patch ALL caching operations to add Cache-Control header even when
   intercepting a 304 NOT MODIFIED
   [laulaz]
-- Upgrade step : Reload portal types to add imio.smartweb.listing behavior on links
-  [boulch]
 
 - Update buildout to use Plone 6.0.0a3 packages versions
   [boulch]
