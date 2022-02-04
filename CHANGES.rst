@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a15 (unreleased)
+1.0a15 (2022-02-04)
 -------------------
 
 - Activate plone.app.caching.moderateCaching.lastModified
