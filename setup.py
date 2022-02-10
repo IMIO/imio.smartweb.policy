@@ -67,6 +67,7 @@ setup(
         "imio.gdpr",
         "imio.smartweb.core",
         "imio.smartweb.locales",
+        "imio.prometheus",
     ],
     extras_require={
         "test": [

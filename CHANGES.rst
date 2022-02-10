@@ -5,7 +5,8 @@ Changelog
 1.0a16 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add imio.prometheus dependency to get mertics view.
+  [bsuttor]
 
 
 1.0a15 (2022-02-04)

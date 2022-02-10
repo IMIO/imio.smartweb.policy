@@ -20,6 +20,7 @@
   <include package="plone.app.caching" />
   <include package="plone.app.imagecropping" />
   <include package="imio.gdpr" />
+  <include package="imio.prometheus" />
 
   <include package="imio.smartweb.core" />
 
