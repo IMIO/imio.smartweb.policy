@@ -2,10 +2,10 @@ Changelog
 =========
 
 
-1.0a16 (unreleased)
+1.0a16 (2022-02-10)
 -------------------
 
-- Add imio.prometheus dependency to get mertics view.
+- Add imio.prometheus dependency to get metrics view.
   [bsuttor]
 
 
