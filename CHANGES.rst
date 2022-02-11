@@ -5,7 +5,8 @@ Changelog
 1.0a17 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Send BAN request after a messageviewlet creation / modification / removal
+  [laulaz]
 
 
 1.0a16 (2022-02-10)

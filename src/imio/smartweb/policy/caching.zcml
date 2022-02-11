@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope">
+
+  <subscriber for="collective.messagesviewlet.message.IMessage
+                   zope.lifecycleevent.interfaces.IObjectAddedEvent"
+              handler=".caching.ban_for_message" />
+
+  <subscriber for="collective.messagesviewlet.message.IMessage
+                   zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+              handler=".caching.ban_for_message" />
+
+  <subscriber for="collective.messagesviewlet.message.IMessage
+                   zope.lifecycleevent.interfaces.IObjectRemovedEvent"
+              handler=".caching.ban_for_message" />
+
+  <subscriber for="collective.messagesviewlet.message.IMessage
+                   Products.DCWorkflow.events.AfterTransitionEvent"
+              handler=".caching.ban_for_message" />
+
+</configure>

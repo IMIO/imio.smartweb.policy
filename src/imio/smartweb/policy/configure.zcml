@@ -24,6 +24,7 @@
 
   <include package="imio.smartweb.core" />
 
+  <include file="caching.zcml" />
   <include file="permissions.zcml" />
   <include file="viewlets.zcml" />
   <include package=".browser" />

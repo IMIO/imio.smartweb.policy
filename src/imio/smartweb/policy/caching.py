@@ -1,12 +1,32 @@
 # -*- coding: utf-8 -*-
 
+from plone import api
 from plone.app.caching.operations.default import ModerateCaching
 from plone.app.caching.operations.default import StrongCaching
 from plone.app.caching.operations.default import TerseCaching
 from plone.app.caching.operations.default import WeakCaching
 from plone.caching.interfaces import ICachingOperationType
 from plone.caching.utils import lookupOptions
+from Products.CMFPlone.utils import parent
+from urllib.parse import urlparse
 from zope.interface import provider
+
+import requests
+
+
+def ban_for_message(obj, event):
+    portal = api.portal.get()
+    portal_url = portal.absolute_url()
+    domain = urlparse(portal_url).netloc
+    if domain.startswith("www."):
+        domain = domain[4:]
+    headers = {"Host": domain}
+    ban_url = portal_url
+    container = parent(obj)
+    if container.portal_type != "MessagesConfig":
+        # we are on a local banner, ban only its container path
+        ban_url = container.absolute_url()
+    requests.request("BAN", ban_url, headers=headers)
 
 
 class PatchedCachingMixin:
