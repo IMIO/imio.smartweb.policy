@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a17 (unreleased)
+1.0a17 (2022-02-11)
 -------------------
 
 - Send BAN request after a messageviewlet creation / modification / removal
