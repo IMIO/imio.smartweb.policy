@@ -57,6 +57,7 @@ setup(
         "plone.app.dexterity",
         "plone.app.imagecropping",
         "collective.autopublishing",
+        "collective.autoscaling",
         "collective.big.bang",
         "collective.messagesviewlet",
         "collective.pivot",
