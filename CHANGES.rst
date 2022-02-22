@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.0a18 (unreleased)
--------------------
+1.0 (2022-02-22)
+----------------
 
 - Install and set collective autoscaling with some default values
   [boulch]
