@@ -5,10 +5,12 @@ from imio.smartweb.locales import SmartwebMessageFactory as _
 from plone import api
 from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.portlets.interfaces import IPortletManager
+from z3c.form.interfaces import IFormLayer
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.globalrequest import getRequest
 from zope.i18n import translate
+from zope.interface import alsoProvides
 
 
 def remove_unused_contents(portal):
@@ -66,6 +68,7 @@ def add_ifind_folder(context, current_lang):
     ]
     api.content.transition(collection, "publish")
     request = getRequest()
+    alsoProvides(request, IFormLayer)
     request.form = {
         "cid": "page-category",
         "faceted.page-category.index": "taxonomy_procedure_category",
