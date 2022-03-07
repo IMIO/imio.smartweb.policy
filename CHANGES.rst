@@ -5,6 +5,9 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
+- Add missing zcml include of collective.autoscaling
+  [laulaz]
+
 - Fix faceted criteria update when installing from code (without browser request)
   [laulaz]
 

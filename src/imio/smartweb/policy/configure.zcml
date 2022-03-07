@@ -10,6 +10,7 @@
   <include package="imio.smartweb.locales" />
 
   <include package="collective.autopublishing" />
+  <include package="collective.autoscaling" />
   <include package="collective.big.bang" />
   <include package="collective.messagesviewlet" />
   <include package="collective.pivot" />
