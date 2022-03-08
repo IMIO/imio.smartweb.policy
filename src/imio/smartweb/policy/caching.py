@@ -8,24 +8,24 @@ from plone.app.caching.operations.default import WeakCaching
 from plone.caching.interfaces import ICachingOperationType
 from plone.caching.utils import lookupOptions
 from Products.CMFPlone.utils import parent
-from urllib.parse import urlparse
 from zope.interface import provider
 
+import os
 import requests
 
 
 def ban_for_message(obj, event):
     portal = api.portal.get()
-    portal_url = portal.absolute_url()
-    domain = urlparse(portal_url).netloc
-    if domain.startswith("www."):
-        domain = domain[4:]
-    headers = {"Host": domain}
-    ban_url = portal_url
+    caching_server = os.environ.get("CACHING_SERVERS", "")
+    forwarded_host = event.object.REQUEST.get("X-Forwarded-Host", "")
+    headers = {"Host": forwarded_host}
+    ban_url = caching_server
     container = parent(obj)
     if container.portal_type != "MessagesConfig":
         # we are on a local banner, ban only its container path
-        ban_url = container.absolute_url()
+        len_portal_path = len(portal.getPhysicalPath())
+        relative_path = "/".join(container.getPhysicalPath()[len_portal_path:])
+        ban_url = f"{caching_server}/{relative_path}"
     requests.request("BAN", ban_url, headers=headers)
 
 

@@ -5,7 +5,8 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix BAN request when we change a message
+  [boulch, laulaz]
 
 
 1.0.1 (2022-03-08)
