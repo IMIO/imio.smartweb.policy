@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.1 (unreleased)
+1.0.1 (2022-03-08)
 ------------------
 
 - Add missing zcml include of collective.autoscaling
