@@ -5,6 +5,9 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
+- Add/install select2 widget for faceted
+  [boulch]
+
 - Fix BAN request when we change a message
   [boulch, laulaz]
 

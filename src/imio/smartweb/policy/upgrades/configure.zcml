@@ -174,4 +174,15 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+        source="1012"
+        destination="1013"
+        profile="imio.smartweb.policy:default">
+      <genericsetup:upgradeDepends
+          title="Install collective.z3cform.select2 add-on"
+          import_profile="collective.z3cform.select2:default"
+          />
+  </genericsetup:upgradeSteps>
+
+
 </configure>
