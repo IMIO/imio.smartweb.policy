@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<registry>
+
+  <record name="collective.autoscaling.interfaces.ICollectiveAutoscalingSettings.image_max_height"
+          interface="collective.autoscaling.interfaces.ICollectiveAutoscalingSettings"
+          field="image_max_height">
+    <value>1536</value>
+  </record>
+  <record name="collective.autoscaling.interfaces.ICollectiveAutoscalingSettings.image_max_width"
+          interface="collective.autoscaling.interfaces.ICollectiveAutoscalingSettings"
+          field="image_max_width">
+    <value>2048</value>
+  </record>
+
+</registry>

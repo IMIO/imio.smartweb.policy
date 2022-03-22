@@ -35,6 +35,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
+  <genericsetup:registerProfile
+      name="upgrade_1013_to_1014"
+      title="Upgrade policy 1013 to 1014"
+      directory="profiles/1013_to_1014"
+      description="Fix collective autoscaling default values"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -184,5 +192,14 @@
           />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      source="1013"
+      destination="1014"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Fix collective autoscaling default values"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1013_to_1014"
+        />
+  </genericsetup:upgradeSteps>
 
 </configure>

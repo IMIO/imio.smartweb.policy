@@ -5,7 +5,8 @@ Changelog
 1.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix collective autoscaling default values
+  [boulch]
 
 
 1.0.2 (2022-03-08)
