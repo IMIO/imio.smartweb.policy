@@ -35,7 +35,10 @@
     <value>False</value>
   </record>
   <record name="plone.app.caching.moderateCaching.etags">
-    <value/>
+    <value>
+      <element>userid</element>
+      <element>roles</element>
+    </value>
   </record>
   <record name="plone.app.caching.moderateCaching.lastModified">
     <value>True</value>
@@ -54,7 +57,10 @@
     <value>False</value>
   </record>
   <record name="plone.app.caching.terseCaching.etags">
-    <value/>
+    <value>
+      <element>userid</element>
+      <element>roles</element>
+    </value>
   </record>
   <record name="plone.app.caching.terseCaching.lastModified">
     <value>True</value>
@@ -98,7 +104,10 @@
     <value>False</value>
   </record>
   <record name="plone.app.caching.weakCaching.etags">
-    <value/>
+    <value>
+      <element>userid</element>
+      <element>roles</element>
+    </value>
   </record>
   <record name="plone.app.caching.weakCaching.lastModified">
     <value>False</value>
