@@ -5,6 +5,9 @@ Changelog
 1.0.3 (unreleased)
 ------------------
 
+- add logger to get some informations about BAN with Varnish
+  [boulch]
+
 - Fix collective autoscaling default values
   [boulch]
 

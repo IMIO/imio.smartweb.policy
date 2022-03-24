@@ -10,8 +10,11 @@ from plone.caching.utils import lookupOptions
 from Products.CMFPlone.utils import parent
 from zope.interface import provider
 
+import logging
 import os
 import requests
+
+logger = logging.getLogger("imio.smartweb.policy")
 
 
 def ban_for_message(obj, event):
@@ -26,6 +29,7 @@ def ban_for_message(obj, event):
         len_portal_path = len(portal.getPhysicalPath())
         relative_path = "/".join(container.getPhysicalPath()[len_portal_path:])
         ban_url = f"{caching_server}/{relative_path}"
+    logger.info(f"## X-Forwarded-Host : {forwarded_host} ## ban_url : {ban_url}")
     requests.request("BAN", ban_url, headers=headers)
 
 
