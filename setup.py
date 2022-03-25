@@ -62,6 +62,7 @@ setup(
         "collective.messagesviewlet",
         "collective.pivot",
         "collective.solr",
+        "collective.themefragments",
         "collective.z3cform.select2",
         "eea.facetednavigation",
         "pas.plugins.imio",
