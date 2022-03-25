@@ -5,7 +5,9 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Allow some Python modules in RestrictedPython (code moved from smartweb.core)
+  This is useful for collective.themefragments fragments
+  [boulch]
 
 
 1.0.3 (2022-03-24)
