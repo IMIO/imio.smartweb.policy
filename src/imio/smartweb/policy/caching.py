@@ -19,18 +19,19 @@ logger = logging.getLogger("imio.smartweb.policy")
 
 def ban_for_message(obj, event):
     portal = api.portal.get()
-    caching_server = os.environ.get("CACHING_SERVERS", "")
+    caching_servers = os.environ.get("CACHING_SERVERS", "").split(" ")
     forwarded_host = event.object.REQUEST.get("X-Forwarded-Host", "")
     headers = {"Host": forwarded_host}
-    ban_url = caching_server
     container = parent(obj)
-    if container.portal_type != "MessagesConfig":
-        # we are on a local banner, ban only its container path
-        len_portal_path = len(portal.getPhysicalPath())
-        relative_path = "/".join(container.getPhysicalPath()[len_portal_path:])
-        ban_url = f"{caching_server}/{relative_path}"
-    logger.info(f"## X-Forwarded-Host : {forwarded_host} ## ban_url : {ban_url}")
-    requests.request("BAN", ban_url, headers=headers)
+    for caching_server in caching_servers:
+        ban_url = f"http://{caching_server}"
+        if container.portal_type != "MessagesConfig":
+            # we are on a local banner, ban only its container path
+            len_portal_path = len(portal.getPhysicalPath())
+            relative_path = "/".join(container.getPhysicalPath()[len_portal_path:])
+            ban_url = f"http://{caching_server}/{relative_path}"
+        logger.info(f"## X-Forwarded-Host : {forwarded_host} ## ban_url : {ban_url}")
+        requests.request("BAN", ban_url, headers=headers)
 
 
 class PatchedCachingMixin:
