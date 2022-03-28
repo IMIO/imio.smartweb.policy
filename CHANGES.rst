@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.4 (unreleased)
+1.0.4 (2022-03-28)
 ------------------
 
 - Add etags userid and roles in caching configuration
