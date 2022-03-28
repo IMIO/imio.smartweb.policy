@@ -5,6 +5,9 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
+- Add etags userid and roles in caching configuration
+  [sverbois, boulch]
+
 - Adapt ban_for_message to cover multi varnish servers and add http to correctly ban
   [boulch]
 

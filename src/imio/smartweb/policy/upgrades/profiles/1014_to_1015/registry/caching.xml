@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<registry>
+  <record name="plone.app.caching.moderateCaching.etags">
+    <value>
+      <element>userid</element>
+      <element>roles</element>
+    </value>
+  </record>
+
+  <record name="plone.app.caching.terseCaching.etags">
+    <value>
+      <element>userid</element>
+      <element>roles</element>
+    </value>
+  </record>
+
+  <record name="plone.app.caching.weakCaching.etags">
+    <value>
+      <element>userid</element>
+      <element>roles</element>
+    </value>
+  </record>
+
+</registry>
