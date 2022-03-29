@@ -220,4 +220,15 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      source="1015"
+      destination="1016"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Reload viewlet to reorder viewlets and add imio.smartweb.portal_header_top_viewletmanager and its viewlets"
+        import_profile="imio.smartweb.policy:default"
+        import_steps="viewlets"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>

@@ -5,7 +5,8 @@ Changelog
 1.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add missing viewlet + reorder viewlets
+  [boulch]
 
 
 1.0.4 (2022-03-28)
