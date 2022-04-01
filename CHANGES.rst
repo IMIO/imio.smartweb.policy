@@ -5,6 +5,9 @@ Changelog
 1.0.5 (unreleased)
 ------------------
 
+- Hide unwanted upgrades from site-creation and quickinstaller
+  [boulch]
+
 - Add missing viewlet + reorder viewlets
   [boulch]
 

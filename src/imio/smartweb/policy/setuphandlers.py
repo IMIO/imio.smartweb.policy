@@ -5,7 +5,6 @@ from imio.smartweb.policy.utils import clear_manager_portlets
 from imio.smartweb.policy.utils import remove_unused_contents
 from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
-from Products.CMFQuickInstallerTool import interfaces as quiskinstallinterfaces
 from zope.interface import implementer
 
 
@@ -14,17 +13,17 @@ class HiddenProfiles(object):
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller."""
         return [
+            "imio.smartweb.common:default",
             "imio.smartweb.core:default",
             "imio.smartweb.policy:uninstall",
         ]
 
-
-@implementer(quiskinstallinterfaces.INonInstallable)
-class HiddenProducts(object):
     def getNonInstallableProducts(self):
-        """Hides profiles from QuickInstaller"""
+        """Hide unwanted products from site-creation and quickinstaller."""
         return [
+            "imio.smartweb.common",
             "imio.smartweb.core",
+            "imio.smartweb.policy.upgrades",
         ]
 
 

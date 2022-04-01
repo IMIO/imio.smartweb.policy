@@ -65,9 +65,4 @@
       name="imio.smartweb.policy-hiddenprofiles"
       />
 
-  <utility
-      factory=".setuphandlers.HiddenProducts"
-      name="imio.smartweb.policy-hiddenproducts"
-      />
-  <!-- -*- extra stuff goes here -*- -->
 </configure>
