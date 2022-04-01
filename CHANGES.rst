@@ -5,6 +5,9 @@ Changelog
 1.0.5 (unreleased)
 ------------------
 
+- Uninstall collective.z3cform.select2, not needed anymore for faceted
+  [laulaz]
+
 - Hide unwanted upgrades from site-creation and quickinstaller
   [boulch]
 

@@ -3,6 +3,7 @@
 from imio.smartweb.policy.utils import add_iam_folder
 from plone import api
 from plone.app.workflow.remap import remap_workflow
+from Products.CMFPlone.utils import get_installer
 import logging
 
 logger = logging.getLogger("imio.smartweb.policy")
@@ -41,3 +42,8 @@ def restore_links_workflow(context):
 def reload_viewlets(context):
     portal_setup = api.portal.get_tool("portal_setup")
     portal_setup.runImportStepFromProfile(PROFILEID, "viewlets")
+
+
+def uninstall_z3cform_select2(context):
+    installer = get_installer(context)
+    installer.uninstall_product("collective.z3cform.select2")

@@ -231,4 +231,13 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeStep
+      title="Uninstall collective.z3cform.select2 add-on"
+      description=""
+      source="1016"
+      destination="1017"
+      handler=".upgrades.uninstall_z3cform_select2"
+      profile="imio.smartweb.policy:default"
+      />
+
 </configure>
