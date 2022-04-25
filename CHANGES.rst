@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.5 (unreleased)
+1.0.5 (2022-04-25)
 ------------------
 
 - Uninstall collective.z3cform.select2, not needed anymore for faceted
