@@ -5,7 +5,8 @@ Changelog
 1.0.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove collective.z3cform.select2. We don't use full product anymore
+  [boulch]
 
 
 1.0.5 (2022-04-25)

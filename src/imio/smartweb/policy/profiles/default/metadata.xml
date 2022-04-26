@@ -9,7 +9,6 @@
     <dependency>profile-collective.autoscaling:default</dependency>
     <dependency>profile-collective.messagesviewlet:default</dependency>
     <dependency>profile-collective.solr:default</dependency>
-    <dependency>profile-collective.z3cform.select2:default</dependency>
     <dependency>profile-eea.facetednavigation:default</dependency>
     <dependency>profile-imio.gdpr:default</dependency>
     <dependency>profile-imio.smartweb.core:default</dependency>
