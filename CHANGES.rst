@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.6 (unreleased)
+1.0.6 (2022-05-02)
 ------------------
 
 - Remove collective.z3cform.select2. We don't use full product anymore
