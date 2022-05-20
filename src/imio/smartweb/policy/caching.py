@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from imio.smartweb.common.caching import ban_physicalpath
 from plone import api
 from plone.app.caching.operations.default import ModerateCaching
 from plone.app.caching.operations.default import StrongCaching
@@ -11,27 +12,19 @@ from Products.CMFPlone.utils import parent
 from zope.interface import provider
 
 import logging
-import os
-import requests
 
 logger = logging.getLogger("imio.smartweb.policy")
 
 
 def ban_for_message(obj, event):
+    request = event.object.REQUEST
     portal = api.portal.get()
-    caching_servers = os.environ.get("CACHING_SERVERS", "").split(" ")
-    forwarded_host = event.object.REQUEST.get("X-Forwarded-Host", "")
-    headers = {"Host": forwarded_host}
+    physical_path = portal.getPhysicalPath()
     container = parent(obj)
-    for caching_server in caching_servers:
-        ban_url = f"http://{caching_server}"
-        if container.portal_type != "MessagesConfig":
-            # we are on a local banner, ban only its container path
-            len_portal_path = len(portal.getPhysicalPath())
-            relative_path = "/".join(container.getPhysicalPath()[len_portal_path:])
-            ban_url = f"http://{caching_server}/{relative_path}"
-        logger.info(f"## X-Forwarded-Host : {forwarded_host} ## ban_url : {ban_url}")
-        requests.request("BAN", ban_url, headers=headers)
+    if container.portal_type != "MessagesConfig":
+        # we are on a local message, ban only its container path
+        physical_path = container.getPhysicalPath()
+    ban_physicalpath(request, physical_path)
 
 
 class PatchedCachingMixin:

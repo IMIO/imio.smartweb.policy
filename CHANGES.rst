@@ -5,7 +5,8 @@ Changelog
 1.0.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Move/adapt ban_physicalpath method into imio.smartweb.common
+  [boulch, laulaz]
 
 
 1.0.6 (2022-05-02)
