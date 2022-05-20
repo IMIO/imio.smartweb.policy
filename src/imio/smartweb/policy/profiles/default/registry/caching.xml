@@ -47,7 +47,7 @@
     <value>False</value>
   </record>
   <record name="plone.app.caching.moderateCaching.smaxage">
-    <value>120</value>
+    <value>300</value>
   </record>
   <record name="plone.app.caching.moderateCaching.vary">
     <value/>
@@ -72,7 +72,7 @@
     <value>False</value>
   </record>
   <record name="plone.app.caching.terseCaching.smaxage">
-    <value>120</value>
+    <value>900</value>
   </record>
   <record name="plone.app.caching.terseCaching.vary">
     <value/>
