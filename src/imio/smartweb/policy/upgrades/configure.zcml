@@ -51,6 +51,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1017_to_1018"
+      title="Upgrade policy 1014 to 1015"
+      directory="profiles/1017_to_1018"
+      description="Add tika config for file content indexing with SolR"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -239,5 +247,15 @@
       handler=".upgrades.uninstall_z3cform_select2"
       profile="imio.smartweb.policy:default"
       />
+
+  <genericsetup:upgradeSteps
+      source="1017"
+      destination="1018"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Add tika config for file content indexing with SolR"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1017_to_1018"
+        />
+  </genericsetup:upgradeSteps>
 
 </configure>

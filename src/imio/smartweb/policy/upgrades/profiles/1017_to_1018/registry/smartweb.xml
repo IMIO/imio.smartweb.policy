@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<registry
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="imio.smartweb">
+
+  <record name="collective.solr.use_tika">
+    <value>True</value>
+  </record>
+
+  <record name="collective.solr.tika_default_field">
+    <value>SearchableText</value>
+  </record>
+
+</registry>

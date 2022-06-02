@@ -5,6 +5,9 @@ Changelog
 1.0.7 (unreleased)
 ------------------
 
+- Adapt SolR config to use tika for file indexing
+  [mpeeters]
+
 - Move/adapt ban_physicalpath method into imio.smartweb.common
   [boulch, laulaz]
 
