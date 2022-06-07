@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.7 (unreleased)
+1.0.7 (2022-06-07)
 ------------------
 
 - Adapt SolR config to use tika for file indexing
