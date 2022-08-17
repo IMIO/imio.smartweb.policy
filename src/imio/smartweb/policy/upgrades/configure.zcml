@@ -53,7 +53,7 @@
 
   <genericsetup:registerProfile
       name="upgrade_1017_to_1018"
-      title="Upgrade policy 1014 to 1015"
+      title="Upgrade policy 1017 to 1018"
       directory="profiles/1017_to_1018"
       description="Add tika config for file content indexing with SolR"
       provides="Products.GenericSetup.interfaces.EXTENSION"
