@@ -31,4 +31,8 @@
     <value>SearchableText</value>
   </record>
 
+  <record name="imio.gdpr.interfaces.IGDPRSettings.is_text_ready">
+    <value>True</value>
+  </record>
+
 </registry>

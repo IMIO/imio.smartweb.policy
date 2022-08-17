@@ -59,6 +59,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1018_to_1019"
+      title="Upgrade policy 1018 to 1019"
+      directory="profiles/1018_to_1019"
+      description="Automatically publish GDPR article"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -255,6 +263,16 @@
     <genericsetup:upgradeDepends
         title="Add tika config for file content indexing with SolR"
         import_profile="imio.smartweb.policy.upgrades:upgrade_1017_to_1018"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1018"
+      destination="1019"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Automatically publish GDPR article"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1018_to_1019"
         />
   </genericsetup:upgradeSteps>
 
