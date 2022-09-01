@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.8 (unreleased)
+1.0.8 (2022-09-01)
 ------------------
 
 - WEB-3731 : Automatically publish GDPR article
