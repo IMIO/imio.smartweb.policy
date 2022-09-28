@@ -67,6 +67,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1019_to_1020"
+      title="Upgrade policy 1019 to 1020"
+      directory="profiles/1019_to_1020"
+      description="Update caching configuration"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -273,6 +281,16 @@
     <genericsetup:upgradeDepends
         title="Automatically publish GDPR article"
         import_profile="imio.smartweb.policy.upgrades:upgrade_1018_to_1019"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1019"
+      destination="1020"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Update caching configuration"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1019_to_1020"
         />
   </genericsetup:upgradeSteps>
 
