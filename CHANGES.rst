@@ -5,7 +5,8 @@ Changelog
 1.0.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Change s-maxage for new Varnish strategy based on grace
+  [sverbois]
 
 
 1.0.8 (2022-09-01)
