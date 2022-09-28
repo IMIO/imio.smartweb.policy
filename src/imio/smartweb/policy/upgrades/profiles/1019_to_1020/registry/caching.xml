@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<registry>
+
+  <record name="plone.app.caching.moderateCaching.smaxage">
+    <value>300</value>
+  </record>
+
+  <record name="plone.app.caching.terseCaching.smaxage">
+    <value>900</value>
+  </record>
+
+</registry>
