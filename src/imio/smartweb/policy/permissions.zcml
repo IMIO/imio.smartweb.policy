@@ -1,12 +1,13 @@
 <configure
   xmlns="http://namespaces.zope.org/zope"
   xmlns:zcml="http://namespaces.zope.org/zcml"
-  i18n_domain="plone">
+  i18n_domain="smartweb">
 
   <configure zcml:condition="installed AccessControl.security">
-  <!-- -*- extra stuff goes here -*- -->
-
-
+    <permission
+      id="smartweb.manageronlyconfiglets"
+      title="Smartweb: Manager-only configlets"
+      description="" />
   </configure>
 
 </configure>

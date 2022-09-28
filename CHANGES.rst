@@ -5,6 +5,9 @@ Changelog
 1.0.9 (unreleased)
 ------------------
 
+- WEB-3733 : Restrict permissions for "site admin" in control panel. Some options are only available for manager
+  [boulch]
+
 - Change s-maxage for new Varnish strategy based on grace
   [sverbois]
 

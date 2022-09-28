@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <rolemap>
-  <permissions>
 
-    <permission name="Portlets: Manage portlets" acquire="False">
-    </permission>
+  <permissions>
 
     <permission name="Plone Site Setup: Site" acquire="False">
       <role name="Manager"/>
@@ -66,4 +64,5 @@
     </permission>
 
   </permissions>
+
 </rolemap>

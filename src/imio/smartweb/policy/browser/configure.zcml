@@ -19,4 +19,24 @@
       directory="static"
       />
 
+  <configure package="plone.app.users.browser">
+  <browser:page
+      name="member-fields"
+      for="*"
+      class=".schemaeditor.MemberSchemaContext"
+      permission="smartweb.manageronlyconfiglets"
+      layer="imio.smartweb.core.interfaces.IImioSmartwebCoreLayer"
+      allowed_interface="OFS.interfaces.IItem" />
+  </configure>
+
+  <configure package="Products.CMFPlone.controlpanel.browser">
+  <browser:page
+      name="usergroup-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".usergroups.UserGroupsSettingsPanelView"
+      permission="smartweb.manageronlyconfiglets"
+      layer="imio.smartweb.core.interfaces.IImioSmartwebCoreLayer"
+      />
+  </configure>
+
 </configure>
