@@ -16,7 +16,7 @@
       <element key="plone.content.file">plone.app.caching.terseCaching</element>
       <element key="plone.content.folderView">plone.app.caching.terseCaching</element>
       <element key="plone.content.itemView">plone.app.caching.terseCaching</element>
-      <element key="plone.resource">plone.app.caching.terseCaching</element>
+      <element key="plone.resource">plone.app.caching.strongCaching</element>
       <element key="plone.stableResource">plone.app.caching.strongCaching</element>
     </value>
   </record>
