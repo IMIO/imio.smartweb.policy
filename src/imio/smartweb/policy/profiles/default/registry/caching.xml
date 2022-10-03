@@ -85,7 +85,7 @@
     <value/>
   </record>
   <record name="plone.app.caching.strongCaching.lastModified">
-    <value>True</value>
+    <value>False</value>
   </record>
   <record name="plone.app.caching.strongCaching.maxage">
     <value>86400</value>
@@ -110,7 +110,7 @@
     </value>
   </record>
   <record name="plone.app.caching.weakCaching.lastModified">
-    <value>False</value>
+    <value>True</value>
   </record>
   <record name="plone.app.caching.weakCaching.ramCache">
     <value>False</value>
