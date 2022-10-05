@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.9 (unreleased)
+1.0.9 (2022-10-05)
 ------------------
 
 - WEB-3733 : Restrict permissions for "site admin" in control panel. Some options are only available for manager
