@@ -52,7 +52,7 @@
   <record name="plone.app.caching.moderateCaching.vary">
     <value/>
   </record>
-  
+
   <record name="plone.app.caching.terseCaching.anonOnly">
     <value>False</value>
   </record>
