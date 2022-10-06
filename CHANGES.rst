@@ -5,7 +5,9 @@ Changelog
 1.0.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Remove unneeded caching patches for 304 NOT MODIFIED requests
+  Those are not needed anymore with the new cache configuration
+  [laulaz]
 
 
 1.0.9 (2022-10-05)
