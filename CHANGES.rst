@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.10 (unreleased)
+1.0.10 (2022-10-28)
 -------------------
 
 - Remove unneeded caching patches for 304 NOT MODIFIED requests
