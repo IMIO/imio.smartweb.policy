@@ -91,6 +91,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1022_to_1023"
+      title="Upgrade policy 1022 to 1023"
+      directory="profiles/1022_to_1023"
+      description="Reapply all caching profile"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -327,6 +335,16 @@
     <genericsetup:upgradeDepends
         title="Reapply all caching profile"
         import_profile="imio.smartweb.policy.upgrades:upgrade_1021_to_1022"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1022"
+      destination="1023"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Reapply all caching profile"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1022_to_1023"
         />
   </genericsetup:upgradeSteps>
 
