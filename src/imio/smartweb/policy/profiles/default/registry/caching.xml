@@ -36,6 +36,7 @@
   </record>
   <record name="plone.app.caching.moderateCaching.etags">
     <value>
+      <element>lastModified</element>
       <element>userid</element>
       <element>roles</element>
     </value>
@@ -58,6 +59,7 @@
   </record>
   <record name="plone.app.caching.terseCaching.etags">
     <value>
+      <element>lastModified</element>
       <element>userid</element>
       <element>roles</element>
     </value>
@@ -105,6 +107,7 @@
   </record>
   <record name="plone.app.caching.weakCaching.etags">
     <value>
+      <element>lastModified</element>
       <element>userid</element>
       <element>roles</element>
     </value>
