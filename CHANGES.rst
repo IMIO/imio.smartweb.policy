@@ -5,7 +5,8 @@ Changelog
 1.0.11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-3798 : Update caching profile (add lastModified to etags)
+  [sverbois, remdub, boulch]
 
 
 1.0.10 (2022-10-28)
