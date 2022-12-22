@@ -12,6 +12,7 @@
   <include package="collective.autopublishing" />
   <include package="collective.autoscaling" />
   <include package="collective.big.bang" />
+  <include package="collective.js.jqueryui" />
   <include package="collective.messagesviewlet" />
   <include package="collective.pivot" />
   <include package="collective.solr" />

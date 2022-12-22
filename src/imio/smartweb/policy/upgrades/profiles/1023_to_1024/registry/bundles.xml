@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<registry>
+
+  <records prefix="plone.bundles/bundle-leaflet"
+           interface="Products.CMFPlone.interfaces.IBundleRegistry"
+           remove="true" />
+
+  <records prefix="plone.bundles/patterns"
+           interface="Products.CMFPlone.interfaces.IBundleRegistry"
+           remove="true" />
+
+</registry>

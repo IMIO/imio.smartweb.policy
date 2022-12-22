@@ -99,6 +99,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1023_to_1024"
+      title="Upgrade policy from 1023 to 1024"
+      directory="profiles/1023_to_1024"
+      description="Remove plone.patternslib deprecated bundles"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -345,6 +353,27 @@
     <genericsetup:upgradeDepends
         title="Reapply all caching profile"
         import_profile="imio.smartweb.policy.upgrades:upgrade_1022_to_1023"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1023"
+      destination="1024"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Remove plone.patternslib deprecated bundles"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1023_to_1024"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1024"
+      destination="1025"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Reload plone.formwidget.geolocation registry"
+        import_profile="plone.formwidget.geolocation:default"
+        import_steps="plone.app.registry"
         />
   </genericsetup:upgradeSteps>
 

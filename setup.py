@@ -59,6 +59,7 @@ setup(
         "collective.autopublishing",
         "collective.autoscaling",
         "collective.big.bang",
+        "collective.js.jqueryui",  # TODO : plone6 : remove
         "collective.messagesviewlet",
         "collective.pivot",
         "collective.solr",
