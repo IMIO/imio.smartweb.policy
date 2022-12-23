@@ -5,6 +5,9 @@ Changelog
 1.0.11 (unreleased)
 -------------------
 
+- Update to Plone 6.0.0 final
+  [boulch]
+
 - WEB-3798 : Update caching profile (add lastModified to etags)
   [sverbois, remdub, boulch]
 
