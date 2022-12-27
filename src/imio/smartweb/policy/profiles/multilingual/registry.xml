@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<registry>
+
+    <record name="plone.use_combined_language_codes" interface="plone.app.multilingual.interfaces.IMultiLanguageExtraOptionsSchema" field="use_combined_language_codes">
+      <value>False</value>
+    </record>
+
+    <record name="plone.always_show_selector" interface="plone.app.multilingual.interfaces.IMultiLanguageExtraOptionsSchema" field="always_show_selector">
+      <value>True</value>
+    </record>
+
+    <record name="plone.set_cookie_always" interface="plone.app.multilingual.interfaces.IMultiLanguageExtraOptionsSchema" field="set_cookie_always">
+      <value>True</value>
+    </record>
+
+    <record name="plone.use_content_negotiation" interface="plone.app.multilingual.interfaces.IMultiLanguageExtraOptionsSchema" field="use_content_negotiation">
+      <value>False</value>
+    </record>
+
+    <record name="plone.use_path_negotiation" interface="plone.app.multilingual.interfaces.IMultiLanguageExtraOptionsSchema" field="use_path_negotiation">
+      <value>True</value>
+    </record>
+
+    <record name="plone.use_cookie_negotiation" interface="plone.app.multilingual.interfaces.IMultiLanguageExtraOptionsSchema" field="use_cookie_negotiation">
+      <value>True</value>
+    </record>
+
+    <record name="plone.set_cookie_always" interface="plone.app.multilingual.interfaces.IMultiLanguageExtraOptionsSchema" field="set_cookie_always">
+      <value>True</value>
+    </record>
+
+</registry>

@@ -1,0 +1,47 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="imio.smartweb">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="imio.smartweb.policy"
+      directory="profiles/default"
+      description="Installs the imio.smartweb.policy add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="demo"
+      title="imio.smartweb.policy (demo)"
+      directory="profiles/demo"
+      description="Installs the imio.smartweb.policy demo contents and configuration"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setupdemo.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="multilingual"
+      title="imio.smartweb.policy (multilingual)"
+      directory="profiles/multilingual"
+      description="Installs the imio.smartweb.policy multilingual configuration"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.setup_multilingual"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="imio.smartweb.policy (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the imio.smartweb.policy add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
+      />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="imio.smartweb.policy-hiddenprofiles"
+      />
+
+</configure>

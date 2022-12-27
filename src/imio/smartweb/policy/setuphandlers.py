@@ -4,8 +4,16 @@ from imio.smartweb.policy.utils import add_navigation_links
 from imio.smartweb.policy.utils import clear_manager_portlets
 from imio.smartweb.policy.utils import remove_unused_contents
 from plone import api
+from plone.app.multilingual.interfaces import ILanguageRootFolder
+from plone.app.multilingual.subscriber import set_recursive_language
 from Products.CMFPlone.interfaces import INonInstallable
+from Products.CMFPlone.interfaces.constrains import DISABLED
+from Products.CMFPlone.interfaces.constrains import ISelectableConstrainTypes
 from zope.interface import implementer
+
+import logging
+
+logger = logging.getLogger("imio.smartweb.policy")
 
 
 @implementer(INonInstallable)
@@ -35,6 +43,43 @@ def post_install(context):
     clear_manager_portlets(portal, "plone.rightcolumn")
     clear_manager_portlets(portal, "plone.footerportlets")
     add_navigation_links(portal)
+
+
+def setup_multilingual(context):
+    portal = api.portal.get()
+
+    available_languages = api.portal.get_registry_record("plone.available_languages")
+    if len(available_languages) < 2:
+        raise ValueError("You should configure at least 2 languages for the site")
+
+    # move existing root contents to default lang LRF
+    default_lang = api.portal.get_registry_record("plone.default_language")
+    lrf = getattr(portal, default_lang)
+    for obj in portal.listFolderContents():
+        portal_type = obj.portal_type
+        if ILanguageRootFolder.providedBy(obj):
+            continue
+        if portal_type == "MessagesConfig":
+            # TODO: determine if we need one MessagesConfig folder by LRF
+            continue
+        set_recursive_language(obj, default_lang)
+        if portal_type in ["imio.smartweb.HeroBanner", "imio.smartweb.Footer"]:
+            # we need to temporarily authorize these content types in LRF
+            container = ISelectableConstrainTypes(lrf)
+            constrain_types_mode = container.getConstrainTypesMode()
+            container.setConstrainTypesMode(DISABLED)
+            pt = api.portal.get_tool("portal_types")
+            allowed_content_types = pt.getTypeInfo("LRF").allowed_content_types
+            allowed_content_types = list(allowed_content_types)
+            allowed_content_types.append(portal_type)
+            pt.getTypeInfo("LRF").allowed_content_types = tuple(allowed_content_types)
+            api.content.move(obj, target=lrf)
+            allowed_content_types.remove(portal_type)
+            pt.getTypeInfo("LRF").allowed_content_types = tuple(allowed_content_types)
+            container.setConstrainTypesMode(constrain_types_mode)
+        else:
+            api.content.move(obj, target=lrf)
+        logger.info(f"Moved {obj.id} content to '{default_lang}' folder.")
 
 
 def uninstall(context):

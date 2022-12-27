@@ -22,6 +22,7 @@
   <include package="pas.plugins.imio" />
   <include package="plone.app.caching" />
   <include package="plone.app.imagecropping" />
+  <include package="plone.app.multilingual" />
   <include package="imio.gdpr" />
   <include package="imio.prometheus" />
 
@@ -29,40 +30,9 @@
 
   <include file="caching.zcml" />
   <include file="permissions.zcml" />
+  <include file="profiles.zcml" />
   <include file="viewlets.zcml" />
   <include package=".browser" />
   <include package=".upgrades" />
-
-  <genericsetup:registerProfile
-      name="default"
-      title="imio.smartweb.policy"
-      directory="profiles/default"
-      description="Installs the imio.smartweb.policy add-on."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.post_install"
-      />
-
-  <genericsetup:registerProfile
-      name="demo"
-      title="imio.smartweb.policy (demo)"
-      directory="profiles/demo"
-      description="Installs the imio.smartweb.policy demo contents and configuration"
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setupdemo.post_install"
-      />
-
-  <genericsetup:registerProfile
-      name="uninstall"
-      title="imio.smartweb.policy (uninstall)"
-      directory="profiles/uninstall"
-      description="Uninstalls the imio.smartweb.policy add-on."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.uninstall"
-      />
-
-  <utility
-      factory=".setuphandlers.HiddenProfiles"
-      name="imio.smartweb.policy-hiddenprofiles"
-      />
 
 </configure>

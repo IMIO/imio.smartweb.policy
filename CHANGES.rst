@@ -5,6 +5,9 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
+- Multilingual: add setup profile with content migration to LRF
+  [laulaz]
+
 - Remove obsolete TinyMCE override
   [laulaz]
 
