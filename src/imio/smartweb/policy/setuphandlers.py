@@ -46,11 +46,16 @@ def post_install(context):
 
 
 def setup_multilingual(context):
-    portal = api.portal.get()
-
     available_languages = api.portal.get_registry_record("plone.available_languages")
     if len(available_languages) < 2:
         raise ValueError("You should configure at least 2 languages for the site")
+
+    portal = api.portal.get()
+    default_page = getattr(portal, "default_page", None)
+
+    # install plone.app.multilingual
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.runAllImportStepsFromProfile("plone.app.multilingual:default")
 
     # move existing root contents to default lang LRF
     default_lang = api.portal.get_registry_record("plone.default_language")
@@ -80,6 +85,11 @@ def setup_multilingual(context):
         else:
             api.content.move(obj, target=lrf)
         logger.info(f"Moved {obj.id} content to '{default_lang}' folder.")
+
+    # restore default page
+    if default_page:
+        lrf.setDefaultPage(default_page)
+        logger.info(f"Restored default page on '{default_lang}' folder.")
 
 
 def uninstall(context):
