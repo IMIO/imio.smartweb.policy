@@ -377,4 +377,15 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      source="1025"
+      destination="1026"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Fix i18n selector viewlets"
+        import_profile="imio.smartweb.policy:default"
+        import_steps="viewlets"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>

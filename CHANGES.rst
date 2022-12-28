@@ -6,7 +6,7 @@ Changelog
 ------------------
 
 - Multilingual: add setup profile with content / default page migration to LRF
-  and navigation links creation
+  and navigation links creation, fix selector viewlet
   [laulaz]
 
 - Remove obsolete TinyMCE override
