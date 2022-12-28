@@ -91,6 +91,14 @@ def setup_multilingual(context):
         lrf.setDefaultPage(default_page)
         logger.info(f"Restored default page on '{default_lang}' folder.")
 
+    # create navigation links in new LRFs
+    root_folders = portal.listFolderContents(contentFilter={"portal_type": "LRF"})
+    for lrf in root_folders:
+        lang = lrf.id
+        if lang == default_lang:
+            continue
+        add_navigation_links(lrf, lrf.id)
+
 
 def uninstall(context):
     """Uninstall script"""

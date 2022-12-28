@@ -26,37 +26,38 @@ def clear_manager_portlets(folder, manager_name):
         del assignments[portlet]
 
 
-def add_iam_folder(context, current_lang):
+def add_iam_folder(context, lang):
     i_am_folder = api.content.create(
         container=context,
         type="imio.smartweb.Folder",
-        title=translate(_("I am"), target_language=current_lang),
+        title=translate(_("I am"), target_language=lang),
     )
     api.content.transition(i_am_folder, "publish")
 
+    root_url = context.absolute_url()
     i_am_vocabulary = get_vocabulary("imio.smartweb.vocabulary.IAm")
     for term in i_am_vocabulary:
         link = api.content.create(
             container=i_am_folder,
             type="Link",
-            title=translate(_(term.title), target_language=current_lang),
+            title=translate(_(term.title), target_language=lang),
         )
-        link.remoteUrl = "{0}/@@search?iam={1}".format("${portal_url}", term.token)
+        link.remoteUrl = "{0}/@@search?iam={1}".format("${root_url}", term.token)
         api.content.transition(link, "publish")
 
 
-def add_ifind_folder(context, current_lang):
+def add_ifind_folder(context, lang):
     i_find_folder = api.content.create(
         container=context,
         type="imio.smartweb.Folder",
-        title=translate(_("I find"), target_language=current_lang),
+        title=translate(_("I find"), target_language=lang),
     )
     api.content.transition(i_find_folder, "publish")
     collection = api.content.create(
         container=i_find_folder,
         type="Collection",
         title=translate(
-            _("Procedures and practical informations"), target_language=current_lang
+            _("Procedures and practical informations"), target_language=lang
         ),
     )
     collection.query = [
@@ -78,7 +79,8 @@ def add_ifind_folder(context, current_lang):
     handler.edit(**request.form)
 
 
-def add_navigation_links(context):
-    current_lang = api.portal.get_current_language()[:2]
-    add_iam_folder(context, current_lang)
-    add_ifind_folder(context, current_lang)
+def add_navigation_links(context, lang=None):
+    if lang is None:
+        lang = api.portal.get_current_language()[:2]
+    add_iam_folder(context, lang)
+    add_ifind_folder(context, lang)
