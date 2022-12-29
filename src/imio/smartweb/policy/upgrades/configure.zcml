@@ -107,6 +107,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1026_to_1027"
+      title="Upgrade policy from 1026 to 1027"
+      directory="profiles/1026_to_1027"
+      description="Configure autopublishing settings"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -385,6 +393,21 @@
         title="Fix i18n selector viewlets"
         import_profile="imio.smartweb.policy:default"
         import_steps="viewlets"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1026"
+      destination="1027"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Install collective.autopublishing"
+        import_profile="collective.autopublishing:default"
+        />
+    <genericsetup:upgradeDepends
+        title="Configure autopublishing settings"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1026_to_1027"
+        import_steps="plone.app.registry"
         />
   </genericsetup:upgradeSteps>
 

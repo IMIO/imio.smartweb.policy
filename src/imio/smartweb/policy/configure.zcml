@@ -31,6 +31,7 @@
   <include file="caching.zcml" />
   <include file="permissions.zcml" />
   <include file="profiles.zcml" />
+  <include file="subscribers.zcml" />
   <include file="viewlets.zcml" />
   <include package=".browser" />
   <include package=".upgrades" />

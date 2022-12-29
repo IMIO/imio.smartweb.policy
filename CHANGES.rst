@@ -5,6 +5,9 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
+- Install and configure autopublishing (with 15 min tick subscriber)
+  [laulaz]
+
 - Multilingual: add setup profile with content / default page migration to LRF
   and navigation links creation, fix selector viewlet
   [laulaz]
