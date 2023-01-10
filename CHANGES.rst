@@ -5,6 +5,9 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
+- Fix missing Plone icons (plone.staticresources)
+  [laulaz]
+
 - Install and configure autopublishing (with 15 min tick subscriber)
   [laulaz]
 

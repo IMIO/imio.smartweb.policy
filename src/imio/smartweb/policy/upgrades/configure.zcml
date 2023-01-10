@@ -411,4 +411,15 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      source="1027"
+      destination="1028"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Fix missing Plone icons (plone.staticresources)"
+        import_profile="plone.staticresources:default"
+        import_steps="plone.app.registry"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>
