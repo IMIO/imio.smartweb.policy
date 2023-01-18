@@ -5,7 +5,8 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- By default authorize_local_message and show_local_message in messagesviewlet must be True in smartweb
+  [boulch]
 
 
 1.1.1 (2023-01-12)
