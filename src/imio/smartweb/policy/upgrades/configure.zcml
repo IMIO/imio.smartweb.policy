@@ -115,6 +115,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1028_to_1029"
+      title="Upgrade policy from 1028 to 1029"
+      directory="profiles/1028_to_1029"
+      description="Change collective.messagesviwlet control panel default values"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -418,6 +426,17 @@
     <genericsetup:upgradeDepends
         title="Fix missing Plone icons (plone.staticresources)"
         import_profile="plone.staticresources:default"
+        import_steps="plone.app.registry"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1028"
+      destination="1029"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Change collective.messagesviwlet control panel default values"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1028_to_1029"
         import_steps="plone.app.registry"
         />
   </genericsetup:upgradeSteps>
