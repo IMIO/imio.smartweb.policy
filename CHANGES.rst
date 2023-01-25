@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.2 (unreleased)
+1.1.2 (2023-01-25)
 ------------------
 
 - By default authorize_local_message and show_local_message in messagesviewlet must be True in smartweb
