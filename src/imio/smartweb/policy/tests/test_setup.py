@@ -33,7 +33,6 @@ class TestSetup(unittest.TestCase):
 
 
 class TestUninstall(unittest.TestCase):
-
     layer = IMIO_SMARTWEB_POLICY_INTEGRATION_TESTING
 
     def setUp(self):
