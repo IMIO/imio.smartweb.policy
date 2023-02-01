@@ -24,6 +24,7 @@ class HiddenProfiles(object):
             "imio.smartweb.common:default",
             "imio.smartweb.core:default",
             "imio.smartweb.policy:uninstall",
+            "plone.app.multilingual:default",
         ]
 
     def getNonInstallableProducts(self):
@@ -32,6 +33,7 @@ class HiddenProfiles(object):
             "imio.smartweb.common",
             "imio.smartweb.core",
             "imio.smartweb.policy.upgrades",
+            "plone.app.multilingual",
         ]
 
 
