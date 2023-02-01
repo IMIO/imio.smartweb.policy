@@ -5,7 +5,8 @@ Changelog
 1.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- WEB-3833 : Hide plone.app.multilingual in control panel installable products
+  [boulch]
 
 
 1.1.2 (2023-01-25)

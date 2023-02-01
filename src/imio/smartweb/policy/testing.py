@@ -16,7 +16,6 @@ import imio.smartweb.policy
 
 
 class ImioSmartwebPolicyLayer(PloneSandboxLayer):
-
     defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
