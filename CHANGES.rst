@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.3 (unreleased)
+1.1.3 (2023-02-17)
 ------------------
 
 - WEB-3820 : Added collective.geotransform but we don't deploy it automaticaly
