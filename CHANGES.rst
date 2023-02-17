@@ -5,6 +5,9 @@ Changelog
 1.1.3 (unreleased)
 ------------------
 
+- WEB-3820 : Added collective.geotransform but we don't deploy it automaticaly
+  [boulch]
+
 - WEB-3833 : Hide plone.app.multilingual in control panel installable products
   [boulch]
 
