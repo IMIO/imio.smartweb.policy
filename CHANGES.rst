@@ -5,7 +5,8 @@ Changelog
 1.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- WEB-3763 : Add new permission to manage configlets in control panel
+  [boulch]
 
 
 1.1.3 (2023-02-17)

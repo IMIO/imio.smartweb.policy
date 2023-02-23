@@ -10,4 +10,11 @@
       description="" />
   </configure>
 
+  <configure zcml:condition="installed AccessControl.security">
+    <permission
+      id="smartweb.manageconfiglets"
+      title="Smartweb: Manage configlets"
+      description="" />
+  </configure>
+
 </configure>

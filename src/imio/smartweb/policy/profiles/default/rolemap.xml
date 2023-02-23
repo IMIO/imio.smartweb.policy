@@ -65,5 +65,10 @@
       <role name="Manager"/>
     </permission>
 
+    <permission name="Smartweb: Manage configlets" acquire="False">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+    </permission>
+
   </permissions>
 </rolemap>

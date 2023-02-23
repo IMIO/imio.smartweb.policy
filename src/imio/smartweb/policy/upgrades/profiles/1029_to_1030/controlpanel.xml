@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel">
+
+  <configlet
+      title="Anysurfer"
+      action_id="anysurfer"
+      appId="collective.anysurfer"
+      category="Products"
+      condition_expr=""
+      url_expr="string:${portal_url}/@@anysurfer-settings"
+      icon_expr="string:$portal_url/++resource++collective.anysurfer/anysurfer.png"
+      visible="True">
+    <permission>Smartweb: Manage configlets</permission>
+  </configlet>
+
+</object>

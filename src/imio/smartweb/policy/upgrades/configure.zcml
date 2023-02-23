@@ -123,6 +123,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1029_to_1030"
+      title="Upgrade policy 1029 to 1030"
+      directory="profiles/1029_to_1030"
+      description="Add new permission to manage configlets in control panel"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -438,6 +446,16 @@
         title="Change collective.messagesviwlet control panel default values"
         import_profile="imio.smartweb.policy.upgrades:upgrade_1028_to_1029"
         import_steps="plone.app.registry"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1029"
+      destination="1030"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Add new permission to manage configlets in control panel"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1029_to_1030"
         />
   </genericsetup:upgradeSteps>
 
