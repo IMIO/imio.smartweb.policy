@@ -5,6 +5,9 @@ Changelog
 1.1.4 (unreleased)
 ------------------
 
+- Migrate to Plone 6.0.2
+  [boulch]
+
 - WEB-3763 : Add new permission to manage configlets in control panel
   [boulch]
 
