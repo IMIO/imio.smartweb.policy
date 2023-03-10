@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
-<registry
-    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-    i18n:domain="imio.smartweb">
+<registry>
 
   <records interface="collective.messagesviewlet.browser.controlpanel.IMessagesviewletSettings"
            prefix="messagesviewlet">
-    <value key="authorize_local_message" i18n:translate="">True</value>
-    <value key="show_local_message" i18n:translate="">True</value>
+    <value key="authorize_local_message">True</value>
+    <value key="show_local_message">True</value>
   </records>
 
 </registry>
