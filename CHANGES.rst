@@ -5,6 +5,9 @@ Changelog
 1.1.4 (unreleased)
 ------------------
 
+- Migrate to Plone 6.0.4
+  [boulch]
+
 - Migrate to Plone 6.0.2
   [boulch]
 
