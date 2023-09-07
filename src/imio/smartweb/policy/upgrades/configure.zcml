@@ -131,6 +131,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1030_to_1031"
+      title="Upgrade policy 1030 to 1031"
+      directory="profiles/1030_to_1031"
+      description="Add orientation behavior on Collection type"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -456,6 +464,16 @@
     <genericsetup:upgradeDepends
         title="Add new permission to manage configlets in control panel"
         import_profile="imio.smartweb.policy.upgrades:upgrade_1029_to_1030"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1030"
+      destination="1031"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Add orientation behavior on Collection type"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1030_to_1031"
         />
   </genericsetup:upgradeSteps>
 
