@@ -5,7 +5,8 @@ Changelog
 1.1.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove deprecated overrides because we removed picture managing out of Tiny
+  [boulch]
 
 
 1.1.4 (2023-05-22)
