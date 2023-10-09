@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.5 (unreleased)
+1.1.5 (2023-10-09)
 ------------------
 
 - Remove deprecated overrides because we removed picture managing out of Tiny
