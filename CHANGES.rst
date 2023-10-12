@@ -5,7 +5,8 @@ Changelog
 1.1.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- WEB-3803 : Monkey patch imio/collective.pivot post_install method to create an imio.smartweb.Folder to store defaults collective.pivot.Family contents
+  [boulch]
 
 
 1.1.5 (2023-10-09)
