@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.6 (unreleased)
+1.1.6 (2023-10-13)
 ------------------
 
 - WEB-3803 : Monkey patch imio/collective.pivot post_install method to create an imio.smartweb.Folder to store defaults collective.pivot.Family contents
