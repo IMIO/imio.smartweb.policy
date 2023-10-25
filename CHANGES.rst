@@ -5,7 +5,8 @@ Changelog
 1.1.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- WEB-3985 : Add orientation behavior on Collection type
+  [boulch, laulaz]
 
 
 1.1.6 (2023-10-13)
