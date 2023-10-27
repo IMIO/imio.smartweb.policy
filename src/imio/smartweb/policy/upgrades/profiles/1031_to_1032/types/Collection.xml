@@ -4,8 +4,6 @@
     meta_type="Dexterity FTI"
     i18n:domain="plone">
 
-  <property name="global_allow">True</property>
-
   <property name="behaviors" purge="true">
     <element value="plone.categorization"/>
     <element value="plone.namefromtitle"/>
@@ -20,10 +18,6 @@
     <element value="imio.smartweb.listing"/>
     <element value="eea.faceted.navigable"/>
     <element value="collective.autopublishing.behavior.IAutoPublishing"/>
-  </property>
-
-  <property name="default_view">view</property>
-  <property name="view_methods" purge="true">
   </property>
 
 </object>

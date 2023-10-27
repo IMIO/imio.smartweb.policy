@@ -139,6 +139,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1031_to_1032"
+      title="Upgrade policy 1031 to 1032"
+      directory="profiles/1031_to_1032"
+      description="Restore removed behaviors on Collection type"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -474,6 +482,16 @@
     <genericsetup:upgradeDepends
         title="Add orientation behavior on Collection type"
         import_profile="imio.smartweb.policy.upgrades:upgrade_1030_to_1031"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1031"
+      destination="1032"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Restore removed behaviors on Collection type"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1031_to_1032"
         />
   </genericsetup:upgradeSteps>
 

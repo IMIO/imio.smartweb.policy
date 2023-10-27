@@ -5,7 +5,8 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Restore removed behaviors on Collection type
+  [laulaz]
 
 
 1.2 (2023-10-25)
