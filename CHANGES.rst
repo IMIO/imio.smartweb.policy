@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.1 (unreleased)
+1.2.1 (2023-10-29)
 ------------------
 
 - Restore removed behaviors on Collection type
