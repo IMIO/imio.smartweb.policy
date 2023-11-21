@@ -147,6 +147,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1032_to_1033"
+      title="Upgrade policy 1032 to 1033"
+      directory="profiles/1032_to_1033"
+      description="Improve collective autoscaling compression quality"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -492,6 +500,16 @@
     <genericsetup:upgradeDepends
         title="Restore removed behaviors on Collection type"
         import_profile="imio.smartweb.policy.upgrades:upgrade_1031_to_1032"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1032"
+      destination="1033"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Improve collective autoscaling compression quality"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1032_to_1033"
         />
   </genericsetup:upgradeSteps>
 

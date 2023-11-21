@@ -5,7 +5,9 @@ Changelog
 1.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Improve collective autoscaling compression quality
+  Also fix missing autoscaling settings for new instances
+  [laulaz]
 
 
 1.2.1 (2023-10-29)
