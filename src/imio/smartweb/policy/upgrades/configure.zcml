@@ -155,6 +155,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
+  <genericsetup:registerProfile
+      name="upgrade_1033_to_1034"
+      title="Upgrade policy 1033 to 1034"
+      directory="profiles/1033_to_1034"
+      description="Add Skip to content viewlet in portal top"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -510,6 +518,16 @@
     <genericsetup:upgradeDepends
         title="Improve collective autoscaling compression quality"
         import_profile="imio.smartweb.policy.upgrades:upgrade_1032_to_1033"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1033"
+      destination="1034"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Add Skip to content viewlet in portal top"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1033_to_1034"
         />
   </genericsetup:upgradeSteps>
 
