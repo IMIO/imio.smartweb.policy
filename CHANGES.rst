@@ -5,7 +5,8 @@ Changelog
 1.2.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- WEB-4046 : Add "Skip to content" viewlet in portal top
+  [laulaz]
 
 
 1.2.2 (2023-11-21)

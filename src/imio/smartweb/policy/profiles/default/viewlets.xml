@@ -26,6 +26,7 @@
   </hidden>
 
   <order manager="plone.portaltop" skinname="Plone Default">
+    <viewlet name="smartweb.skip_to_content" />
     <viewlet name="imio.smartweb.minisite_portal_link" />
     <viewlet name="plone.header" />
     <viewlet name="imio.smartweb.offcanvas" />
