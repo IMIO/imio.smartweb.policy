@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.3 (unreleased)
+1.2.3 (2024-01-16)
 ------------------
 
 - WEB-4046 : Add "Skip to content" viewlet in portal top
