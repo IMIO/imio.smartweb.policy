@@ -5,7 +5,9 @@ Changelog
 1.2.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Make content types translatable (with `plone.translatable` behavior) in
+  multilingual profile.
+  [laulaz]
 
 
 1.2.3 (2024-01-16)
