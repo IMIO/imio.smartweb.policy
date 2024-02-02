@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.4 (unreleased)
+1.2.4 (2024-02-02)
 ------------------
 
 - Make content types translatable (with `plone.translatable` behavior) in
