@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<registry>
+
+  <record name="plone.app.caching.moderateCaching.etags">
+    <value purge="true">
+      <element>lastModified</element>
+      <element>userid</element>
+      <element>roles</element>
+      <element>resourceRegistries</element>
+    </value>
+  </record>
+
+  <record name="plone.app.caching.terseCaching.etags">
+    <value purge="true">
+      <element>lastModified</element>
+      <element>userid</element>
+      <element>roles</element>
+      <element>resourceRegistries</element>
+    </value>
+  </record>
+
+  <record name="plone.app.caching.weakCaching.etags">
+    <value purge="true">
+      <element>lastModified</element>
+      <element>userid</element>
+      <element>roles</element>
+      <element>resourceRegistries</element>
+    </value>
+  </record>
+
+</registry>
