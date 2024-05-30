@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.5 (unreleased)
+1.2.5 (2024-05-30)
 ------------------
 
 - WEB-4107 : Use resourceRegistries ETag in caching configurations
