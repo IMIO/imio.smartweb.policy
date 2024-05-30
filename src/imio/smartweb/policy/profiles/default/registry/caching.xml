@@ -39,6 +39,7 @@
       <element>lastModified</element>
       <element>userid</element>
       <element>roles</element>
+      <element>resourceRegistries</element>
     </value>
   </record>
   <record name="plone.app.caching.moderateCaching.lastModified">
@@ -62,6 +63,7 @@
       <element>lastModified</element>
       <element>userid</element>
       <element>roles</element>
+      <element>resourceRegistries</element>
     </value>
   </record>
   <record name="plone.app.caching.terseCaching.lastModified">
@@ -110,6 +112,7 @@
       <element>lastModified</element>
       <element>userid</element>
       <element>roles</element>
+      <element>resourceRegistries</element>
     </value>
   </record>
   <record name="plone.app.caching.weakCaching.lastModified">

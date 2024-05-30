@@ -5,7 +5,8 @@ Changelog
 1.2.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- WEB-4107 : Use resourceRegistries ETag in caching configurations
+  [laulaz]
 
 
 1.2.4 (2024-02-02)
