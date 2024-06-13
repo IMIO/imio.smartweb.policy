@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.6 (unreleased)
+1.2.6 (2024-06-13)
 ------------------
 
 - WEB-3763 : Fix Anysurfer controlpanel permission for fresh Smartweb installs
