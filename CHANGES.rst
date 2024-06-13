@@ -5,7 +5,9 @@ Changelog
 1.2.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- WEB-3763 : Fix Anysurfer controlpanel permission for fresh Smartweb installs
+  See upgrade step 1029_to_1030
+  [laulaz]
 
 
 1.2.5 (2024-05-30)

@@ -33,7 +33,7 @@
       url_expr="string:${portal_url}/@@anysurfer-settings"
       icon_expr="string:$portal_url/++resource++collective.anysurfer/anysurfer.png"
       visible="True">
-    <permission>Smartweb: Manager-only configlets</permission>
+    <permission>Smartweb: Manage configlets</permission>
   </configlet>
 
 </object>

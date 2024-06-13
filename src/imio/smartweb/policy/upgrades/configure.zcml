@@ -171,6 +171,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
+  <genericsetup:registerProfile
+      name="upgrade_1035_to_1036"
+      title="Upgrade policy 1035 to 1036"
+      directory="profiles/1035_to_1036"
+      description="Fix Anysurfer controlpanel permission (fix 1029_to_1030)"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -546,6 +554,16 @@
     <genericsetup:upgradeDepends
         title="Use resourceRegistries ETag in caching configurations"
         import_profile="imio.smartweb.policy.upgrades:upgrade_1034_to_1035"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1035"
+      destination="1036"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Fix Anysurfer controlpanel permission (fix 1029_to_1030)"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1035_to_1036"
         />
   </genericsetup:upgradeSteps>
 
