@@ -18,7 +18,7 @@ jobs:
         BASE_DIR: 'src'
         CHECK: 'black'
         PATH: |
-          imio/smartweb/common
+          imio/smartweb/policy
         MATTERMOST_WEBHOOK_URL: ${{ secrets.SMARTWEB_MATTERMOST_WEBHOOK_URL }}
 
   test:
