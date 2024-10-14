@@ -11,6 +11,7 @@
 
   <record name="plone.caching.interfaces.ICacheSettings.operationMapping">
     <value>
+      <element key="imio.smartweb.core.rest">plone.app.caching.moderateCaching</element>
       <element key="plone.content.dynamic">plone.app.caching.moderateCaching</element>
       <element key="plone.content.feed">plone.app.caching.moderateCaching</element>
       <element key="plone.content.file">plone.app.caching.terseCaching</element>

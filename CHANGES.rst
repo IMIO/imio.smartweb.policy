@@ -5,6 +5,9 @@ Changelog
 1.2.7 (unreleased)
 ------------------
 
+- WEB-4153: Set moderateCaching for imio.smartweb.core.rest
+  [remdub]
+
 - GHA tests on Python 3.8 3.9 and 3.10
   [remdub]
 

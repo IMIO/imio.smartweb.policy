@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<registry>
+
+  <record name="plone.caching.interfaces.ICacheSettings.operationMapping">
+    <value purge="true">
+      <element key="imio.smartweb.core.rest">plone.app.caching.moderateCaching</element>
+      <element key="plone.content.dynamic">plone.app.caching.moderateCaching</element>
+      <element key="plone.content.feed">plone.app.caching.moderateCaching</element>
+      <element key="plone.content.file">plone.app.caching.terseCaching</element>
+      <element key="plone.content.folderView">plone.app.caching.terseCaching</element>
+      <element key="plone.content.itemView">plone.app.caching.terseCaching</element>
+      <element key="plone.resource">plone.app.caching.strongCaching</element>
+      <element key="plone.stableResource">plone.app.caching.strongCaching</element>
+    </value>
+  </record>
+
+</registry>
