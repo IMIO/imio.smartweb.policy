@@ -5,6 +5,9 @@ Changelog
 1.2.7 (unreleased)
 ------------------
 
+- Migrate to Plone 6.0.14
+  [boulch]
+
 - GHA tests on Python 3.8 3.9 and 3.10
   [remdub]
 
