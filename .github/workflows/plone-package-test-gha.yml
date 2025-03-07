@@ -33,9 +33,12 @@ jobs:
       uses: IMIO/gha/plone-package-test-notify@DEVOPS-212
       with:
         CACHE_KEY: eggs-test-${{ hashFiles('base.cfg') }}-python-${{ matrix.python-version }}
+        EGGS_PATH: '/home/runner/eggs'
         TEST_COMMAND: TZ=UTC bin/test
         MATTERMOST_WEBHOOK_URL: ${{ secrets.SMARTWEB_MATTERMOST_WEBHOOK_URL }}
         PYTHON_VERSION: ${{ matrix.python-version }}
+        INSTALL_DEPENDENCIES_COMMANDS: |
+          pip install -r requirements.txt
 
   coverage:
     runs-on: gha-runners-smartweb
@@ -46,9 +49,11 @@ jobs:
       uses: IMIO/gha/plone-package-test-notify@DEVOPS-212
       with:
         CACHE_KEY: eggs-test-${{ hashFiles('base.cfg') }}-python-3.10
+        EGGS_PATH: '/home/runner/eggs'
         TEST_COMMAND: TZ=UTC coverage run bin/test
-        REQUIREMENTS_FILE: 'requirements-coverage.txt'
         MATTERMOST_WEBHOOK_URL: ${{ secrets.SMARTWEB_MATTERMOST_WEBHOOK_URL }}
+        INSTALL_DEPENDENCIES_COMMANDS: |
+          pip install -r requirements-coverage.txt
     - name: Submit to Coveralls
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
