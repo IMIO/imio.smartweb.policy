@@ -34,7 +34,7 @@ def add_iam_folder(context, lang):
     )
     api.content.transition(i_am_folder, "publish")
 
-    root_url = context.absolute_url()
+    root_url = context.absolute_url() # NOQA
     i_am_vocabulary = get_vocabulary("imio.smartweb.vocabulary.IAm")
     for term in i_am_vocabulary:
         link = api.content.create(

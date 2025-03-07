@@ -5,7 +5,8 @@ Changelog
 1.2.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- WEB-4230 : Add collective.preventactions
+  [remdub]
 
 
 1.2.7 (2025-01-29)

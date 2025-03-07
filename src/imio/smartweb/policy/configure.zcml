@@ -16,6 +16,7 @@
   <include package="collective.js.jqueryui" />
   <include package="collective.messagesviewlet" />
   <include package="collective.pivot" />
+  <include package="collective.preventactions" />
   <include package="collective.solr" />
   <include package="collective.themefragments" />
   <include package="collective.z3cform.select2.widget" file="adapters.zcml" />
@@ -28,6 +29,7 @@
   <include package="imio.prometheus" />
 
   <include package="imio.smartweb.core" />
+
 
   <include file="caching.zcml" />
   <include file="permissions.zcml" />

@@ -567,4 +567,14 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      source="1036"
+      destination="1037"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Install collective.preventactions add-on"
+        import_profile="collective.preventactions:default"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>
