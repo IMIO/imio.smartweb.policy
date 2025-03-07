@@ -30,7 +30,7 @@ jobs:
     - name: Checkout codebase
       uses: actions/checkout@v4
     - name: Run check
-      uses: IMIO/gha/plone-package-test-notify@v3
+      uses: IMIO/gha/plone-package-test-notify@DEVOPS-212
       with:
         CACHE_KEY: eggs-test-${{ hashFiles('base.cfg') }}-python-${{ matrix.python-version }}
         TEST_COMMAND: TZ=UTC bin/test
@@ -43,7 +43,7 @@ jobs:
     - name: Checkout codebase
       uses: actions/checkout@v4
     - name: Run check
-      uses: IMIO/gha/plone-package-test-notify@v3
+      uses: IMIO/gha/plone-package-test-notify@DEVOPS-212
       with:
         CACHE_KEY: eggs-test-${{ hashFiles('base.cfg') }}-python-3.10
         TEST_COMMAND: TZ=UTC coverage run bin/test
