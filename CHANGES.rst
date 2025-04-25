@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.8 (unreleased)
+1.2.8 (2025-04-25)
 ------------------
 
 - Add plone.app.discussion as a dependency
