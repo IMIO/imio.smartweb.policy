@@ -4,7 +4,8 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:zcml="http://namespaces.zope.org/zcml"
-    i18n_domain="imio.smartweb">
+    i18n_domain="imio.smartweb"
+    >
 
   <!-- We must include locales first to override some Plone translations -->
   <include package="imio.smartweb.locales" />
@@ -18,10 +19,14 @@
   <include package="collective.pivot" />
   <include package="collective.solr" />
   <include package="collective.themefragments" />
-  <include package="collective.z3cform.select2.widget" file="adapters.zcml" />
+  <include
+      package="collective.z3cform.select2.widget"
+      file="adapters.zcml"
+      />
   <include package="eea.facetednavigation" />
   <include package="pas.plugins.imio" />
   <include package="plone.app.caching" />
+  <include package="plone.app.discussion" />
   <include package="plone.app.imagecropping" />
   <include package="plone.app.multilingual" />
   <include package="imio.gdpr" />

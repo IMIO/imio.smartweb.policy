@@ -5,7 +5,9 @@ Changelog
 1.2.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add plone.app.discussion as a dependency
+  It is not installed by default since Plone 6.1
+  [remdub]
 
 
 1.2.7 (2025-01-29)

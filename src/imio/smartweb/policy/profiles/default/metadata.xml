@@ -4,6 +4,7 @@
   <dependencies>
     <dependency>profile-plone.app.contenttypes:plone-content</dependency>
     <dependency>profile-plone.app.caching:default</dependency>
+    <dependency>profile-plone.app.discussion:default</dependency>
     <dependency>profile-pas.plugins.imio:default</dependency>
     <dependency>profile-collective.autopublishing:default</dependency>
     <dependency>profile-collective.autoscaling:default</dependency>
