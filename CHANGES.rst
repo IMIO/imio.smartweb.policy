@@ -5,7 +5,8 @@ Changelog
 1.2.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- WEB-4240 : Fix 'I am' links when creating instances
+  [boulch]
 
 
 1.2.8 (2025-04-25)

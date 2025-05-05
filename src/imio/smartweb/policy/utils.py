@@ -42,7 +42,7 @@ def add_iam_folder(context, lang):
             type="Link",
             title=translate(_(term.title), target_language=lang),
         )
-        link.remoteUrl = "{0}/@@search?iam={1}".format("${root_url}", term.token)
+        link.remoteUrl = f"{root_url}/@@search?iam={term.token}"
         api.content.transition(link, "publish")
 
 
