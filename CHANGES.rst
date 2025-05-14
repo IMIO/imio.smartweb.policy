@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.9 (unreleased)
+1.2.9 (2025-05-14)
 ------------------
 
 - WEB-4240 : Fix 'I am' links when creating instances
