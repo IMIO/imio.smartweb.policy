@@ -47,3 +47,8 @@ def reload_viewlets(context):
 def uninstall_z3cform_select2(context):
     installer = get_installer(context)
     installer.uninstall_product("collective.z3cform.select2")
+
+
+def install_kimug(context):
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.runAllImportStepsFromProfile("profile-pas.plugins.kimug:default")

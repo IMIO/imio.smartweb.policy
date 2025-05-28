@@ -5,7 +5,8 @@ Changelog
 1.2.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add upgrade step to install Kimug and migrate user to Keycloak.
+  [bsuttor]
 
 
 1.2.9 (2025-05-14)
