@@ -72,11 +72,11 @@ setup(
         "collective.themefragments",
         "collective.z3cform.select2",
         "eea.facetednavigation",
-        "pas.plugins.imio",
         "imio.gdpr",
         "imio.smartweb.core",
         "imio.smartweb.locales",
         "imio.prometheus",
+        "pas.plugins.kimug",
     ],
     extras_require={
         "test": [
