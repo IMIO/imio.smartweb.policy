@@ -2,6 +2,8 @@
 
 from imio.smartweb.policy.utils import add_navigation_links
 from imio.smartweb.policy.utils import clear_manager_portlets
+from imio.smartweb.policy.utils import get_cookie_policy_content
+from imio.smartweb.policy.utils import get_gdpr_html_content
 from imio.smartweb.policy.utils import remove_unused_contents
 from plone import api
 from plone.app.multilingual.interfaces import ILanguageRootFolder
@@ -12,6 +14,7 @@ from Products.CMFPlone.interfaces.constrains import ISelectableConstrainTypes
 from zope.interface import implementer
 
 import logging
+import os
 
 logger = logging.getLogger("imio.smartweb.policy")
 
@@ -45,6 +48,8 @@ def post_install(context):
     clear_manager_portlets(portal, "plone.rightcolumn")
     clear_manager_portlets(portal, "plone.footerportlets")
     add_navigation_links(portal)
+    register_cookie_policy(portal)
+    register_gdpr_text(portal)
 
 
 def setup_multilingual(context):
@@ -100,6 +105,21 @@ def setup_multilingual(context):
         if lang == default_lang:
             continue
         add_navigation_links(lrf, lrf.id)
+
+
+def register_cookie_policy(portal=None):
+    """Register cookie policy in the portal."""
+    text = get_cookie_policy_content()
+    api.portal.set_registry_record(
+        "imio.gdpr.interfaces.IGDPRSettings.cookies_text", text
+    )
+
+
+def register_gdpr_text(portal=None):
+    """Register GDPR text in the portal."""
+    commune = os.environ.get("WEBSITE_HOSTNAME")
+    text = get_gdpr_html_content(commune)
+    api.portal.set_registry_record("imio.gdpr.interfaces.IGDPRSettings.text", text)
 
 
 def uninstall(context):

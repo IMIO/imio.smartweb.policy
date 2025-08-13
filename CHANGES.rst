@@ -5,7 +5,8 @@ Changelog
 1.2.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-4233 : Update GDPR text for new instances only
+  [boulch]
 
 
 1.2.9 (2025-05-14)
