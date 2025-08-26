@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.10 (unreleased)
+1.2.10 (2025-08-26)
 -------------------
 
 - Add upgrade step to install Kimug and migrate user to Keycloak.
