@@ -567,4 +567,14 @@
         />
   </genericsetup:upgradeSteps>
 
+
+  <genericsetup:upgradeStep
+    title="Install Kimug plugin"
+    description="Install pas.plugins.kimug and migrate sso to Keycloak"
+    source="1036"
+    destination="1037"
+    handler=".upgrades.install_kimug"
+    profile="imio.smartweb.policy:default"
+    />
+
 </configure>
