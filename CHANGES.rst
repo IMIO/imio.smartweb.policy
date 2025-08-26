@@ -8,6 +8,9 @@ Changelog
 - Add upgrade step to install Kimug and migrate user to Keycloak.
   [bsuttor]
 
+- WEB-4233 : Update GDPR text for new instances only
+  [boulch]
+
 
 1.2.9 (2025-05-14)
 ------------------
