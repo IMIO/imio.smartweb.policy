@@ -5,7 +5,8 @@ Changelog
 1.2.11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add upgrade step to set allowed_groups to login to Plone from Keycloak groups.
+  [bsuttor]
 
 
 1.2.10 (2025-08-26)

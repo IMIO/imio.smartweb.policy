@@ -52,3 +52,9 @@ def uninstall_z3cform_select2(context):
 def install_kimug(context):
     portal_setup = api.portal.get_tool("portal_setup")
     portal_setup.runAllImportStepsFromProfile("profile-pas.plugins.kimug:default")
+
+
+def set_keycloak_login_group(context):
+    acl_users = api.portal.get_tool("acl_users")
+    oidc = acl_users.get("oidc")
+    oidc.allowed_groups = ["iA.Smartweb"]
