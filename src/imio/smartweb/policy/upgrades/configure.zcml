@@ -577,4 +577,13 @@
     profile="imio.smartweb.policy:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Set Keycloak allowed_groups"
+    description="Set allowed_groups to iA.Smartweb in oidc plugin"
+    source="1037"
+    destination="1038"
+    handler=".upgrades.set_keycloak_login_group"
+    profile="imio.smartweb.policy:default"
+    />
+
 </configure>
