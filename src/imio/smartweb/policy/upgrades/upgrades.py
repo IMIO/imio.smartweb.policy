@@ -57,4 +57,7 @@ def install_kimug(context):
 def set_keycloak_login_group(context):
     acl_users = api.portal.get_tool("acl_users")
     oidc = acl_users.get("oidc")
-    oidc.allowed_groups = ["iA.Smartweb"]
+    if oidc is not None:
+        oidc.allowed_groups = ["iA.Smartweb"]
+    else:
+        logger.warning("OIDC plugin not found in acl_users; cannot set allowed_groups.")
