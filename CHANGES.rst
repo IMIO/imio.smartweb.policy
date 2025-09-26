@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.11 (unreleased)
+1.2.11 (2025-09-26)
 -------------------
 
 - Add upgrade step to set allowed_groups to login to Plone from Keycloak groups.
