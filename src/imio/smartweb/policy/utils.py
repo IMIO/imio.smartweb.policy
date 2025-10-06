@@ -5,6 +5,7 @@ from imio.smartweb.locales import SmartwebMessageFactory as _
 from plone import api
 from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.portlets.interfaces import IPortletManager
+from urllib.parse import urlparse
 from z3c.form.interfaces import IFormLayer
 from zope.component import getMultiAdapter
 from zope.component import getUtility
@@ -171,3 +172,15 @@ def get_cookie_policy_content():
     <p>Pour supprimer rapidement les cookies, certains navigateurs (Firefox, Chrome, Edge, Internet Explorer) proposent un raccourci clavier par l'appui simultané sur les touches CTRL/CMD, MAJ et DELETE.</p>
     """
     return cookie_policy_html
+
+
+def get_ts_api_base_url() -> str | None:
+    """Get the base url of the ts api."""
+    from imio.smartweb.core.utils import get_value_from_registry
+    from imio.smartweb.core.utils import is_valid_url
+
+    url_ts = get_value_from_registry("smartweb.url_ts")
+    if is_valid_url(url_ts):
+        parsed_url = urlparse(url_ts)
+        return f"{parsed_url.scheme}://{parsed_url.netloc}/"
+    return None

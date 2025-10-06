@@ -586,4 +586,13 @@
     profile="imio.smartweb.policy:default"
     />
 
+  <genericsetup:upgradeStep
+    title="Clean TS api URL"
+    description="Clean TS api URL in registry to keep only base URL"
+    source="1038"
+    destination="1039"
+    handler=".upgrades.clean_ts_api_url"
+    profile="imio.smartweb.policy:default"
+    />
+
 </configure>
