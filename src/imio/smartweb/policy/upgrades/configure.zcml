@@ -185,7 +185,7 @@
       directory="profiles/1039_to_1040"
       description="Switch portal timezone from UTC to Europe/Brussels, available timezones to Europe/Brussels and first weekday to monday"
       provides="Products.GenericSetup.interfaces.EXTENSION"
-      />      
+      />
 
   <genericsetup:upgradeStep
       title="Configure first official release"
@@ -613,5 +613,14 @@
         import_profile="imio.smartweb.policy.upgrades:upgrade_1039_to_1040"
         />
   </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeStep
+    title="Clean TS api URL"
+    description="Clean TS api URL in registry to keep only base URL"
+    source="1040"
+    destination="1041"
+    handler=".upgrades.clean_ts_api_url"
+    profile="imio.smartweb.policy:default"
+    />
 
 </configure>
