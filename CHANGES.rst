@@ -5,7 +5,8 @@ Changelog
 1.2.12 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- CITI-15 : Add upgrade step to clean TS api URL in registry to keep only base URL.
+  [remdub]
 
 
 1.2.11 (2025-09-26)

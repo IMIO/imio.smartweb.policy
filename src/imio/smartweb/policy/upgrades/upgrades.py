@@ -61,3 +61,25 @@ def set_keycloak_login_group(context):
         oidc.allowed_groups = ["iA.Smartweb"]
     else:
         logger.warning("OIDC plugin not found in acl_users; cannot set allowed_groups.")
+
+
+def clean_ts_api_url(context):
+    from imio.smartweb.policy.utils import get_ts_api_base_url
+
+    url_before = api.portal.get_registry_record("smartweb.url_ts")
+    if url_before is None:
+        logger.info("TS api URL is empty in registry, nothing to clean.")
+        return
+    url_after = get_ts_api_base_url()
+    if url_before == url_after:
+        logger.info(
+            f"TS api URL {url_before} is already clean in registry, nothing to do."
+        )
+        return
+    if url_after is None:
+        logger.warning(
+            f"TS api URL {url_before} is not valid, cannot be cleaned. Please check the value in the registry."
+        )
+        return
+    api.portal.set_registry_record("smartweb.url_ts", url_after)
+    logger.info(f"TS api URL {url_before} cleaned in registry. New value: {url_after}.")
