@@ -5,6 +5,10 @@ Changelog
 1.2.12 (unreleased)
 -------------------
 
+- WEB-4325 : Return to a previous version of plone.patternslib (9.9.16). 
+  (Avoid an issue with plone.patternslib 9.10.3.1
+  [boulch]
+
 - Migrate to Plone 6.1.3
   [boulch]
 
