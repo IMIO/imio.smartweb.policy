@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.12 (unreleased)
+1.2.12 (2025-11-07)
 -------------------
 
 - WEB-4325 : Return to a previous version of plone.patternslib (9.9.16). 
