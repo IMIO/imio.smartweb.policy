@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.13 (unreleased)
+1.2.13 (2025-11-13)
 -------------------
 
 - WEB-4325 : Uninstall unused / problematic plone.patternslib
