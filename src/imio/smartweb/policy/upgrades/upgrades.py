@@ -64,27 +64,10 @@ def set_keycloak_login_group(context):
 
 
 def uninstall_plone_patternslib(context):
+    product = "plone.patternslib"
     installer = get_installer(context)
-    installer.uninstall_product("plone.patternslib")
-
-
-def install_plone_patternslib(context):
-    portal_setup = api.portal.get_tool("portal_setup")
-    portal_setup.runAllImportStepsFromProfile("profile-plone.patternslib:default")
-    ps = api.portal.get_tool("portal_setup")
-    PROFILE = "profile-plone.patternslib:default"
-    ps.setLastVersionForProfile(PROFILE, "0")
-    steps = ps.listUpgrades(PROFILE)
-    target_id = ""
-    for step in steps:
-        if (
-            step[0].get("title")
-            == "Update the Patternslib bundle and clean up the old registered"
-        ):
-            target_id = step[0].get("id")
-            break
-    req = context.REQUEST
-    req.form["profile_id"] = PROFILE
-    req.form["upgrades"] = [target_id]
-    ps.manage_doUpgrades(req)
-    ps.setLastVersionForProfile(PROFILE, ps.getLastVersionForProfile(PROFILE))
+    if not installer.is_product_installable(product):
+        # plone.patternslib is not present on all instance ?!
+        return
+    if installer.is_product_installed(product):
+        installer.uninstall_product("plone.patternslib")

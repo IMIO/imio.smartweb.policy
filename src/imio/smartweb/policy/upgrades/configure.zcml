@@ -179,15 +179,6 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-  <genericsetup:registerProfile
-      name="upgrade_1038_to_1039"
-      title="Upgrade policy 1038 to 1039"
-      directory="profiles/1038_to_1039"
-      description="Return to a previous version of plone.patternslib."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
-
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -599,24 +590,10 @@
       source="1038"
       destination="1039"
       profile="imio.smartweb.policy:default">
-    <genericsetup:upgradeDepends
-        title="Return to a previous version of plone.patternslib."
-        import_profile="imio.smartweb.policy.upgrades:upgrade_1038_to_1039"
-        />
-    <!-- <genericsetup:upgradeStep
+    <genericsetup:upgradeStep
         title="Uninstall/Return to a previous version of plone.patternslib."
         handler=".upgrades.uninstall_plone_patternslib"
-        /> -->
+        />
   </genericsetup:upgradeSteps>
-
-  <genericsetup:upgradeStep
-    title="ReInstall plone.patternslib"
-    description="ReInstall plone.patternslib in an older version"
-    source="1039"
-    destination="1040"
-    handler=".upgrades.install_plone_patternslib"
-    profile="imio.smartweb.policy:default"
-    />
-
 
 </configure>

@@ -5,7 +5,8 @@ Changelog
 1.2.13 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-4325 : Uninstall unused / problematic plone.patternslib
+  [boulch]
 
 
 1.2.12 (2025-11-07)
