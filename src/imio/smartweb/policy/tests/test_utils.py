@@ -42,14 +42,18 @@ class TestUtils(unittest.TestCase):
         self.assertIn("je-suis", self.portal)
 
         iam_folder = self.portal["je-suis"]
-        self._check_iam_links_start_with("/Plone/@@search?iam=", iam_folder, delete=True)
+        self._check_iam_links_start_with(
+            "/Plone/@@search?iam=", iam_folder, delete=True
+        )
         api.content.delete(iam_folder)
 
         # 2. Add iam folder with HOSTNAME_HOST set
         os.environ["HOSTNAME_HOST"] = "www.kamoulox.be"
         add_iam_folder(self.portal, "fr")
         iam_folder = self.portal["je-suis"]
-        self._check_iam_links_start_with("https://www.kamoulox.be/@@search?iam=", iam_folder, delete=True)
+        self._check_iam_links_start_with(
+            "https://www.kamoulox.be/@@search?iam=", iam_folder, delete=True
+        )
         api.content.delete(iam_folder)
 
     def test_update_iam_folder_links(self):

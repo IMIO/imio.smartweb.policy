@@ -79,7 +79,9 @@ def update_iam_folder_links(context, commit=True):
     folder_id = idnormalizer.normalize(translate(_("I am"), target_language=lang))
     iam_folder = site.get(folder_id, None)
     if iam_folder is None:
-        logger.warning(f"I am folder with id {folder_id} not found, cannot update links")
+        logger.warning(
+            f"I am folder with id {folder_id} not found, cannot update links"
+        )
         return
 
     # construct base url
