@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    name="Image"
+    meta_type="Dexterity FTI"
+    i18n:domain="plone">
+
+  <property name="global_allow">False</property>
+
+  <property name="behaviors" purge="true">
+    <element value="plone.namefromfilename"/>
+    <element value="plone.shortname"/>
+  </property>
+
+</object>

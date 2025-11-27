@@ -31,6 +31,15 @@
       />
 
   <genericsetup:registerProfile
+      name="testing"
+      title="imio.smartweb.policy (testing)"
+      directory="profiles/testing"
+      description="Installs the imio.smartweb.policy testing configuration"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
       name="uninstall"
       title="imio.smartweb.policy (uninstall)"
       directory="profiles/uninstall"

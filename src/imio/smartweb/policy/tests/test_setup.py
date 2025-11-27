@@ -20,9 +20,9 @@ class TestSetup(unittest.TestCase):
         self.portal = self.layer["portal"]
         self.installer = get_installer(self.portal, self.layer["request"])
 
-    def test_product_installed(self):
-        """Test if imio.smartweb.policy is installed."""
-        self.assertTrue(self.installer.is_product_installed("imio.smartweb.policy"))
+    def test_profile_installed(self):
+        """Test if imio.smartweb.policy:testing profile is installed."""
+        self.assertTrue(self.installer.is_profile_installed("imio.smartweb.policy:testing"))
 
     def test_browserlayer(self):
         """Test that IImioSmartwebPolicyLayer is registered."""

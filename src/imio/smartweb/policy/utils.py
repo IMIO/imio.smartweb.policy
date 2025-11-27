@@ -3,14 +3,22 @@
 from imio.smartweb.common.utils import get_vocabulary
 from imio.smartweb.locales import SmartwebMessageFactory as _
 from plone import api
+from plone.i18n.normalizer import idnormalizer
 from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.portlets.interfaces import IPortletManager
 from z3c.form.interfaces import IFormLayer
 from zope.component import getMultiAdapter
 from zope.component import getUtility
+from zope.component.hooks import setSite
 from zope.globalrequest import getRequest
 from zope.i18n import translate
 from zope.interface import alsoProvides
+
+import logging
+import os
+import transaction
+
+logger = logging.getLogger("imio.smartweb.policy.utils")
 
 
 def remove_unused_contents(portal):
@@ -34,7 +42,12 @@ def add_iam_folder(context, lang):
     )
     api.content.transition(i_am_folder, "publish")
 
-    root_url = context.absolute_url()
+    base_url = os.environ.get("HOSTNAME_HOST", "")
+
+    if base_url != "":
+        base_url = "https://" + base_url
+    else:
+        base_url = "/Plone"
     i_am_vocabulary = get_vocabulary("imio.smartweb.vocabulary.IAm")
     for term in i_am_vocabulary:
         link = api.content.create(
@@ -42,8 +55,57 @@ def add_iam_folder(context, lang):
             type="Link",
             title=translate(_(term.title), target_language=lang),
         )
-        link.remoteUrl = f"{root_url}/@@search?iam={term.token}"
+        link.remoteUrl = f"{base_url}/@@search?iam={term.token}"
         api.content.transition(link, "publish")
+
+
+def update_iam_folder_links(context, commit=True):
+
+    # get the site. During startup, api.portal.get() will fail
+    try:
+        site = api.portal.get()
+        logger.info("Site found with api.portal.get()")
+    except api.exc.CannotGetPortalError:
+        logger.info("Site not found with api.portal.get(), setting it with setSite()")
+        try:
+            site = context.database.open().root()["Application"]["Plone"]
+        except KeyError:
+            logger.warning("Could not find Plone site, not updating iam folder links")
+            return
+        setSite(site)
+
+    # get iam folder
+    lang = site.Language()[:2]
+    folder_id = idnormalizer.normalize(translate(_("I am"), target_language=lang))
+    iam_folder = site.get(folder_id, None)
+    if iam_folder is None:
+        logger.warning(f"I am folder with id {folder_id} not found, cannot update links")
+        return
+
+    # construct base url
+    base_url = os.environ.get("HOSTNAME_HOST", "")
+    if base_url != "":
+        base_url = "https://" + base_url
+    else:
+        base_url = "/Plone"
+
+    # update existing links in iam folder
+    for link in api.content.find(context=iam_folder, portal_type="Link", depth=1):
+        link_obj = link.getObject()
+        if link_obj.remoteUrl.startswith(base_url):
+            pass
+        else:
+            if "/@@search?iam=" in link_obj.remoteUrl:
+                url_token = link_obj.remoteUrl.split("/@@search?iam=")[-1]
+                link_obj.remoteUrl = f"{base_url}/@@search?iam={url_token}"
+                link_obj.reindexObject()
+                logger.info(f"Updated link {link_obj.remoteUrl}")
+            else:
+                logger.warning(
+                    f"Link {link_obj.absolute_url()} remoteUrl is not default format, skipping update"
+                )
+    if commit:
+        transaction.commit()
 
 
 def add_ifind_folder(context, lang):

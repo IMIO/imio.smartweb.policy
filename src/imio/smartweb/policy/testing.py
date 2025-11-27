@@ -29,7 +29,7 @@ class ImioSmartwebPolicyLayer(PloneSandboxLayer):
         # set basic request to be able to handle redirect in subscribers
         setRequest(request)
         alsoProvides(request, IFormLayer)
-        applyProfile(portal, "imio.smartweb.policy:default")
+        applyProfile(portal, "imio.smartweb.policy:testing")
 
 
 IMIO_SMARTWEB_POLICY_FIXTURE = ImioSmartwebPolicyLayer()
