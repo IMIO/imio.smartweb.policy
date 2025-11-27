@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    name="File"
+    meta_type="Dexterity FTI"
+    i18n:domain="plone">
+
+  <property name="global_allow">False</property>
+
+  <property name="behaviors" purge="true">
+    <element value="plone.namefromfilename"/>
+    <element value="plone.leadimage"/>
+    <element value="plone.imagecropping"/>
+    <element value="collective.taxonomy.generated.page_category"/>
+    <element value="imio.smartweb.topics"/>
+    <element value="plone.categorization"/>
+    <element value="plone.shortname"/>
+  </property>
+
+</object>

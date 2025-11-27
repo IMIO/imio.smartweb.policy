@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<registry
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="imio.smartweb">
+
+  <record name="plone.displayed_types"
+          interface="Products.CMFPlone.interfaces.controlpanel.INavigationSchema"
+          field="displayed_types">
+    <value purge="false">
+      <element>Collection</element>
+    </value>
+  </record>
+
+  <record name="plone.default_page_types">
+    <value purge="true">
+      <element>Collection</element>
+      <element>imio.smartweb.Page</element>
+      <element>imio.smartweb.PortalPage</element>
+    </value>
+  </record>
+
+  <record name="collective.solr.active">
+    <value>False</value>
+  </record>
+
+  <record name="collective.solr.use_tika">
+    <value>True</value>
+  </record>
+
+  <record name="collective.solr.tika_default_field">
+    <value>SearchableText</value>
+  </record>
+
+  <record name="imio.gdpr.interfaces.IGDPRSettings.is_text_ready">
+    <value>True</value>
+  </record>
+
+</registry>

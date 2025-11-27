@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+
+    <permission name="Portlets: Manage portlets" acquire="False">
+    </permission>
+
+    <permission name="Plone Site Setup: Site" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Plone Site Setup: Mail" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Plone Site Setup: Language" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Plone Site Setup: Navigation" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Plone Site Setup: Search" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Plone Site Setup: Security" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Plone Site Setup: Themes" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Plone Site Setup: Types" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Inspect Relations" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Plone Site Setup: TinyMCE" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Plone Site Setup: Markup" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Content rules: Manage rules" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Plone Site Setup: Editing" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Plone Site Setup: Filtering" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Smartweb: Manager-only configlets" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+    <permission name="Smartweb: Manage configlets" acquire="False">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+    </permission>
+
+  </permissions>
+</rolemap>
