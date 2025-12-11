@@ -6,4 +6,9 @@
      handler="collective.autopublishing.eventhandler.autopublish_handler"
      />
 
+   <subscriber
+      for="zope.processlifetime.IDatabaseOpenedWithRoot"
+      handler=".utils.update_iam_folder_links"
+      />
+
 </configure>

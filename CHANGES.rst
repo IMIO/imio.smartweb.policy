@@ -5,7 +5,8 @@ Changelog
 1.2.14 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-4332 : Update i-am folder links on startup when the environment variable HOSTNAME_HOST changes
+  [remdub]
 
 
 1.2.13 (2025-11-13)
@@ -18,7 +19,7 @@ Changelog
 1.2.12 (2025-11-07)
 -------------------
 
-- WEB-4325 : Return to a previous version of plone.patternslib (9.9.16). 
+- WEB-4325 : Return to a previous version of plone.patternslib (9.9.16).
   (Avoid an issue with plone.patternslib 9.10.3.1
   [boulch]
 
