@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.14 (unreleased)
+1.2.14 (2026-01-08)
 -------------------
 
 - WEB-4332 : Update i-am folder links on startup when the environment variable HOSTNAME_HOST changes
