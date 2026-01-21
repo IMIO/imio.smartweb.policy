@@ -34,9 +34,9 @@ class TestUtils(unittest.TestCase):
         """Test add_iam_folder utility."""
         from imio.smartweb.policy.utils import add_iam_folder
 
-        os.environ.pop("HOSTNAME_HOST", None)
+        os.environ.pop("WEBSITE_HOSTNAME", None)
 
-        # 1. Add iam folder without HOSTNAME_HOST set
+        # 1. Add iam folder without WEBSITE_HOSTNAME set
         add_iam_folder(self.portal, "fr")
 
         self.assertIn("je-suis", self.portal)
@@ -47,8 +47,8 @@ class TestUtils(unittest.TestCase):
         )
         api.content.delete(iam_folder)
 
-        # 2. Add iam folder with HOSTNAME_HOST set
-        os.environ["HOSTNAME_HOST"] = "www.kamoulox.be"
+        # 2. Add iam folder with WEBSITE_HOSTNAME set
+        os.environ["WEBSITE_HOSTNAME"] = "www.kamoulox.be"
         add_iam_folder(self.portal, "fr")
         iam_folder = self.portal["je-suis"]
         self._check_iam_links_start_with(
@@ -61,22 +61,22 @@ class TestUtils(unittest.TestCase):
         from imio.smartweb.policy.utils import add_iam_folder
         from imio.smartweb.policy.utils import update_iam_folder_links
 
-        os.environ.pop("HOSTNAME_HOST", None)
+        os.environ.pop("WEBSITE_HOSTNAME", None)
 
-        # 1. Add iam folder without HOSTNAME_HOST set
+        # 1. Add iam folder without WEBSITE_HOSTNAME set
         add_iam_folder(self.portal, "fr")
         iam_folder = self.portal["je-suis"]
         base_url = "/Plone/@@search?iam="
         self._check_iam_links_start_with(base_url, iam_folder)
 
-        # 2. Update links with HOSTNAME_HOST set
-        os.environ["HOSTNAME_HOST"] = "www.kamoulox.be"
+        # 2. Update links with WEBSITE_HOSTNAME set
+        os.environ["WEBSITE_HOSTNAME"] = "www.kamoulox.be"
         update_iam_folder_links(iam_folder, commit=False)
         base_url = "https://www.kamoulox.be/@@search?iam="
         self._check_iam_links_start_with(base_url, iam_folder)
 
-        # 3. Removing HOSTNAME_HOST and updating links again
-        os.environ.pop("HOSTNAME_HOST", None)
+        # 3. Removing WEBSITE_HOSTNAME and updating links again
+        os.environ.pop("WEBSITE_HOSTNAME", None)
         update_iam_folder_links(iam_folder, commit=False)
         base_url = "/Plone/@@search?iam="
         self._check_iam_links_start_with(base_url, iam_folder)
@@ -90,7 +90,7 @@ class TestUtils(unittest.TestCase):
         self._check_iam_links_start_with(base_url, iam_folder)
 
         # 5. Changing a link remoteUrl to a non standard format and updating links again, link should be unchanged
-        os.environ["HOSTNAME_HOST"] = "www.kamoulox.com"
+        os.environ["WEBSITE_HOSTNAME"] = "www.kamoulox.com"
         link = api.content.get(path="/je-suis/commercant")
         link.remoteUrl = "https://www.kamoulox.be/commercant"
         link.reindexObject()

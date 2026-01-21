@@ -5,7 +5,8 @@ Changelog
 1.2.15 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-4332 (fix) : Use WEBSITE_HOSTNAME instead of HOSTNAME_HOST to update i-am folder links on startup
+  [remdub]
 
 
 1.2.14 (2026-01-08)

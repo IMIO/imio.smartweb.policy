@@ -42,7 +42,7 @@ def add_iam_folder(context, lang):
     )
     api.content.transition(i_am_folder, "publish")
 
-    base_url = os.environ.get("HOSTNAME_HOST", "")
+    base_url = os.environ.get("WEBSITE_HOSTNAME", "")
 
     if base_url != "":
         base_url = "https://" + base_url
@@ -85,7 +85,7 @@ def update_iam_folder_links(context, commit=True):
         return
 
     # construct base url
-    base_url = os.environ.get("HOSTNAME_HOST", "")
+    base_url = os.environ.get("WEBSITE_HOSTNAME", "")
     if base_url != "":
         base_url = "https://" + base_url
     else:
