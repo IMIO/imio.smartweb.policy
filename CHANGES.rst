@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.15 (unreleased)
+1.2.15 (2026-01-21)
 -------------------
 
 - WEB-4332 (fix) : Use WEBSITE_HOSTNAME instead of HOSTNAME_HOST to update i-am folder links on startup
