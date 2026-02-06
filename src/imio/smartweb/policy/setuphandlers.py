@@ -2,12 +2,14 @@
 
 from imio.smartweb.policy.utils import add_navigation_links
 from imio.smartweb.policy.utils import clear_manager_portlets
+from imio.smartweb.policy.utils import get_accessibility_html_content
 from imio.smartweb.policy.utils import get_cookie_policy_content
 from imio.smartweb.policy.utils import get_gdpr_html_content
 from imio.smartweb.policy.utils import remove_unused_contents
 from plone import api
 from plone.app.multilingual.interfaces import ILanguageRootFolder
 from plone.app.multilingual.subscriber import set_recursive_language
+from plone.app.textfield.value import RichTextValue
 from Products.CMFPlone.interfaces import INonInstallable
 from Products.CMFPlone.interfaces.constrains import DISABLED
 from Products.CMFPlone.interfaces.constrains import ISelectableConstrainTypes
@@ -50,6 +52,7 @@ def post_install(context):
     add_navigation_links(portal)
     register_cookie_policy(portal)
     register_gdpr_text(portal)
+    register_accessibility_text(portal)
 
 
 def setup_multilingual(context):
@@ -120,6 +123,20 @@ def register_gdpr_text(portal=None):
     commune = os.environ.get("WEBSITE_HOSTNAME")
     text = get_gdpr_html_content(commune)
     api.portal.set_registry_record("imio.gdpr.interfaces.IGDPRSettings.text", text)
+
+
+def register_accessibility_text(portal=None):
+    text = get_accessibility_html_content()
+    richtext = RichTextValue(
+        raw=text,
+        mimeType="text/html",
+        outputMimeType="text/x-html-safe",
+        encoding="utf-8",
+    )
+    api.portal.set_registry_record(
+        "collective.anysurfer.interfaces.IAnysurferSettings.accessibility_translations",
+        [{"language": "fr", "text": richtext}],
+    )
 
 
 def uninstall(context):

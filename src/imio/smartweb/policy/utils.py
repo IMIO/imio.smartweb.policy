@@ -235,3 +235,52 @@ def get_cookie_policy_content():
     <p>Pour supprimer rapidement les cookies, certains navigateurs (Firefox, Chrome, Edge, Internet Explorer) proposent un raccourci clavier par l'appui simultané sur les touches CTRL/CMD, MAJ et DELETE.</p>
     """
     return cookie_policy_html
+
+
+def get_accessibility_html_content():
+    accessibility_html_content = """
+        <h2>Déclaration d’accessibilité numérique</h2>
+        <p>La présente déclaration d’accessibilité numérique concerne le site de [nom du pouvoir local].</p>
+        <p>L’accessibilité numérique vise à rendre les contenus et services en ligne utilisables par tout le monde, y compris les personnes en situation de handicap. Elle s’applique à l’ensemble des supports numériques : sites web, applications mobiles, documents PDF et autres formats numériques.</p>
+        <p>En améliorant la navigation, la compréhension et l’interaction, l’accessibilité bénéficie non seulement aux personnes en situation de handicap (visuel, auditif, moteur ou cognitif), mais aussi aux seniors, aux personnes rencontrant des limitations temporaires, ainsi qu’à l’ensemble des utilisateurs.</p>
+        <p>Les règles pour l’accessibilité des contenus Web (WCAG) reprennent les critères à respecter par les développeurs, les concepteurs et l’équipe éditorialiste afin que le site soit accessible aux personnes en situation de handicap. Trois niveaux de conformité existent : A, AA et AAA.</p>
+        <h3>1. Notre engagement</h3>
+        <p>Le site [url du site] a été créé en collaboration avec iMio qui, depuis sa création, s’est activement engagé dans un processus d’amélioration continue de l’accessibilité numérique, en conformité avec la Directive (UE) 2016/2102 (<a target="_blank" title="Nouvelle fenêtre" href="https://eur-lex.europa.eu/legal-content/FR/ALL/?uri=CELEX:32016L2102">site internet <span class="sr-only">, ouvre une nouvelle fenêtre</span></a>).&nbsp;</p>
+        <p>Cette directive impose aux pouvoirs locaux investis d’une mission de service public de rendre leur site internet accessible dès le 23 septembre 2020.</p>
+        <h3>2. Statut de conformité</h3>
+        <h4>Technique</h4>
+        <p>iMio gère la partie technique du site.&nbsp;</p>
+        <p>Son outil iA.SmartWeb a été audité en octobre 2020 par Anysurfer dans sa version Plone 4 (voir <a target="_blank" title="Nouvelle fenêtre" href="https://docs.imio.be/iasmartweb/siteweb_v4/accessibilite/index.html" data-linktype="external" data-val="https://docs.imio.be/iasmartweb/siteweb_v4/accessibilite/index.html" data-mce-href="https://docs.imio.be/iasmartweb/siteweb_v4/accessibilite/index.html">https://docs.imio.be/iasmartweb/siteweb_v4/accessibilite/index.html <span class="sr-only">, ouvre une nouvelle fenêtre</span></a>).</p>
+        <p>Les recommandations faites lors de cet audit ont été intégrées dans la nouvelle version d’iA.SmartWeb Plone 6 proposée depuis mars 2022 et ont été enrichies de nouvelles améliorations.</p>
+        <p>Des développements améliorant l’accessibilité sont régulièrement intégrés via les mises à jour de iA.SmartWeb et sont listés sur <a target="_blank" title="Nouvelle fenêtre" href="https://docs.imio.be/iasmartweb/smartweb_v6/accessibilite/accessibilite.html" data-linktype="external" data-val="https://docs.imio.be/iasmartweb/smartweb_v6/accessibilite/accessibilite.html" data-mce-href="https://docs.imio.be/iasmartweb/smartweb_v6/accessibilite/accessibilite.html">https://docs.imio.be/iasmartweb/smartweb_v6/accessibilite/accessibilite.html <span class="sr-only">, ouvre une nouvelle fenêtre</span></a>
+        <br data-mce-bogus="1"></p>
+        <p>En outre, l’outil a été conçu pour privilégier l’insertion de contenus accessibles, tout en prenant en compte les réalités du terrain pour les agents des pouvoirs locaux (voir détails sur cette même page <a target="_blank" title="Nouvelle fenêtre" href="https://docs.imio.be/iasmartweb/smartweb_v6/accessibilite/accessibilite.html" data-linktype="external" data-val="https://docs.imio.be/iasmartweb/smartweb_v6/accessibilite/accessibilite.html" data-mce-href="https://docs.imio.be/iasmartweb/smartweb_v6/accessibilite/accessibilite.html">https://docs.imio.be/iasmartweb/smartweb_v6/accessibilite/accessibilite.html<span class="sr-only">, ouvre une nouvelle fenêtre</span></a>).</p>
+        <p>En parallèle à la partie technique, les agents gestionnaires de notre site ont suivi la formation à l’édition et les ateliers proposés par iMio.&nbsp;</p>
+        <p>Ces séances insistent sur l’obligation pour un site public d’être accessible, sensibilisent à l’accessibilité, en expliquant ce que c’est et ce que cela implique, et forment les agents à la création de contenus accessibles.</p>
+        <p>Le gestionnaire de notre site consulte aussi régulièrement la documentation en ligne consacrée à l’accessibilité, qu’iMio met à jour à chaque amélioration de l’outil.</p>
+        <p>Notre gestionnaire est donc mis au courant de l’importance de rendre accessible l’ensemble du site, y compris les images, les PDF et les tableaux.</p>
+        <p>Le dernier rapport de contrôle simplifié d’accessibilité numérique date du 15 décembre 2023 et n’a porté que sur l’aspect technique d’iA.SmartWeb. Il a été réalisé par l’organisme Passe-muraille qui a également salué l’implication et les actions d’iMio en la matière.</p>
+        <h4>Éditoriale</h4>
+        <p>L'accessibilité du contenu du site relève de la responsabilité de [nom du pouvoir local].</p>
+        <h3>3. Plan d’amélioration</h3>
+        <p>[[[Les documents PDF scannés ne sont pas encore accessibles. La Commune en est consciente et travaille à leur mise en conformité, qui sera progressivement assurée dans les prochains mois. &gt;&gt;&gt; si vous en avez effectivement
+        <br>A compléter &nbsp;par vos soins : ce qui va être amélioré et quand
+        <br>Exemple :
+        <br>Nous prévoyons d’ici la fin de l’année 2025 la mise en place d’un audit simplifié qui nous permettra d’obtenir notre statut de conformité et d’identifier le travail à faire pour rendre accessible nos services.
+        <br>Début 2026, nous mettrons en place un plan d’actions, qui inclut un audit approfondi ainsi que la mise en place des recommandations issues de cet audit. La remédiation portera en premier sur les points bloquants relevés dans l’audit.
+        <br>Notre but est d’améliorer l’accessibilité de notre site sur 3 ans pour qu’il devienne complètement inclusif.]]]</p>
+        <h3>4. Préparation de cette déclaration d’accessibilité</h3>
+        <p>Cette déclaration a été préparée le 01/08/2025 par Anais Digital-Jems Belgique à partir des informations et documentations fournies par iMio. Nous avons complété la partie 'conformité éditoriale', ainsi que les points 3, 4, 5 et 7.</p>
+        <h3>5. Comment nous contacter</h3>
+        <p>Pour obtenir de l’aide en cas de difficulté d’accès à un contenu, ou encore remonter vos remarques et suggestions pour rendre le site plus accessible, vous pouvez nous contacter :</p>
+        <ul><li>par email xxxx@xxx</li>
+        <li>par téléphone xxxxxx</li>
+        <li>via notre formulaire de contact xxxxxxxx</li>
+        </ul>
+        <p>[[[C’est obligé de laisser un contact oral, donc numéro de tel à renseigner, l’adresse mail n’est pas obligatoire.]]]</p>
+        <h3>6. Recours externes</h3>
+        <p>Si vous n’avez pas obtenu de réponse satisfaisante par nos équipes, vous pouvez introduire une plainte via le service du Médiateur de la Wallonie et de la Fédération Wallonie-Bruxelles.</p>
+        <h3>7. Mise à jour de la déclaration</h3>
+        <p>[[[Date à mentionner une fois que vous avez complété la partie relevant de votre responsabilité]]]</p>
+        """
+    return accessibility_html_content

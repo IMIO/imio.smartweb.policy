@@ -5,7 +5,8 @@ Changelog
 1.2.16 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-4308 : Update (default) accessibilty text
+  [boulch]
 
 
 1.2.15 (2026-01-21)
