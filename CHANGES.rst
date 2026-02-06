@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.16 (unreleased)
+1.2.16 (2026-02-06)
 -------------------
 
 - WEB-4308 : Update (default) accessibilty text
