@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<registry>
+  <record name="plone.portal_timezone">
+    <value>Europe/Brussels</value>
+  </record>
+
+  <record name="plone.available_timezones">
+    <value purge="true">
+      <element>Europe/Brussels</element>
+    </value>
+  </record>
+
+  <record name="plone.first_weekday">
+    <value>0</value>
+  </record>
+
+</registry>

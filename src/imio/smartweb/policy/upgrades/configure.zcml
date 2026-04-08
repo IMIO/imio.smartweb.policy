@@ -179,6 +179,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1039_to_1040"
+      title="Upgrade core from 1039 to 1040"
+      directory="profiles/1039_to_1040"
+      description="Switch portal timezone from UTC to Europe/Brussels, available timezones to Europe/Brussels and first weekday to monday"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />      
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -593,6 +601,16 @@
     <genericsetup:upgradeStep
         title="Uninstall/Return to a previous version of plone.patternslib."
         handler=".upgrades.uninstall_plone_patternslib"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1039"
+      destination="1040"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Switch portal timezone from UTC to Europe/Brussels, available timezones to Europe/Brussels and first weekday to monday"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1039_to_1040"
         />
   </genericsetup:upgradeSteps>
 

@@ -5,6 +5,10 @@ Changelog
 1.2.17 (unreleased)
 -------------------
 
+- WEB-4352 : Switch portal timezone from UTC to Europe/Brussels, 
+  available timezones to Europe/Brussels and first weekday to monday
+  [boulch]
+
 - Migrate to Plone 6.1.4
   [boulch]
 
