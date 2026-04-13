@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.17 (unreleased)
+1.2.17 (2026-04-13)
 -------------------
 
 - WEB-4352 : Switch portal timezone from UTC to Europe/Brussels, 
