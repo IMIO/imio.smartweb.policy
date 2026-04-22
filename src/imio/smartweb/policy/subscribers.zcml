@@ -11,4 +11,10 @@
       handler=".utils.update_iam_folder_links"
       />
 
+   <subscriber
+      for="*
+           OFS.interfaces.IObjectWillBeRemovedEvent"
+      handler=".subscribers.prevent_messages_config_delete"
+      />
+
 </configure>

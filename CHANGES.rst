@@ -5,7 +5,8 @@ Changelog
 1.2.18 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- In smartweb, only Manager can delete MessagesFolder (from collective.messagesviewlet)
+  [boulch]
 
 
 1.2.17 (2026-04-13)
