@@ -187,6 +187,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />      
 
+  <genericsetup:registerProfile
+      name="upgrade_1040_to_1041"
+      title="Upgrade policy from 1040 to 1041"
+      directory="profiles/1040_to_1041"
+      description="Restrict MessagesConfig deletion to Managers"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -611,6 +619,16 @@
     <genericsetup:upgradeDepends
         title="Switch portal timezone from UTC to Europe/Brussels, available timezones to Europe/Brussels and first weekday to monday"
         import_profile="imio.smartweb.policy.upgrades:upgrade_1039_to_1040"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1040"
+      destination="1041"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Restrict MessagesConfig deletion to Managers"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1040_to_1041"
         />
   </genericsetup:upgradeSteps>
 
