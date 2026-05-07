@@ -72,11 +72,12 @@ def uninstall_plone_patternslib(context):
     if installer.is_product_installed(product):
         installer.uninstall_product("plone.patternslib")
 
+
 def clean_ts_api_url(context):
     from imio.smartweb.policy.utils import get_ts_api_base_url
 
     url_before = api.portal.get_registry_record("smartweb.url_ts")
-    if url_before is None:
+    if not url_before:
         logger.info("TS api URL is empty in registry, nothing to clean.")
         return
     url_after = get_ts_api_base_url()
