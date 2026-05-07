@@ -6,6 +6,7 @@ from plone import api
 from plone.i18n.normalizer import idnormalizer
 from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.portlets.interfaces import IPortletManager
+from urllib.parse import urlparse
 from z3c.form.interfaces import IFormLayer
 from zope.component import getMultiAdapter
 from zope.component import getUtility
@@ -284,3 +285,15 @@ def get_accessibility_html_content():
         <p>[[[Date à mentionner une fois que vous avez complété la partie relevant de votre responsabilité]]]</p>
         """
     return accessibility_html_content
+
+
+def get_ts_api_base_url() -> str | None:
+    """Get the base url of the ts api."""
+    from imio.smartweb.core.utils import get_value_from_registry
+    from imio.smartweb.core.utils import is_valid_url
+
+    url_ts = get_value_from_registry("smartweb.url_ts")
+    if is_valid_url(url_ts):
+        parsed_url = urlparse(url_ts)
+        return f"{parsed_url.scheme}://{parsed_url.netloc}/"
+    return None
