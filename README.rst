@@ -34,28 +34,17 @@ Policies to setup imio.smartweb
 Features
 --------
 
-- TODO
+- **Site policy**: GenericSetup profiles (default, multilingual, testing, demo, uninstall) that configure a complete SmartWeb Plone site for Belgian municipalities.
+- **Content type configuration**: Pre-configured Plone content types (Collection, Document, Event, File, Folder, Image, Link, News Item).
+- **Registry settings**: SmartWeb-specific registry entries for timezone (Europe/Brussels), auto-publishing, autoscaling, caching, and message viewlets.
+- **Viewlet management**: Custom portal layout (header, footer, navigation) with SmartWeb-specific viewlets replacing default Plone ones.
+- **Site setup handlers**: Post-installation setup — removes default Plone content, creates "I am" / "I find" navigation folders with dynamic links.
+- **GDPR & accessibility**: Registers GDPR consent text, cookie policy, and AnySurfer accessibility statements (templated per organisation).
+- **Multilingual support**: Optional multilingual profile integrating plone.app.multilingual.
+- **Authentication**: Upgrade steps for Keycloak/OIDC group configuration and Kimug user migration.
+- **Search**: Solr integration (collective.solr) with Tika indexing enabled.
+- **Upgrade steps**: Incremental upgrade steps to migrate existing instances across package versions.
 
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
--------------
-
-TODO
-
-
-Translations
-------------
-
-This product has been translated into
-
-- French
 
 
 Installation
