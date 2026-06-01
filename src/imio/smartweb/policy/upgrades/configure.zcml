@@ -187,6 +187,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1041_to_1042"
+      title="Upgrade core from 1040 to 1041"
+      directory="profiles/1041_to_1042"
+      description="Move breadcrumbs before subsite navigation in portal header"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -622,5 +630,15 @@
     handler=".upgrades.clean_ts_api_url"
     profile="imio.smartweb.policy:default"
     />
+
+  <genericsetup:upgradeSteps
+      source="1041"
+      destination="1042"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Move breadcrumbs before subsite navigation in portal header"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1041_to_1042"
+        />
+  </genericsetup:upgradeSteps>
 
 </configure>

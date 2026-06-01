@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
+
 from imio.smartweb.policy.testing import (
     IMIO_SMARTWEB_POLICY_INTEGRATION_TESTING,
 )  # noqa: E501

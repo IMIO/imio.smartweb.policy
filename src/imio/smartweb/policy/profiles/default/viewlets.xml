@@ -49,11 +49,11 @@
     <viewlet name="imio.smartweb.portal_header_top_viewlet" />
     <viewlet name="imio.smartweb.herobanner" />
     <viewlet name="message-viewlet" />
+    <viewlet name="plone.path_bar" />
     <viewlet name="imio.smartweb.subsite_header_viewlet" />
     <viewlet name="imio.smartweb.subsite_logo" />
     <viewlet name="imio.smartweb.subsite_navigation" />
     <viewlet name="local-message-viewlet" />
-    <viewlet name="plone.path_bar" />
     <viewlet name="imio.smartweb.banner" />
     <viewlet name="smartweb.privacy_consent" />
   </order>
