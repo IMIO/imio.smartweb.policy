@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from imio.smartweb.policy.utils import add_iam_folder
+from imio.smartweb.policy.utils import get_ts_api_base_url
 from plone import api
 from plone.app.workflow.remap import remap_workflow
 from Products.CMFPlone.utils import get_installer
@@ -74,8 +75,6 @@ def uninstall_plone_patternslib(context):
 
 
 def clean_ts_api_url(context):
-    from imio.smartweb.policy.utils import get_ts_api_base_url
-
     url_before = api.portal.get_registry_record("smartweb.url_ts")
     if not url_before:
         logger.info("TS api URL is empty in registry, nothing to clean.")
@@ -93,3 +92,8 @@ def clean_ts_api_url(context):
         return
     api.portal.set_registry_record("smartweb.url_ts", url_after)
     logger.info(f"TS api URL {url_before} cleaned in registry. New value: {url_after}.")
+
+
+def install_omnia_tinymce(context):
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.runAllImportStepsFromProfile("profile-imio.omnia.tinymce:default")

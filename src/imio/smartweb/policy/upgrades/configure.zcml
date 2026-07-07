@@ -641,4 +641,13 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeStep
+      title="Install imio.omnia.tinymce"
+      description="Install imio.omnia.tinymce add-on (Omnia TinyMCE plugin)"
+      source="1042"
+      destination="1043"
+      handler=".upgrades.install_omnia_tinymce"
+      profile="imio.smartweb.policy:default"
+      />
+
 </configure>
