@@ -47,8 +47,8 @@
   </order>
   <order manager="plone.portalheader" skinname="Plone Default">
     <viewlet name="imio.smartweb.portal_header_top_viewlet" />
-    <viewlet name="imio.smartweb.herobanner" />
     <viewlet name="message-viewlet" />
+    <viewlet name="imio.smartweb.herobanner" />
     <viewlet name="plone.path_bar" />
     <viewlet name="imio.smartweb.subsite_header_viewlet" />
     <viewlet name="imio.smartweb.subsite_logo" />
