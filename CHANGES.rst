@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.20 (unreleased)
+1.2.20 (2026-08-10)
 -------------------
 
 - move message viewlet above banner
