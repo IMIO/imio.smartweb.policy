@@ -5,7 +5,8 @@ Changelog
 1.2.20 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- move message viewlet above banner
+  [thomlamb]
 
 
 1.2.19 (2026-07-07)
