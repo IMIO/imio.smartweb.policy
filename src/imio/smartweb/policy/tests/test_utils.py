@@ -7,6 +7,7 @@ from imio.smartweb.policy.testing import (
 from imio.smartweb.policy.utils import get_ts_api_base_url
 from plone import api
 from plone.app.testing import setRoles, TEST_USER_ID
+from unittest.mock import MagicMock
 from unittest.mock import patch
 
 import os
@@ -100,6 +101,49 @@ class TestUtils(unittest.TestCase):
         update_iam_folder_links(iam_folder, commit=False)
         link = api.content.get(path="/je-suis/commercant")
         assert link.remoteUrl == "https://www.kamoulox.be/commercant"
+
+
+class TestUpdateIamFolderLinksStartup(unittest.TestCase):
+
+    layer = IMIO_SMARTWEB_POLICY_INTEGRATION_TESTING
+
+    def test_startup_connection_closed_when_site_missing(self):
+        """At startup without a Plone site, the connection opened to look for it
+        must be closed: a leaked one keeps its storage read snapshot open."""
+        from imio.smartweb.policy import utils
+
+        conn = MagicMock()
+        conn.root.return_value = {"Application": {}}
+        context = MagicMock()
+        context.database.open.return_value = conn
+        with patch.object(
+            utils.api.portal, "get", side_effect=api.exc.CannotGetPortalError
+        ):
+            utils.update_iam_folder_links(context)
+        conn.close.assert_called_once()
+
+    def test_startup_connection_closed_after_update(self):
+        """At startup with a Plone site, the links are updated, then the
+        transaction is aborted, the site unset and the connection closed."""
+        from imio.smartweb.policy import utils
+
+        site = object()
+        conn = MagicMock()
+        conn.root.return_value = {"Application": {"Plone": site}}
+        context = MagicMock()
+        context.database.open.return_value = conn
+        with patch.object(
+            utils.api.portal, "get", side_effect=api.exc.CannotGetPortalError
+        ), patch("imio.smartweb.policy.utils.setSite") as mock_set_site, patch(
+            "imio.smartweb.policy.utils._update_iam_folder_links"
+        ) as mock_update, patch(
+            "imio.smartweb.policy.utils.transaction"
+        ) as mock_transaction:
+            utils.update_iam_folder_links(context)
+        mock_update.assert_called_once_with(site, True)
+        assert [c.args for c in mock_set_site.call_args_list] == [(site,), (None,)]
+        mock_transaction.abort.assert_called_once()
+        conn.close.assert_called_once()
 
 
 class TestGetTsApiBaseUrl(unittest.TestCase):

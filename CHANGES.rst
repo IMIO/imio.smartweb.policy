@@ -5,7 +5,10 @@ Changelog
 1.2.21 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Close the ZODB connection opened by the `update_iam_folder_links` startup
+  subscriber. The leaked connection kept its storage read snapshot open
+  (idle in transaction session on PostgreSQL for the whole process lifetime).
+  [remdub]
 
 
 1.2.20 (2026-08-10)

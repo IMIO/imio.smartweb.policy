@@ -61,20 +61,33 @@ def add_iam_folder(context, lang):
 
 
 def update_iam_folder_links(context, commit=True):
-
+    conn = None
     # get the site. During startup, api.portal.get() will fail
     try:
         site = api.portal.get()
         logger.info("Site found with api.portal.get()")
     except api.exc.CannotGetPortalError:
         logger.info("Site not found with api.portal.get(), setting it with setSite()")
+        # Startup subscriber: the connection must be closed, a leaked one keeps
+        # its storage read snapshot open (idle in transaction).
+        conn = context.database.open()
         try:
-            site = context.database.open().root()["Application"]["Plone"]
+            site = conn.root()["Application"]["Plone"]
         except KeyError:
             logger.warning("Could not find Plone site, not updating iam folder links")
+            conn.close()
             return
         setSite(site)
+    try:
+        _update_iam_folder_links(site, commit)
+    finally:
+        if conn is not None:
+            transaction.abort()
+            setSite(None)
+            conn.close()
 
+
+def _update_iam_folder_links(site, commit):
     # get iam folder
     lang = site.Language()[:2]
     folder_id = idnormalizer.normalize(translate(_("I am"), target_language=lang))
