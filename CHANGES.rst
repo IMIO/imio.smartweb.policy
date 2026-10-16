@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.21 (unreleased)
+1.2.21 (2026-10-16)
 -------------------
 
 - Close the ZODB connection opened by the `update_iam_folder_links` startup

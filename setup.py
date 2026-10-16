@@ -15,7 +15,7 @@ long_description = "\n\n".join(
 
 setup(
     name="imio.smartweb.policy",
-    version="1.2.21.dev0",
+    version="1.2.21",
     description="Policies to setup imio.smartweb",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
