@@ -5,7 +5,10 @@ Changelog
 1.2.23 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-4404 : Ban the pages showing a message when its start or end date is
+  reached (``tick_fifteen``), so the message appears / disappears without
+  waiting for the cache to expire and browsers don't get a 304.
+  [remdub]
 
 
 1.2.22 (2026-10-22)
