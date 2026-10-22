@@ -1,29 +1,43 @@
 #!/usr/bin/make
-.PHONY: buildout run cleanall test test-coverage
+VENV_FOLDER=.venv
+
+ifeq (, $(shell which uv ))
+  $(error "[ERROR] The 'uv' command is missing from your PATH. Install it from: https://docs.astral.sh/uv/getting-started/installation/")
+endif
+
 all: buildout
 
-bin/buildout: bin/pip buildout.cfg
-	bin/pip install -I -r requirements.txt
+.PHONY: help
+help: ## Display this help message
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-buildout: bin/instance
+.PHONY: buildout
+buildout: bin/instance ## Install development environment
 
-bin/instance: bin/buildout
-	bin/buildout
-
-bin/pip:
-	python3.12 -m venv .
-
-run: bin/instance
+.PHONY: run
+run: bin/instance ## Start the instance
 	bin/instance fg
 
-test: bin/instance
+.PHONY: test
+test: bin/instance ## Run tests
 	bin/test
 
-test-coverage: bin/instance
+.PHONY: test-coverage
+test-coverage: bin/instance ## Run tests with coverage
 	bin/test-coverage
 
-cleanall:
-	rm -fr develop-eggs downloads eggs parts .installed.cfg lib lib64 include bin .mr.developer.cfg local/
+.PHONY: cleanall
+cleanall: ## Clean development environment
+	rm -fr .venv pyvenv.cfg develop-eggs downloads eggs parts .installed.cfg lib lib64 include bin .mr.developer.cfg local/
 
-upgrade-steps:
-	bin/instance -O plone run scripts/run_portal_upgrades.py
+$(VENV_FOLDER):
+	@echo "Creating virtual environment with uv"
+	uv venv
+
+$(VENV_FOLDER)/bin/buildout: $(VENV_FOLDER) buildout.cfg
+	@echo "Installing requirements with uv pip interface"
+	uv pip install --python $(VENV_FOLDER)/bin/python -r requirements.txt
+
+bin/instance: $(VENV_FOLDER)/bin/buildout
+	@echo "Bootstrapping environment with buildout"
+	$(VENV_FOLDER)/bin/buildout
