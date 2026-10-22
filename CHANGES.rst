@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.23 (unreleased)
+1.2.23 (2026-10-22)
 -------------------
 
 - WEB-4404 : Ban the pages showing a message when its start or end date is
