@@ -195,6 +195,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="upgrade_1044_to_1045"
+      title="Upgrade policy 1044 to 1045"
+      directory="profiles/1044_to_1045"
+      description="Use lastBan ETag in caching configurations"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Configure first official release"
       description="Install pas.plugins.imio and run needed profiles steps"
@@ -658,6 +666,16 @@
         title="Move message-viewlet directly under the header menu, before the herobanner (WEB-4345)"
         import_profile="imio.smartweb.policy:default"
         import_steps="viewlets"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1044"
+      destination="1045"
+      profile="imio.smartweb.policy:default">
+    <genericsetup:upgradeDepends
+        title="Use lastBan ETag in caching configurations (WEB-4404)"
+        import_profile="imio.smartweb.policy.upgrades:upgrade_1044_to_1045"
         />
   </genericsetup:upgradeSteps>
 
