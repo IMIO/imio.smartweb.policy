@@ -17,4 +17,7 @@
                    Products.DCWorkflow.events.AfterTransitionEvent"
               handler=".caching.ban_for_message" />
 
+  <subscriber for="collective.timedevents.interfaces.IIntervalTicks15Event"
+              handler=".caching.ban_for_message_dates" />
+
 </configure>
