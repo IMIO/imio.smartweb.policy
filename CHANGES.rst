@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.22 (unreleased)
+1.2.22 (2026-10-22)
 -------------------
 
 - WEB-4404 : Add the ``lastBan`` ETag component (imio.smartweb.common) to
