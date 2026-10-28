@@ -11,4 +11,10 @@
       handler=".utils.update_iam_folder_links"
       />
 
+   <subscriber
+      for="plone.app.multilingual.interfaces.ILanguageRootFolder
+           OFS.interfaces.IObjectWillBeRemovedEvent"
+      handler=".subscribers.prevent_lrf_removal"
+      />
+
 </configure>

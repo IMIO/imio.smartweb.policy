@@ -5,7 +5,8 @@ Changelog
 1.2.24 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-4523 : Only Managers can delete a language root folder (LRF) on a multilingual site.
+  [boulch]
 
 
 1.2.23 (2026-10-22)
