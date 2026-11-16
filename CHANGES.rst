@@ -5,6 +5,9 @@ Changelog
 1.2.24 (unreleased)
 -------------------
 
+- WEB-4533 : Migrate to PEP 420 native namespaces (setuptools 81 / Plone 6.2)
+  [bsuttor]
+
 - WEB-4523 : Only Managers can delete a language root folder (LRF) on a multilingual site.
   [boulch]
 
