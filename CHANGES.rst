@@ -5,7 +5,8 @@ Changelog
 1.2.25 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-4533 : Migrate to PEP 420 native namespaces (setuptools 81 / Plone 6.2)
+  [bsuttor]
 
 
 1.2.24 (2026-11-19)
