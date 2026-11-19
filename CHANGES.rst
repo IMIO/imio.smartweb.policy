@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.24 (unreleased)
+1.2.24 (2026-11-19)
 -------------------
 
 - WEB-4523 : Only Managers can delete a language root folder (LRF) on a multilingual site.
