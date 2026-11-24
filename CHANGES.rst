@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0.1 (unreleased)
+2.0.1 (2026-11-24)
 ------------------
 
 - WEB-4533 : Drop imio.prometheus: plone.observability serves ``@@metrics`` on the Zope root.
