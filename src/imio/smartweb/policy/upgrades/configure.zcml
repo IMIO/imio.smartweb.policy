@@ -679,4 +679,13 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeStep
+      title="Forget imio.prometheus profile"
+      description="imio.prometheus is removed: drop its profile version from portal_setup on sites that installed it"
+      source="1045"
+      destination="1046"
+      handler=".upgrades.forget_imio_prometheus"
+      profile="imio.smartweb.policy:default"
+      />
+
 </configure>

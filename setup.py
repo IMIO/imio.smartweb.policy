@@ -76,7 +76,6 @@ setup(
         "imio.omnia.tinymce",
         "imio.smartweb.core",
         "imio.smartweb.locales",
-        "imio.prometheus",
         "pas.plugins.kimug",
     ],
     extras_require={

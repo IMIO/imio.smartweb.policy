@@ -28,7 +28,7 @@ test-coverage: bin/instance ## Run tests with coverage
 
 .PHONY: cleanall
 cleanall: ## Clean development environment
-	rm -fr .venv pyvenv.cfg develop-eggs downloads eggs parts .installed.cfg lib lib64 include bin .mr.developer.cfg local/
+	rm -fr .venv pyvenv.cfg devel develop-eggs downloads eggs parts .installed.cfg lib lib64 include bin .mr.developer.cfg local/
 
 $(VENV_FOLDER):
 	@echo "Creating virtual environment with uv"

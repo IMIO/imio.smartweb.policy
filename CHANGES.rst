@@ -5,7 +5,8 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- WEB-4533 : Drop imio.prometheus: plone.observability serves ``@@metrics`` on the Zope root.
+  [remdub]
 
 
 2.0.0 (2026-11-19)
@@ -77,7 +78,7 @@ Changelog
 1.2.17 (2026-04-13)
 -------------------
 
-- WEB-4352 : Switch portal timezone from UTC to Europe/Brussels, 
+- WEB-4352 : Switch portal timezone from UTC to Europe/Brussels,
   available timezones to Europe/Brussels and first weekday to monday
   [boulch]
 

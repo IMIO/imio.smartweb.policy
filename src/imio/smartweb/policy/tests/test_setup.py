@@ -34,6 +34,18 @@ class TestSetup(unittest.TestCase):
 
         self.assertIn(IImioSmartwebPolicyLayer, utils.registered_layers())
 
+    def test_upgrade_forgets_imio_prometheus(self):
+        from imio.smartweb.policy.upgrades.upgrades import forget_imio_prometheus
+
+        portal_setup = api.portal.get_tool("portal_setup")
+        portal_setup.setLastVersionForProfile("imio.prometheus:default", "1000")
+        forget_imio_prometheus(portal_setup)
+        self.assertEqual(
+            portal_setup.getLastVersionForProfile("imio.prometheus:default"), "unknown"
+        )
+        # Sites that never installed it: nothing to forget, no error
+        forget_imio_prometheus(portal_setup)
+
 
 class TestUninstall(unittest.TestCase):
     layer = IMIO_SMARTWEB_POLICY_INTEGRATION_TESTING

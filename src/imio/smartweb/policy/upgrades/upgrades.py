@@ -97,3 +97,8 @@ def clean_ts_api_url(context):
 def install_omnia_tinymce(context):
     portal_setup = api.portal.get_tool("portal_setup")
     portal_setup.runAllImportStepsFromProfile("profile-imio.omnia.tinymce:default")
+
+
+def forget_imio_prometheus(context):
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.unsetLastVersionForProfile("imio.prometheus:default")
