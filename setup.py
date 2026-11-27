@@ -73,6 +73,7 @@ setup(
         "collective.z3cform.select2",
         "eea.facetednavigation",
         "imio.gdpr",
+        "imio.omnia.assistant",
         "imio.omnia.tinymce",
         "imio.smartweb.core",
         "imio.smartweb.locales",

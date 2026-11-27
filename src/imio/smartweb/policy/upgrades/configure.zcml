@@ -688,4 +688,13 @@
       profile="imio.smartweb.policy:default"
       />
 
+  <genericsetup:upgradeStep
+      title="Install imio.omnia.assistant"
+      description="Install imio.omnia.assistant add-on (Omnia AI assistant, off until a site turns it on)"
+      source="1046"
+      destination="1047"
+      handler=".upgrades.install_omnia_assistant"
+      profile="imio.smartweb.policy:default"
+      />
+
 </configure>

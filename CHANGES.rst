@@ -5,7 +5,10 @@ Changelog
 2.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Install imio.omnia.assistant (Omnia AI assistant). It stays off until a site
+  turns it on in its control panel; sites that installed it by hand keep
+  their settings. Upgrade step 1047.
+  [thomlamb]
 
 
 2.0.1 (2026-11-24)

@@ -99,6 +99,13 @@ def install_omnia_tinymce(context):
     portal_setup.runAllImportStepsFromProfile("profile-imio.omnia.tinymce:default")
 
 
+def install_omnia_assistant(context):
+    # Not a profile re-import: sites that installed it by hand keep their settings.
+    installer = get_installer(context)
+    if not installer.is_product_installed("imio.omnia.assistant"):
+        installer.install_product("imio.omnia.assistant")
+
+
 def forget_imio_prometheus(context):
     portal_setup = api.portal.get_tool("portal_setup")
     portal_setup.unsetLastVersionForProfile("imio.prometheus:default")

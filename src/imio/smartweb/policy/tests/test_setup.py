@@ -10,6 +10,10 @@ from Products.CMFPlone.utils import get_installer
 
 import unittest
 
+ASSISTANT_ENABLED = (
+    "imio.omnia.assistant.browser.controlpanel.IOmniaAssistantSettings.enabled"
+)
+
 
 class TestSetup(unittest.TestCase):
     """Test that imio.smartweb.policy is properly installed."""
@@ -45,6 +49,23 @@ class TestSetup(unittest.TestCase):
         )
         # Sites that never installed it: nothing to forget, no error
         forget_imio_prometheus(portal_setup)
+
+    def test_upgrade_installs_omnia_assistant_turned_off(self):
+        from imio.smartweb.policy.upgrades.upgrades import install_omnia_assistant
+
+        portal_setup = api.portal.get_tool("portal_setup")
+        install_omnia_assistant(portal_setup)
+        self.assertTrue(self.installer.is_product_installed("imio.omnia.assistant"))
+        self.assertFalse(api.portal.get_registry_record(ASSISTANT_ENABLED))
+
+    def test_upgrade_keeps_the_settings_of_an_installed_assistant(self):
+        from imio.smartweb.policy.upgrades.upgrades import install_omnia_assistant
+
+        portal_setup = api.portal.get_tool("portal_setup")
+        install_omnia_assistant(portal_setup)
+        api.portal.set_registry_record(ASSISTANT_ENABLED, True)
+        install_omnia_assistant(portal_setup)
+        self.assertTrue(api.portal.get_registry_record(ASSISTANT_ENABLED))
 
 
 class TestUninstall(unittest.TestCase):
