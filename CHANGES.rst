@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0.2 (unreleased)
+2.0.2 (2026-11-27)
 ------------------
 
 - Install imio.omnia.assistant (Omnia AI assistant). It stays off until a site
